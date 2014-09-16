@@ -1,0 +1,481 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		33474776CA8841BCB8053EC3 /* libPods-GQURLDispatcherTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D09E1804235A48679B581586 /* libPods-GQURLDispatcherTests.a */; };
+		E38D988219C2044600630F43 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E38D988119C2044600630F43 /* Foundation.framework */; };
+		E38D988719C2044600630F43 /* GQURLDispatcher.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = E38D988619C2044600630F43 /* GQURLDispatcher.h */; };
+		E38D988919C2044600630F43 /* GQURLDispatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = E38D988819C2044600630F43 /* GQURLDispatcher.m */; };
+		E38D989019C2044600630F43 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E38D988F19C2044600630F43 /* XCTest.framework */; };
+		E38D989119C2044600630F43 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E38D988119C2044600630F43 /* Foundation.framework */; };
+		E38D989319C2044600630F43 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E38D989219C2044600630F43 /* UIKit.framework */; };
+		E38D989619C2044600630F43 /* libGQURLDispatcher.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E38D987E19C2044600630F43 /* libGQURLDispatcher.a */; };
+		E38D989C19C2044600630F43 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E38D989A19C2044600630F43 /* InfoPlist.strings */; };
+		E38D989E19C2044600630F43 /* GQURLDispatcherTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E38D989D19C2044600630F43 /* GQURLDispatcherTests.m */; };
+		E38D98F919C7582100630F43 /* GQURLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E38D98F819C7582100630F43 /* GQURLViewController.m */; };
+		E38D98FF19C75C9200630F43 /* GQNavigationResponder.m in Sources */ = {isa = PBXBuildFile; fileRef = E38D98FE19C75C9200630F43 /* GQNavigationResponder.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E38D989419C2044600630F43 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E38D987619C2044600630F43 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E38D987D19C2044600630F43;
+			remoteInfo = GQURLDispatcher;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E38D987C19C2044600630F43 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				E38D988719C2044600630F43 /* GQURLDispatcher.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		B8126C0029C24AF0A9AD9044 /* Pods-GQURLDispatcherTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GQURLDispatcherTests.xcconfig"; path = "../Pods/Pods-GQURLDispatcherTests.xcconfig"; sourceTree = "<group>"; };
+		D09E1804235A48679B581586 /* libPods-GQURLDispatcherTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GQURLDispatcherTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E38D987E19C2044600630F43 /* libGQURLDispatcher.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libGQURLDispatcher.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		E38D988119C2044600630F43 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		E38D988519C2044600630F43 /* GQURLDispatcher-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GQURLDispatcher-Prefix.pch"; sourceTree = "<group>"; };
+		E38D988619C2044600630F43 /* GQURLDispatcher.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GQURLDispatcher.h; sourceTree = "<group>"; };
+		E38D988819C2044600630F43 /* GQURLDispatcher.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GQURLDispatcher.m; sourceTree = "<group>"; };
+		E38D988E19C2044600630F43 /* GQURLDispatcherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GQURLDispatcherTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E38D988F19C2044600630F43 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		E38D989219C2044600630F43 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		E38D989919C2044600630F43 /* GQURLDispatcherTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GQURLDispatcherTests-Info.plist"; sourceTree = "<group>"; };
+		E38D989B19C2044600630F43 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E38D989D19C2044600630F43 /* GQURLDispatcherTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GQURLDispatcherTests.m; sourceTree = "<group>"; };
+		E38D98EB19C2F81A00630F43 /* GQURLResponder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GQURLResponder.h; sourceTree = "<group>"; };
+		E38D98EC19C2F8DF00630F43 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		E38D98F719C7582100630F43 /* GQURLViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GQURLViewController.h; sourceTree = "<group>"; };
+		E38D98F819C7582100630F43 /* GQURLViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GQURLViewController.m; sourceTree = "<group>"; };
+		E38D98FD19C75C9200630F43 /* GQNavigationResponder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GQNavigationResponder.h; sourceTree = "<group>"; };
+		E38D98FE19C75C9200630F43 /* GQNavigationResponder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GQNavigationResponder.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E38D987B19C2044600630F43 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E38D988219C2044600630F43 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E38D988B19C2044600630F43 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E38D989619C2044600630F43 /* libGQURLDispatcher.a in Frameworks */,
+				E38D989019C2044600630F43 /* XCTest.framework in Frameworks */,
+				E38D989319C2044600630F43 /* UIKit.framework in Frameworks */,
+				E38D989119C2044600630F43 /* Foundation.framework in Frameworks */,
+				33474776CA8841BCB8053EC3 /* libPods-GQURLDispatcherTests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E38D987519C2044600630F43 = {
+			isa = PBXGroup;
+			children = (
+				E38D988319C2044600630F43 /* GQURLDispatcher */,
+				E38D989719C2044600630F43 /* GQURLDispatcherTests */,
+				E38D988019C2044600630F43 /* Frameworks */,
+				E38D987F19C2044600630F43 /* Products */,
+				B8126C0029C24AF0A9AD9044 /* Pods-GQURLDispatcherTests.xcconfig */,
+			);
+			sourceTree = "<group>";
+		};
+		E38D987F19C2044600630F43 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E38D987E19C2044600630F43 /* libGQURLDispatcher.a */,
+				E38D988E19C2044600630F43 /* GQURLDispatcherTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E38D988019C2044600630F43 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E38D98EC19C2F8DF00630F43 /* UIKit.framework */,
+				E38D988119C2044600630F43 /* Foundation.framework */,
+				E38D988F19C2044600630F43 /* XCTest.framework */,
+				E38D989219C2044600630F43 /* UIKit.framework */,
+				D09E1804235A48679B581586 /* libPods-GQURLDispatcherTests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E38D988319C2044600630F43 /* GQURLDispatcher */ = {
+			isa = PBXGroup;
+			children = (
+				E38D988619C2044600630F43 /* GQURLDispatcher.h */,
+				E38D988819C2044600630F43 /* GQURLDispatcher.m */,
+				E38D98EB19C2F81A00630F43 /* GQURLResponder.h */,
+				E38D98F719C7582100630F43 /* GQURLViewController.h */,
+				E38D98F819C7582100630F43 /* GQURLViewController.m */,
+				E38D98FD19C75C9200630F43 /* GQNavigationResponder.h */,
+				E38D98FE19C75C9200630F43 /* GQNavigationResponder.m */,
+				E38D988419C2044600630F43 /* Supporting Files */,
+			);
+			path = GQURLDispatcher;
+			sourceTree = "<group>";
+		};
+		E38D988419C2044600630F43 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E38D988519C2044600630F43 /* GQURLDispatcher-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E38D989719C2044600630F43 /* GQURLDispatcherTests */ = {
+			isa = PBXGroup;
+			children = (
+				E38D989D19C2044600630F43 /* GQURLDispatcherTests.m */,
+				E38D989819C2044600630F43 /* Supporting Files */,
+			);
+			path = GQURLDispatcherTests;
+			sourceTree = "<group>";
+		};
+		E38D989819C2044600630F43 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E38D989919C2044600630F43 /* GQURLDispatcherTests-Info.plist */,
+				E38D989A19C2044600630F43 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E38D987D19C2044600630F43 /* GQURLDispatcher */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E38D98A119C2044600630F43 /* Build configuration list for PBXNativeTarget "GQURLDispatcher" */;
+			buildPhases = (
+				E38D987A19C2044600630F43 /* Sources */,
+				E38D987B19C2044600630F43 /* Frameworks */,
+				E38D987C19C2044600630F43 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GQURLDispatcher;
+			productName = GQURLDispatcher;
+			productReference = E38D987E19C2044600630F43 /* libGQURLDispatcher.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		E38D988D19C2044600630F43 /* GQURLDispatcherTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E38D98A419C2044600630F43 /* Build configuration list for PBXNativeTarget "GQURLDispatcherTests" */;
+			buildPhases = (
+				1D745C27862F466DB4FCE7DB /* Check Pods Manifest.lock */,
+				E38D988A19C2044600630F43 /* Sources */,
+				E38D988B19C2044600630F43 /* Frameworks */,
+				E38D988C19C2044600630F43 /* Resources */,
+				E6CF79CA29254786AC99FA3E /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E38D989519C2044600630F43 /* PBXTargetDependency */,
+			);
+			name = GQURLDispatcherTests;
+			productName = GQURLDispatcherTests;
+			productReference = E38D988E19C2044600630F43 /* GQURLDispatcherTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E38D987619C2044600630F43 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Qian GuoQiang";
+			};
+			buildConfigurationList = E38D987919C2044600630F43 /* Build configuration list for PBXProject "GQURLDispatcher" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = E38D987519C2044600630F43;
+			productRefGroup = E38D987F19C2044600630F43 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E38D987D19C2044600630F43 /* GQURLDispatcher */,
+				E38D988D19C2044600630F43 /* GQURLDispatcherTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E38D988C19C2044600630F43 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E38D989C19C2044600630F43 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1D745C27862F466DB4FCE7DB /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E6CF79CA29254786AC99FA3E /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/../Pods/Pods-GQURLDispatcherTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E38D987A19C2044600630F43 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E38D98FF19C75C9200630F43 /* GQNavigationResponder.m in Sources */,
+				E38D98F919C7582100630F43 /* GQURLViewController.m in Sources */,
+				E38D988919C2044600630F43 /* GQURLDispatcher.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E38D988A19C2044600630F43 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E38D989E19C2044600630F43 /* GQURLDispatcherTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E38D989519C2044600630F43 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E38D987D19C2044600630F43 /* GQURLDispatcher */;
+			targetProxy = E38D989419C2044600630F43 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E38D989A19C2044600630F43 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E38D989B19C2044600630F43 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E38D989F19C2044600630F43 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		E38D98A019C2044600630F43 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E38D98A219C2044600630F43 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/GQURLDispatcher.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GQURLDispatcher/GQURLDispatcher-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		E38D98A319C2044600630F43 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/GQURLDispatcher.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GQURLDispatcher/GQURLDispatcher-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		E38D98A519C2044600630F43 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B8126C0029C24AF0A9AD9044 /* Pods-GQURLDispatcherTests.xcconfig */;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GQURLDispatcher/GQURLDispatcher-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "GQURLDispatcherTests/GQURLDispatcherTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		E38D98A619C2044600630F43 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B8126C0029C24AF0A9AD9044 /* Pods-GQURLDispatcherTests.xcconfig */;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GQURLDispatcher/GQURLDispatcher-Prefix.pch";
+				INFOPLIST_FILE = "GQURLDispatcherTests/GQURLDispatcherTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E38D987919C2044600630F43 /* Build configuration list for PBXProject "GQURLDispatcher" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E38D989F19C2044600630F43 /* Debug */,
+				E38D98A019C2044600630F43 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E38D98A119C2044600630F43 /* Build configuration list for PBXNativeTarget "GQURLDispatcher" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E38D98A219C2044600630F43 /* Debug */,
+				E38D98A319C2044600630F43 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E38D98A419C2044600630F43 /* Build configuration list for PBXNativeTarget "GQURLDispatcherTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E38D98A519C2044600630F43 /* Debug */,
+				E38D98A619C2044600630F43 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E38D987619C2044600630F43 /* Project object */;
+}
