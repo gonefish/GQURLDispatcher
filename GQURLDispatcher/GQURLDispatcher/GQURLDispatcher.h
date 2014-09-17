@@ -17,6 +17,8 @@
 
 - (BOOL)dispatchURL:(NSURL *)url withObject:(id)anObject;
 
+- (NSArray *)responders;
+
 - (void)registerResponder:(id <GQURLResponder>)responder;
 
 - (void)unregisterResponder:(id <GQURLResponder>)responder;

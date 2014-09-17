@@ -10,9 +10,7 @@
 
 @interface GQURLDispatcher ()
 
-+ (instancetype)sharedInstance;
-
-@property (nonatomic, strong) NSMutableArray *responders;
+@property (nonatomic, strong) NSMutableArray *responderList;
 
 @end
 
@@ -35,7 +33,7 @@
     self = [super init];
     
     if (self) {
-        self.responders = [NSMutableArray array];
+        self.responderList = [NSMutableArray array];
     }
     
     return self;
@@ -67,18 +65,23 @@
     
 }
 
+- (NSArray *)responders
+{
+    return [self.responderList copy];
+}
+
 - (void)registerResponder:(id <GQURLResponder>)responder
 {
     if ([self.responders containsObject:responder]) {
         [self unregisterResponder:responder];
     }
         
-    [self.responders addObject:responder];
+    [self.responderList addObject:responder];
 }
 
 - (void)unregisterResponder:(id <GQURLResponder>)responder
 {
-    [self.responders removeObject:responder];
+    [self.responderList removeObject:responder];
 }
 
 @end
