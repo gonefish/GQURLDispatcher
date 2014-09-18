@@ -77,4 +77,9 @@
     XCTAssertEqual(0, [[self.testURLDispatcher responders] count], @"");
 }
 
+- (void)testDispatchURL
+{
+    id mockGQURLDispatcher = OCMClassMock([GQURLDispatcher class]);
+}
+
 @end

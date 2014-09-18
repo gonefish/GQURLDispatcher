@@ -7,6 +7,7 @@
 //
 
 #import "GQURLDispatcher.h"
+#import "NSURL+GQURLUtilities.h"
 
 @interface GQURLDispatcher ()
 
@@ -49,20 +50,28 @@
     __block BOOL rel = NO;
     
     [[self responders] enumerateObjectsWithOptions:NSEnumerationReverse
-                                      usingBlock:^(id <GQURLResponder> obj, NSUInteger idx, BOOL *stop) {
-//                                          if ([obj isResponseURL:url]) {
-//                                              
-//                                              [obj responseURL:url
-//                                                    withObject:anObject];
-//                                              
-//                                              rel = YES;
-//                                              
-//                                              *stop = YES;
-//                                          }
-                                      }];
+                                        usingBlock:
+     ^(id <GQURLResponder> obj, NSUInteger idx, BOOL *stop) {
+         if ([obj respondsToSelector:@selector(responseURLStringRegularExpression)]) {
+         
+         } else {
+             [[obj responseURLs] enumerateObjectsUsingBlock:^(NSURL *url, NSUInteger idx, BOOL *stop) {
+                 if ([url isSameToURL:url]) {
+                     rel = YES;
+                     
+                     *stop = YES;
+                 }
+             }];
+         }
+         
+         if (rel) {
+             *stop = YES;
+             
+             [obj handleURL:url withObject:anObject];
+         }
+     }];
     
     return rel;
-    
 }
 
 - (NSArray *)responders

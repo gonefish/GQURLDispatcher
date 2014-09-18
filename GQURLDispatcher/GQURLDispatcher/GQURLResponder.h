@@ -10,9 +10,9 @@
 
 @protocol GQURLResponder <NSObject>
 
-- (NSURL *)responseURL;
+- (NSArray *)responseURLs;
 
-- (void)dispatchURL:(NSURL *)aURL withObject:(id)anObject;
+- (void)handleURL:(NSURL *)aURL withObject:(id)anObject;
 
 @optional
 
