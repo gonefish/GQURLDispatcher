@@ -52,16 +52,17 @@
     [[self responders] enumerateObjectsWithOptions:NSEnumerationReverse
                                         usingBlock:
      ^(id <GQURLResponder> obj, NSUInteger idx, BOOL *stop) {
-         if ([obj respondsToSelector:@selector(responseURLStringRegularExpression)]) {
+         if ([obj respondsToSelector:@selector(responseURLStringRegularExpression)]
+             && [obj responseURLStringRegularExpression] != nil) {
          
          } else {
-             [[obj responseURLs] enumerateObjectsUsingBlock:^(NSURL *url, NSUInteger idx, BOOL *stop) {
-                 if ([url isSameToURL:url]) {
+             for (NSURL *responseURL in [obj responseURLs]) {
+                 if ([url isSameToURL:responseURL]) {
                      rel = YES;
                      
-                     *stop = YES;
+                     break;
                  }
-             }];
+             }
          }
          
          if (rel) {

@@ -20,6 +20,7 @@
 		E38D98F919C7582100630F43 /* GQURLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E38D98F819C7582100630F43 /* GQURLViewController.m */; };
 		E38D98FF19C75C9200630F43 /* GQNavigationResponder.m in Sources */ = {isa = PBXBuildFile; fileRef = E38D98FE19C75C9200630F43 /* GQNavigationResponder.m */; };
 		E3D3E32C19CABAD100EA7E22 /* NSURL+GQURLUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = E3D3E32B19CABAD100EA7E22 /* NSURL+GQURLUtilities.m */; };
+		E3E7C5D119CADAF800F75C89 /* GQURLUtilitiesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E3E7C5D019CADAF800F75C89 /* GQURLUtilitiesTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		E38D98FE19C75C9200630F43 /* GQNavigationResponder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GQNavigationResponder.m; sourceTree = "<group>"; };
 		E3D3E32A19CABAD100EA7E22 /* NSURL+GQURLUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+GQURLUtilities.h"; sourceTree = "<group>"; };
 		E3D3E32B19CABAD100EA7E22 /* NSURL+GQURLUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+GQURLUtilities.m"; sourceTree = "<group>"; };
+		E3E7C5D019CADAF800F75C89 /* GQURLUtilitiesTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GQURLUtilitiesTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				E38D989D19C2044600630F43 /* GQURLDispatcherTests.m */,
+				E3E7C5D019CADAF800F75C89 /* GQURLUtilitiesTests.m */,
 				E38D989819C2044600630F43 /* Supporting Files */,
 			);
 			path = GQURLDispatcherTests;
@@ -296,6 +299,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3E7C5D119CADAF800F75C89 /* GQURLUtilitiesTests.m in Sources */,
 				E38D989E19C2044600630F43 /* GQURLDispatcherTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

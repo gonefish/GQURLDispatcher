@@ -9,11 +9,11 @@
 #import <XCTest/XCTest.h>
 #import "NSURL+GQURLUtilities.h"
 
-@interface GQURLUtilities : XCTestCase
+@interface GQURLUtilitiesTests : XCTestCase
 
 @end
 
-@implementation GQURLUtilities
+@implementation GQURLUtilitiesTests
 
 - (void)setUp
 {

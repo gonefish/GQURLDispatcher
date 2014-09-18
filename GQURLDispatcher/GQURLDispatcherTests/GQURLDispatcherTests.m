@@ -79,7 +79,30 @@
 
 - (void)testDispatchURL
 {
-    id mockGQURLDispatcher = OCMClassMock([GQURLDispatcher class]);
+    NSURL *testURL = [NSURL URLWithString:@"https://github.com/gonefish/GQURLDispatcher"];
+    
+    id responder = OCMProtocolMock(@protocol(GQURLResponder));
+    
+    OCMStub([responder responseURLs]).andReturn(@[testURL]);
+    
+    [self.testURLDispatcher registerResponder:responder];
+    
+    XCTAssertTrue([self.testURLDispatcher dispatchURL:testURL], @"");
+    
+    OCMVerify([responder handleURL:testURL withObject:nil]);
+}
+
+- (void)testDispatchURLFail
+{
+    NSURL *testURL = [NSURL URLWithString:@"https://github.com/gonefish/GQURLDispatcher"];
+    
+    id responder = OCMProtocolMock(@protocol(GQURLResponder));
+    
+    OCMStub([responder responseURLs]).andReturn(@[[NSURL URLWithString:@"https://github.com/gonefish"]]);
+    
+    [self.testURLDispatcher registerResponder:responder];
+    
+    XCTAssertFalse([self.testURLDispatcher dispatchURL:testURL], @"");
 }
 
 @end
