@@ -54,7 +54,17 @@
      ^(id <GQURLResponder> obj, NSUInteger idx, BOOL *stop) {
          if ([obj respondsToSelector:@selector(responseURLStringRegularExpression)]
              && [obj responseURLStringRegularExpression] != nil) {
-         
+             
+             NSString *matchString = [url dispatchURLString];
+             
+             NSRegularExpression *regex = [obj responseURLStringRegularExpression];
+             
+             NSRange rangeOfFirstMatch = [regex rangeOfFirstMatchInString:matchString
+                                                                  options:0
+                                                                    range:NSMakeRange(0, [matchString length])];
+             if (!NSEqualRanges(rangeOfFirstMatch, NSMakeRange(NSNotFound, 0))) {
+                 rel = YES;
+             }
          } else {
              for (NSURL *responseURL in [obj responseURLs]) {
                  if ([url isSameToURL:responseURL]) {

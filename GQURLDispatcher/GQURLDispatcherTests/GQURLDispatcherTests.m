@@ -77,7 +77,7 @@
     XCTAssertEqual(0, [[self.testURLDispatcher responders] count], @"");
 }
 
-- (void)testDispatchURL
+- (void)testDispatchURLPass
 {
     NSURL *testURL = [NSURL URLWithString:@"https://github.com/gonefish/GQURLDispatcher"];
     
@@ -89,7 +89,7 @@
     
     XCTAssertTrue([self.testURLDispatcher dispatchURL:testURL], @"");
     
-    OCMVerify([responder handleURL:testURL withObject:nil]);
+    OCMVerify([responder responseURLs]);
 }
 
 - (void)testDispatchURLFail
@@ -99,6 +99,40 @@
     id responder = OCMProtocolMock(@protocol(GQURLResponder));
     
     OCMStub([responder responseURLs]).andReturn(@[[NSURL URLWithString:@"https://github.com/gonefish"]]);
+    
+    [self.testURLDispatcher registerResponder:responder];
+    
+    XCTAssertFalse([self.testURLDispatcher dispatchURL:testURL], @"");
+}
+
+- (void)testResponseURLStringRegularExpressionPass
+{
+    NSURL *testURL = [NSURL URLWithString:@"https://github.com/gonefish/GQURLDispatcher"];
+    
+    id responder = OCMProtocolMock(@protocol(GQURLResponder));
+    
+    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"https://github.com/gonefish/.*"
+                                                                           options:NSRegularExpressionCaseInsensitive
+                                                                             error:nil];
+    
+    OCMStub([responder responseURLStringRegularExpression]).andReturn(regex);
+    
+    [self.testURLDispatcher registerResponder:responder];
+    
+    XCTAssertTrue([self.testURLDispatcher dispatchURL:testURL], @"");
+}
+
+- (void)testResponseURLStringRegularExpressionFail
+{
+    NSURL *testURL = [NSURL URLWithString:@"https://github.com/gonefish/GQURLDispatcher"];
+    
+    id responder = OCMProtocolMock(@protocol(GQURLResponder));
+    
+    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@""
+                                                                           options:NSRegularExpressionCaseInsensitive
+                                                                             error:nil];
+    
+    OCMStub([responder responseURLStringRegularExpression]).andReturn(regex);
     
     [self.testURLDispatcher registerResponder:responder];
     
