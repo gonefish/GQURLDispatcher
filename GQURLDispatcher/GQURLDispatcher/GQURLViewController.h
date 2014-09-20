@@ -8,6 +8,24 @@
 
 #import <UIKit/UIKit.h>
 
-@interface GQURLViewController : UIViewController
+@protocol GQURLViewController <NSObject>
+
+- (NSURL *)gqURL;
+
+- (id)gqObject;
+
+- (void)updateWithURL:(NSURL *)aURL withObject:(id)anObject;
+
+@end
+
+@interface GQURLViewController : UIViewController <GQURLViewController>
+
+@property (nonatomic, strong, readonly) NSURL *gqURL;
+
+@property (nonatomic, strong, readonly) id gqObject;
+
+- (id)initWithURL:(NSURL *)aURL;
+
+- (id)initWithURL:(NSURL *)aURL withObject:(id)anObject;
 
 @end

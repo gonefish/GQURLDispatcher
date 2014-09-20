@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
+#import "GQURLViewController.h"
 
 @interface GQURLViewControllerTests : XCTestCase
 
@@ -25,16 +26,15 @@
     [super tearDown];
 }
 
-- (void)testExample {
-    // This is an example of a functional test case.
-    XCTAssert(YES, @"Pass");
-}
-
-- (void)testPerformanceExample {
-    // This is an example of a performance test case.
-    [self measureBlock:^{
-        // Put the code you want to measure the time of here.
-    }];
+- (void)testInitWithURL {
+    NSURL *aURL = [NSURL URLWithString:@"https://github.com/gonefish/GQURLDispatcher"];
+    id anObject = [[NSObject alloc] init];
+    
+    GQURLViewController *vc = [[GQURLViewController alloc] initWithURL:aURL withObject:anObject];
+    
+    XCTAssertEqual(aURL, vc.gqURL, @"");
+    
+    XCTAssertEqual(anObject, vc.gqObject, @"");
 }
 
 @end
