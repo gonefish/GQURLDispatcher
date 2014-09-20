@@ -14,4 +14,6 @@
 
 - (BOOL)isSameToURL:(NSURL *)aURL;
 
+- (NSDictionary *)queryDictionary;
+
 @end

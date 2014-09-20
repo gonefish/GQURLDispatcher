@@ -27,7 +27,7 @@
 }
 
 - (void)testInitWithURL {
-    NSURL *aURL = [NSURL URLWithString:@"https://github.com/gonefish/GQURLDispatcher"];
+    NSURL *aURL = [NSURL URLWithString:@"https://github.com/gonefish/GQURLDispatcher?test=1"];
     id anObject = [[NSObject alloc] init];
     
     GQURLViewController *vc = [[GQURLViewController alloc] initWithURL:aURL withObject:anObject];
@@ -35,6 +35,8 @@
     XCTAssertEqual(aURL, vc.gqURL, @"");
     
     XCTAssertEqual(anObject, vc.gqObject, @"");
+    
+    XCTAssertEqualObjects(@{@"test": @"1"}, vc.gqURLQueryDictionary, @"");
 }
 
 @end

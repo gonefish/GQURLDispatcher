@@ -44,4 +44,14 @@
     XCTAssertTrue([testURLa isSameToURL:testURLb], @"");
 }
 
+- (void)testQueryDictionary
+{
+    NSURL *testURL = [NSURL URLWithString:@"https://github.com/gonefish/GQURLDispatcher?lang=%e4%b8%ad%e6%96%87&test=1"];
+    
+    NSDictionary *testDictionary = [testURL queryDictionary];
+    
+    XCTAssertEqualObjects(testDictionary[@"lang"], @"中文", @"");
+    XCTAssertEqualObjects(testDictionary[@"test"], @"1", @"");
+}
+
 @end

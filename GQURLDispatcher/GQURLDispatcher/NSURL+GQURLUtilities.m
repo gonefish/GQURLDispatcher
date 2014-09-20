@@ -20,4 +20,25 @@
     return [[self dispatchURLString] isEqualToString:[aURL dispatchURLString]];
 }
 
+- (NSDictionary *)queryDictionary {
+    if (self.query == nil) return nil;
+    
+    __block NSMutableDictionary *dictionary = [NSMutableDictionary dictionary];
+    
+    [[self.query componentsSeparatedByString:@"&"] enumerateObjectsUsingBlock:^(NSString *obj, NSUInteger idx, BOOL *stop) {
+        
+        NSRange queryRange = [obj rangeOfString:@"="];
+        
+        NSString *key = [obj substringToIndex:queryRange.location];
+        NSString *value = [obj substringFromIndex:queryRange.location + 1];
+        
+        if (key != nil) {
+            [dictionary setObject:[value stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding]
+                           forKey:[key stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
+        }
+    }];
+    
+    return [dictionary copy];
+}
+
 @end

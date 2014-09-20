@@ -24,6 +24,8 @@
 
 @property (nonatomic, strong, readonly) id gqObject;
 
+@property (nonatomic, strong, readonly) NSDictionary *gqURLQueryDictionary;
+
 - (id)initWithURL:(NSURL *)aURL;
 
 - (id)initWithURL:(NSURL *)aURL withObject:(id)anObject;

@@ -7,12 +7,15 @@
 //
 
 #import "GQURLViewController.h"
+#import "NSURL+GQURLUtilities.h"
 
 @interface GQURLViewController ()
 
 @property (nonatomic, strong) NSURL *gqURL;
 
 @property (nonatomic, strong) id gqObject;
+
+@property (nonatomic, strong) NSDictionary *gqURLQueryDictionary;
 
 @end
 
@@ -30,6 +33,7 @@
     if (self) {
         self.gqURL = aURL;
         self.gqObject = anObject;
+        self.gqURLQueryDictionary = [self.gqURL queryDictionary];
     }
     
     return self;
