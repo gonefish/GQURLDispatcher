@@ -2,7 +2,7 @@
 //  GQNavigationResponderTest.m
 //  GQURLDispatcher
 //
-//  Created by 钱国强 on 14-9-20.
+//  Created by Qian GuoQiang on 14-9-20.
 //  Copyright (c) 2014年 Qian GuoQiang. All rights reserved.
 //
 

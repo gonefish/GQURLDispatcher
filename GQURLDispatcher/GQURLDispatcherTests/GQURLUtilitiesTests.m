@@ -2,7 +2,7 @@
 //  GQURLUtilities.m
 //  GQURLDispatcher
 //
-//  Created by 钱国强 on 14-9-18.
+//  Created by Qian GuoQiang on 14-9-18.
 //  Copyright (c) 2014年 Qian GuoQiang. All rights reserved.
 //
 
