@@ -7,12 +7,8 @@
 //
 
 #import "GQNavigationResponder.h"
-
-@interface GQNavigationResponder ()
-
-@property (nonatomic, weak) UINavigationController *navigationController;
-
-@end
+#import "NSURL+GQURLUtilities.h"
+#import "GQURLViewController.h"
 
 @implementation GQNavigationResponder
 
@@ -25,6 +21,26 @@
     }
     
     return self;
+}
+
+- (void)handleURL:(NSURL *)aURL withObject:(id)anObject
+{
+    NSString *className = [self.classNameMap objectForKey:[aURL dispatchURLString]];
+    
+    if (className == nil) return;
+    
+    Class cls = NSClassFromString(className);
+    
+    UIViewController *newVC = nil;
+    
+    if ([cls isSubclassOfClass:[GQURLViewController class]]) {
+        newVC = [[cls alloc] initWithURL:aURL withObject:anObject];
+    } else {
+        newVC = [[cls alloc] init];
+    }
+    
+    [self.navigationController pushViewController:newVC
+                                         animated:NO];
 }
 
 @end

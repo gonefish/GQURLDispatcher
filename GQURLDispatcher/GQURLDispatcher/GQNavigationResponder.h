@@ -11,7 +11,13 @@
 
 @interface GQNavigationResponder : NSObject <GQURLResponder>
 
-@property (nonatomic, weak, readonly) UINavigationController *navigationController;
+@property (nonatomic, weak) UINavigationController *navigationController;
+
+@property (nonatomic, strong) NSArray *responseURLs;
+
+@property (nonatomic, strong) NSRegularExpression *responseURLStringRegularExpression;
+
+@property (nonatomic, strong) NSDictionary *classNameMap;
 
 - (id)initWithNavigationController:(UINavigationController *)aNavigationController;
 
