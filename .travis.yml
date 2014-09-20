@@ -1,0 +1,7 @@
+language: objective-c
+before_install:
+    - brew update
+    - brew unlink xctool
+    - brew install xctool
+    - gem install cocoapods -v '0.33.1'
+script: xctool -workspace GQURLDispatcher.xcworkspace -scheme GQURLDispatcher -sdk iphonesimulator test
