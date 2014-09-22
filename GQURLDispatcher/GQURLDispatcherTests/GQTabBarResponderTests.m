@@ -37,27 +37,20 @@
 }
 
 - (void)testHandleURLWithObject {
-    NSURL *url1 = [NSURL URLWithString:@"https://github.com/gonefish/GQURLDispatcher"];
-    GQURLViewController *vc1 = [[GQURLViewController alloc] initWithURL:url1];
+    NSURL *url1 = [NSURL URLWithString:@"gqurl://tabBarController/selectedIndex?GQTabBarIndex=0"];
+    NSURL *url2 = [NSURL URLWithString:@"gqurl://tabBarController/selectedIndex?GQTabBarIndex=2"];
     
-    NSURL *url2 = [NSURL URLWithString:@"https://github.com/gonefish/GQFlowController"];
-    GQURLViewController *vc2 = [[GQURLViewController alloc] initWithURL:url2];
-    id vc2Mock = OCMPartialMock(vc2);
-    
-    NSURL *url3 = [NSURL URLWithString:@"https://github.com/gonefish"];
-    GQURLViewController *vc3 = [[GQURLViewController alloc] initWithURL:url3];
+    UIViewController *vc1 = [[UIViewController alloc] init];
+    UIViewController *vc2 = [[UIViewController alloc] init];
     
     UITabBarController *tabVC = [[UITabBarController alloc] init];
-    tabVC.viewControllers = @[vc1, vc2Mock, vc3];
+    tabVC.viewControllers = @[vc1, vc2];
     
     GQTabBarResponder *responder = [[GQTabBarResponder alloc] initWithTabBarController:tabVC];
-    responder.responseURLs = @[url1, url2, url3];
     
-    [responder handleURL:url2 withObject:nil];
+    XCTAssertTrue([responder handleURL:url1 withObject:nil], @"");
     
-    XCTAssertEqual(vc2Mock, responder.tabBarController.selectedViewController, @"");
-    
-    OCMVerify([vc2Mock updateWithURL:url2 withObject:nil]);
+    XCTAssertFalse([responder handleURL:url2 withObject:nil], @"");
 }
 
 @end

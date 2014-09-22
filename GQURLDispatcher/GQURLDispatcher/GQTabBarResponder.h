@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "GQURLResponder.h"
 
+extern NSString * const GQTabBarIndex;
+
 @interface GQTabBarResponder : NSObject <GQURLResponder>
 
 @property (nonatomic, weak) UITabBarController *tabBarController;

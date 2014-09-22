@@ -10,6 +10,8 @@
 #import "NSURL+GQURLUtilities.h"
 #import "GQURLViewController.h"
 
+NSString * const GQTabBarIndex = @"GQTabBarIndex";
+
 @implementation GQTabBarResponder
 
 - (id)initWithTabBarController:(UITabBarController *)aTabBarController
@@ -23,26 +25,26 @@
     return self;
 }
 
-- (void)handleURL:(NSURL *)aURL withObject:(id)anObject
+- (BOOL)handleURL:(NSURL *)aURL withObject:(id)anObject
 {
-    __block UIViewController *selectVC = nil;
+    NSString *selectedIndexString = [[aURL queryDictionary] objectForKey:GQTabBarIndex];
     
-    [self.tabBarController.viewControllers enumerateObjectsUsingBlock:^(UIViewController *obj, NSUInteger idx, BOOL *stop) {
-        if ([obj conformsToProtocol:@protocol(GQURLViewController)]) {
-            if ([aURL isSameToURL:[(id <GQURLViewController>)obj gqURL]]) {
-                selectVC = obj;
-                *stop = YES;
-            }
+    if (selectedIndexString == nil) return NO;
+    
+    NSUInteger selectedIndex = [selectedIndexString integerValue];
+    
+    if ([[self.tabBarController viewControllers] count] >= 6
+        && selectedIndex > 3) {
+        return NO;
+    } else {
+        if (selectedIndex + 1 > [[self.tabBarController viewControllers] count]) {
+            return NO;
         }
-    }];
-    
-    if (selectVC) {
-        self.tabBarController.selectedViewController = selectVC;
-        
-        [(id <GQURLViewController>)selectVC updateWithURL:aURL
-                                               withObject:anObject];
     }
     
+    self.tabBarController.selectedIndex = selectedIndex;
+    
+    return YES;
 }
 
 @end

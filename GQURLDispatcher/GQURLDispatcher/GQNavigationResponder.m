@@ -23,11 +23,11 @@
     return self;
 }
 
-- (void)handleURL:(NSURL *)aURL withObject:(id)anObject
+- (BOOL)handleURL:(NSURL *)aURL withObject:(id)anObject
 {
     NSString *className = [self.classNameMap objectForKey:[aURL dispatchURLString]];
     
-    if (className == nil) return;
+    if (className == nil) NO;
     
     Class cls = NSClassFromString(className);
     
@@ -41,6 +41,8 @@
     
     [self.navigationController pushViewController:newVC
                                          animated:NO];
+    
+    return YES;
 }
 
 @end

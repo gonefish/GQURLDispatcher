@@ -87,6 +87,8 @@
     
     [self.testURLDispatcher registerResponder:responder];
     
+    OCMStub([responder handleURL:testURL withObject:nil]).andReturn(YES);
+    
     XCTAssertTrue([self.testURLDispatcher dispatchURL:testURL], @"");
     
     OCMVerify([responder responseURLs]);
@@ -118,6 +120,8 @@
     OCMStub([responder responseURLStringRegularExpression]).andReturn(regex);
     
     [self.testURLDispatcher registerResponder:responder];
+    
+    OCMStub([responder handleURL:testURL withObject:nil]).andReturn(YES);
     
     XCTAssertTrue([self.testURLDispatcher dispatchURL:testURL], @"");
 }

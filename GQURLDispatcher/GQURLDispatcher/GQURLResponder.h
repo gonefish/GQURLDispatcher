@@ -12,7 +12,7 @@
 
 - (NSArray *)responseURLs;
 
-- (void)handleURL:(NSURL *)aURL withObject:(id)anObject;
+- (BOOL)handleURL:(NSURL *)aURL withObject:(id)anObject;
 
 @optional
 
