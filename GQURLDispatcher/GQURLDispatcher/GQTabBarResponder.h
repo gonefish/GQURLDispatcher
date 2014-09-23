@@ -9,16 +9,14 @@
 #import <UIKit/UIKit.h>
 #import "GQURLResponder.h"
 
-extern NSString * const GQTabBarIndex;
-
 @interface GQTabBarResponder : NSObject <GQURLResponder>
 
 @property (nonatomic, weak) UITabBarController *tabBarController;
 
-@property (nonatomic, strong) NSArray *responseURLs;
+@property (nonatomic, strong, readonly) NSArray *responseURLs;
 
-@property (nonatomic, strong) NSRegularExpression *responseURLStringRegularExpression;
+@property (nonatomic, strong, readonly) NSRegularExpression *responseURLStringRegularExpression;
 
-- (id)initWithTabBarController:(UITabBarController *)aTabBarController;
+- (id)initWithTabBarController:(UITabBarController *)aTabBarController withURL:(NSURL *)aURL;
 
 @end

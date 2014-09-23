@@ -8,18 +8,23 @@
 
 #import "GQTabBarResponder.h"
 #import "NSURL+GQURLUtilities.h"
-#import "GQURLViewController.h"
 
-NSString * const GQTabBarIndex = @"GQTabBarIndex";
+
+@interface GQTabBarResponder ()
+
+@property (nonatomic, strong) NSArray *responseURLs;
+
+@end
 
 @implementation GQTabBarResponder
 
-- (id)initWithTabBarController:(UITabBarController *)aTabBarController
+- (id)initWithTabBarController:(UITabBarController *)aTabBarController withURL:(NSURL *)aURL
 {
     self = [super init];
     
     if (self) {
         self.tabBarController = aTabBarController;
+        self.responseURLs = @[aURL];
     }
     
     return self;
@@ -27,19 +32,14 @@ NSString * const GQTabBarIndex = @"GQTabBarIndex";
 
 - (BOOL)handleURL:(NSURL *)aURL withObject:(id)anObject
 {
-    NSString *selectedIndexString = [[aURL queryDictionary] objectForKey:GQTabBarIndex];
+    NSString *selectedIndexString = [[aURL queryDictionary] objectForKey:@"GQTabBarIndex"];
     
     if (selectedIndexString == nil) return NO;
     
     NSUInteger selectedIndex = [selectedIndexString integerValue];
     
-    if ([[self.tabBarController viewControllers] count] >= 6
-        && selectedIndex > 3) {
+    if (selectedIndex + 1 > [[self.tabBarController viewControllers] count]) {
         return NO;
-    } else {
-        if (selectedIndex + 1 > [[self.tabBarController viewControllers] count]) {
-            return NO;
-        }
     }
     
     self.tabBarController.selectedIndex = selectedIndex;
