@@ -25,9 +25,14 @@
 
 - (BOOL)handleURL:(NSURL *)aURL withObject:(id)anObject
 {
+    if (self.navigationController.tabBarController
+        && self.navigationController.tabBarController.selectedViewController != self.navigationController) {
+        return NO;
+    }
+    
     NSString *className = [self.classNameMap objectForKey:[aURL dispatchURLString]];
     
-    if (className == nil) NO;
+    if (className == nil) return NO;
     
     Class cls = NSClassFromString(className);
     
