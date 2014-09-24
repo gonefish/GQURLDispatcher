@@ -1,0 +1,529 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E36D316C19D07841003ACC19 /* GQNavigationResponder.m in Sources */ = {isa = PBXBuildFile; fileRef = E36D316119D07841003ACC19 /* GQNavigationResponder.m */; };
+		E36D316D19D07841003ACC19 /* GQTabBarResponder.m in Sources */ = {isa = PBXBuildFile; fileRef = E36D316319D07841003ACC19 /* GQTabBarResponder.m */; };
+		E36D316E19D07841003ACC19 /* GQURLDispatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = E36D316619D07841003ACC19 /* GQURLDispatcher.m */; };
+		E36D316F19D07841003ACC19 /* GQURLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E36D316919D07841003ACC19 /* GQURLViewController.m */; };
+		E36D317019D07841003ACC19 /* NSURL+GQURLUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = E36D316B19D07841003ACC19 /* NSURL+GQURLUtilities.m */; };
+		E36D317419D1B746003ACC19 /* GQFirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E36D317319D1B746003ACC19 /* GQFirstViewController.xib */; };
+		E36D317619D1B794003ACC19 /* GQSecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E36D317519D1B794003ACC19 /* GQSecondViewController.xib */; };
+		E38D98B419C2049400630F43 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E38D98B319C2049400630F43 /* Foundation.framework */; };
+		E38D98B619C2049400630F43 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E38D98B519C2049400630F43 /* CoreGraphics.framework */; };
+		E38D98B819C2049400630F43 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E38D98B719C2049400630F43 /* UIKit.framework */; };
+		E38D98BE19C2049400630F43 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E38D98BC19C2049400630F43 /* InfoPlist.strings */; };
+		E38D98C019C2049400630F43 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E38D98BF19C2049400630F43 /* main.m */; };
+		E38D98C419C2049400630F43 /* GQAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E38D98C319C2049400630F43 /* GQAppDelegate.m */; };
+		E38D98C719C2049400630F43 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E38D98C519C2049400630F43 /* Main.storyboard */; };
+		E38D98CA19C2049400630F43 /* GQFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E38D98C919C2049400630F43 /* GQFirstViewController.m */; };
+		E38D98CD19C2049400630F43 /* GQSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E38D98CC19C2049400630F43 /* GQSecondViewController.m */; };
+		E38D98CF19C2049400630F43 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E38D98CE19C2049400630F43 /* Images.xcassets */; };
+		E38D98D619C2049400630F43 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E38D98D519C2049400630F43 /* XCTest.framework */; };
+		E38D98D719C2049400630F43 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E38D98B319C2049400630F43 /* Foundation.framework */; };
+		E38D98D819C2049400630F43 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E38D98B719C2049400630F43 /* UIKit.framework */; };
+		E38D98E019C2049400630F43 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E38D98DE19C2049400630F43 /* InfoPlist.strings */; };
+		E38D98E219C2049400630F43 /* GQURLDispatcherExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E38D98E119C2049400630F43 /* GQURLDispatcherExampleTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E38D98D919C2049400630F43 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E38D98A819C2049400630F43 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E38D98AF19C2049400630F43;
+			remoteInfo = GQURLDispatcherExample;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		E36D316019D07841003ACC19 /* GQNavigationResponder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GQNavigationResponder.h; sourceTree = "<group>"; };
+		E36D316119D07841003ACC19 /* GQNavigationResponder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GQNavigationResponder.m; sourceTree = "<group>"; };
+		E36D316219D07841003ACC19 /* GQTabBarResponder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GQTabBarResponder.h; sourceTree = "<group>"; };
+		E36D316319D07841003ACC19 /* GQTabBarResponder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GQTabBarResponder.m; sourceTree = "<group>"; };
+		E36D316519D07841003ACC19 /* GQURLDispatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GQURLDispatcher.h; sourceTree = "<group>"; };
+		E36D316619D07841003ACC19 /* GQURLDispatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GQURLDispatcher.m; sourceTree = "<group>"; };
+		E36D316719D07841003ACC19 /* GQURLResponder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GQURLResponder.h; sourceTree = "<group>"; };
+		E36D316819D07841003ACC19 /* GQURLViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GQURLViewController.h; sourceTree = "<group>"; };
+		E36D316919D07841003ACC19 /* GQURLViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GQURLViewController.m; sourceTree = "<group>"; };
+		E36D316A19D07841003ACC19 /* NSURL+GQURLUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+GQURLUtilities.h"; sourceTree = "<group>"; };
+		E36D316B19D07841003ACC19 /* NSURL+GQURLUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+GQURLUtilities.m"; sourceTree = "<group>"; };
+		E36D317319D1B746003ACC19 /* GQFirstViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GQFirstViewController.xib; sourceTree = "<group>"; };
+		E36D317519D1B794003ACC19 /* GQSecondViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GQSecondViewController.xib; sourceTree = "<group>"; };
+		E38D98B019C2049400630F43 /* GQURLDispatcherExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GQURLDispatcherExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E38D98B319C2049400630F43 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		E38D98B519C2049400630F43 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		E38D98B719C2049400630F43 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		E38D98BB19C2049400630F43 /* GQURLDispatcherExample-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GQURLDispatcherExample-Info.plist"; sourceTree = "<group>"; };
+		E38D98BD19C2049400630F43 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E38D98BF19C2049400630F43 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E38D98C119C2049400630F43 /* GQURLDispatcherExample-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GQURLDispatcherExample-Prefix.pch"; sourceTree = "<group>"; };
+		E38D98C219C2049400630F43 /* GQAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GQAppDelegate.h; sourceTree = "<group>"; };
+		E38D98C319C2049400630F43 /* GQAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GQAppDelegate.m; sourceTree = "<group>"; };
+		E38D98C619C2049400630F43 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E38D98C819C2049400630F43 /* GQFirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GQFirstViewController.h; sourceTree = "<group>"; };
+		E38D98C919C2049400630F43 /* GQFirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GQFirstViewController.m; sourceTree = "<group>"; };
+		E38D98CB19C2049400630F43 /* GQSecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GQSecondViewController.h; sourceTree = "<group>"; };
+		E38D98CC19C2049400630F43 /* GQSecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GQSecondViewController.m; sourceTree = "<group>"; };
+		E38D98CE19C2049400630F43 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		E38D98D419C2049400630F43 /* GQURLDispatcherExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GQURLDispatcherExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E38D98D519C2049400630F43 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		E38D98DD19C2049400630F43 /* GQURLDispatcherExampleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GQURLDispatcherExampleTests-Info.plist"; sourceTree = "<group>"; };
+		E38D98DF19C2049400630F43 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E38D98E119C2049400630F43 /* GQURLDispatcherExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GQURLDispatcherExampleTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E38D98AD19C2049400630F43 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E38D98B619C2049400630F43 /* CoreGraphics.framework in Frameworks */,
+				E38D98B819C2049400630F43 /* UIKit.framework in Frameworks */,
+				E38D98B419C2049400630F43 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E38D98D119C2049400630F43 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E38D98D619C2049400630F43 /* XCTest.framework in Frameworks */,
+				E38D98D819C2049400630F43 /* UIKit.framework in Frameworks */,
+				E38D98D719C2049400630F43 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E36D315F19D07841003ACC19 /* GQURLDispatcher */ = {
+			isa = PBXGroup;
+			children = (
+				E36D316019D07841003ACC19 /* GQNavigationResponder.h */,
+				E36D316119D07841003ACC19 /* GQNavigationResponder.m */,
+				E36D316219D07841003ACC19 /* GQTabBarResponder.h */,
+				E36D316319D07841003ACC19 /* GQTabBarResponder.m */,
+				E36D316519D07841003ACC19 /* GQURLDispatcher.h */,
+				E36D316619D07841003ACC19 /* GQURLDispatcher.m */,
+				E36D316719D07841003ACC19 /* GQURLResponder.h */,
+				E36D316819D07841003ACC19 /* GQURLViewController.h */,
+				E36D316919D07841003ACC19 /* GQURLViewController.m */,
+				E36D316A19D07841003ACC19 /* NSURL+GQURLUtilities.h */,
+				E36D316B19D07841003ACC19 /* NSURL+GQURLUtilities.m */,
+			);
+			name = GQURLDispatcher;
+			path = ../../GQURLDispatcher/GQURLDispatcher;
+			sourceTree = "<group>";
+		};
+		E38D98A719C2049400630F43 = {
+			isa = PBXGroup;
+			children = (
+				E38D98B919C2049400630F43 /* GQURLDispatcherExample */,
+				E38D98DB19C2049400630F43 /* GQURLDispatcherExampleTests */,
+				E38D98B219C2049400630F43 /* Frameworks */,
+				E38D98B119C2049400630F43 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E38D98B119C2049400630F43 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E38D98B019C2049400630F43 /* GQURLDispatcherExample.app */,
+				E38D98D419C2049400630F43 /* GQURLDispatcherExampleTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E38D98B219C2049400630F43 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E38D98B319C2049400630F43 /* Foundation.framework */,
+				E38D98B519C2049400630F43 /* CoreGraphics.framework */,
+				E38D98B719C2049400630F43 /* UIKit.framework */,
+				E38D98D519C2049400630F43 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E38D98B919C2049400630F43 /* GQURLDispatcherExample */ = {
+			isa = PBXGroup;
+			children = (
+				E36D315F19D07841003ACC19 /* GQURLDispatcher */,
+				E38D98C219C2049400630F43 /* GQAppDelegate.h */,
+				E38D98C319C2049400630F43 /* GQAppDelegate.m */,
+				E38D98C519C2049400630F43 /* Main.storyboard */,
+				E38D98C819C2049400630F43 /* GQFirstViewController.h */,
+				E38D98C919C2049400630F43 /* GQFirstViewController.m */,
+				E36D317319D1B746003ACC19 /* GQFirstViewController.xib */,
+				E38D98CB19C2049400630F43 /* GQSecondViewController.h */,
+				E38D98CC19C2049400630F43 /* GQSecondViewController.m */,
+				E36D317519D1B794003ACC19 /* GQSecondViewController.xib */,
+				E38D98CE19C2049400630F43 /* Images.xcassets */,
+				E38D98BA19C2049400630F43 /* Supporting Files */,
+			);
+			path = GQURLDispatcherExample;
+			sourceTree = "<group>";
+		};
+		E38D98BA19C2049400630F43 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E38D98BB19C2049400630F43 /* GQURLDispatcherExample-Info.plist */,
+				E38D98BC19C2049400630F43 /* InfoPlist.strings */,
+				E38D98BF19C2049400630F43 /* main.m */,
+				E38D98C119C2049400630F43 /* GQURLDispatcherExample-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E38D98DB19C2049400630F43 /* GQURLDispatcherExampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				E38D98E119C2049400630F43 /* GQURLDispatcherExampleTests.m */,
+				E38D98DC19C2049400630F43 /* Supporting Files */,
+			);
+			path = GQURLDispatcherExampleTests;
+			sourceTree = "<group>";
+		};
+		E38D98DC19C2049400630F43 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E38D98DD19C2049400630F43 /* GQURLDispatcherExampleTests-Info.plist */,
+				E38D98DE19C2049400630F43 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E38D98AF19C2049400630F43 /* GQURLDispatcherExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E38D98E519C2049400630F43 /* Build configuration list for PBXNativeTarget "GQURLDispatcherExample" */;
+			buildPhases = (
+				E38D98AC19C2049400630F43 /* Sources */,
+				E38D98AD19C2049400630F43 /* Frameworks */,
+				E38D98AE19C2049400630F43 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GQURLDispatcherExample;
+			productName = GQURLDispatcherExample;
+			productReference = E38D98B019C2049400630F43 /* GQURLDispatcherExample.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E38D98D319C2049400630F43 /* GQURLDispatcherExampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E38D98E819C2049400630F43 /* Build configuration list for PBXNativeTarget "GQURLDispatcherExampleTests" */;
+			buildPhases = (
+				E38D98D019C2049400630F43 /* Sources */,
+				E38D98D119C2049400630F43 /* Frameworks */,
+				E38D98D219C2049400630F43 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E38D98DA19C2049400630F43 /* PBXTargetDependency */,
+			);
+			name = GQURLDispatcherExampleTests;
+			productName = GQURLDispatcherExampleTests;
+			productReference = E38D98D419C2049400630F43 /* GQURLDispatcherExampleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E38D98A819C2049400630F43 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = GQ;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Qian GuoQiang";
+				TargetAttributes = {
+					E38D98D319C2049400630F43 = {
+						TestTargetID = E38D98AF19C2049400630F43;
+					};
+				};
+			};
+			buildConfigurationList = E38D98AB19C2049400630F43 /* Build configuration list for PBXProject "GQURLDispatcherExample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E38D98A719C2049400630F43;
+			productRefGroup = E38D98B119C2049400630F43 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E38D98AF19C2049400630F43 /* GQURLDispatcherExample */,
+				E38D98D319C2049400630F43 /* GQURLDispatcherExampleTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E38D98AE19C2049400630F43 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E38D98CF19C2049400630F43 /* Images.xcassets in Resources */,
+				E36D317619D1B794003ACC19 /* GQSecondViewController.xib in Resources */,
+				E36D317419D1B746003ACC19 /* GQFirstViewController.xib in Resources */,
+				E38D98BE19C2049400630F43 /* InfoPlist.strings in Resources */,
+				E38D98C719C2049400630F43 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E38D98D219C2049400630F43 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E38D98E019C2049400630F43 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E38D98AC19C2049400630F43 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E36D317019D07841003ACC19 /* NSURL+GQURLUtilities.m in Sources */,
+				E36D316D19D07841003ACC19 /* GQTabBarResponder.m in Sources */,
+				E38D98C419C2049400630F43 /* GQAppDelegate.m in Sources */,
+				E36D316F19D07841003ACC19 /* GQURLViewController.m in Sources */,
+				E38D98C019C2049400630F43 /* main.m in Sources */,
+				E36D316E19D07841003ACC19 /* GQURLDispatcher.m in Sources */,
+				E36D316C19D07841003ACC19 /* GQNavigationResponder.m in Sources */,
+				E38D98CD19C2049400630F43 /* GQSecondViewController.m in Sources */,
+				E38D98CA19C2049400630F43 /* GQFirstViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E38D98D019C2049400630F43 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E38D98E219C2049400630F43 /* GQURLDispatcherExampleTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E38D98DA19C2049400630F43 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E38D98AF19C2049400630F43 /* GQURLDispatcherExample */;
+			targetProxy = E38D98D919C2049400630F43 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E38D98BC19C2049400630F43 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E38D98BD19C2049400630F43 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		E38D98C519C2049400630F43 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E38D98C619C2049400630F43 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E38D98DE19C2049400630F43 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E38D98DF19C2049400630F43 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E38D98E319C2049400630F43 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		E38D98E419C2049400630F43 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E38D98E619C2049400630F43 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GQURLDispatcherExample/GQURLDispatcherExample-Prefix.pch";
+				INFOPLIST_FILE = "GQURLDispatcherExample/GQURLDispatcherExample-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		E38D98E719C2049400630F43 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GQURLDispatcherExample/GQURLDispatcherExample-Prefix.pch";
+				INFOPLIST_FILE = "GQURLDispatcherExample/GQURLDispatcherExample-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		E38D98E919C2049400630F43 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/GQURLDispatcherExample.app/GQURLDispatcherExample";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GQURLDispatcherExample/GQURLDispatcherExample-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "GQURLDispatcherExampleTests/GQURLDispatcherExampleTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		E38D98EA19C2049400630F43 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/GQURLDispatcherExample.app/GQURLDispatcherExample";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GQURLDispatcherExample/GQURLDispatcherExample-Prefix.pch";
+				INFOPLIST_FILE = "GQURLDispatcherExampleTests/GQURLDispatcherExampleTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E38D98AB19C2049400630F43 /* Build configuration list for PBXProject "GQURLDispatcherExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E38D98E319C2049400630F43 /* Debug */,
+				E38D98E419C2049400630F43 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E38D98E519C2049400630F43 /* Build configuration list for PBXNativeTarget "GQURLDispatcherExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E38D98E619C2049400630F43 /* Debug */,
+				E38D98E719C2049400630F43 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E38D98E819C2049400630F43 /* Build configuration list for PBXNativeTarget "GQURLDispatcherExampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E38D98E919C2049400630F43 /* Debug */,
+				E38D98EA19C2049400630F43 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E38D98A819C2049400630F43 /* Project object */;
+}
