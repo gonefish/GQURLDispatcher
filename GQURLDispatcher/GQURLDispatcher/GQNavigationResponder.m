@@ -32,13 +32,15 @@
     
     NSString *className = [self.classNameMap objectForKey:[aURL dispatchURLString]];
     
-    if (className == nil) return NO;
+    if (className == nil) {
+        className = @"GQURLViewController";
+    }
     
     Class cls = NSClassFromString(className);
     
     UIViewController *newVC = nil;
     
-    if ([cls isSubclassOfClass:[GQURLViewController class]]) {
+    if ([cls conformsToProtocol:@protocol(GQURLViewController)]) {
         newVC = [[cls alloc] initWithURL:aURL withObject:anObject];
     } else {
         newVC = [[cls alloc] init];

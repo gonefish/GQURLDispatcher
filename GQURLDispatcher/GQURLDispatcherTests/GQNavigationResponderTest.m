@@ -27,13 +27,25 @@
     [super tearDown];
 }
 
-- (void)testInitWithNavigationController {
-    UIViewController *vc = [[UIViewController alloc] init];
-    UINavigationController *nVC = [[UINavigationController alloc] initWithRootViewController:vc];
+- (void)testEmbedInTabBarController
+{
+    UIViewController *vc1 = [[UIViewController alloc] init];
+    UINavigationController *nVC1 = [[UINavigationController alloc] initWithRootViewController:vc1];
     
-    GQNavigationResponder *responder = [[GQNavigationResponder alloc] initWithNavigationController:nVC];
+    UIViewController *vc2 = [[UIViewController alloc] init];
+    UINavigationController *nVC2 = [[UINavigationController alloc] initWithRootViewController:vc2];
     
-    XCTAssertEqual(nVC, responder.navigationController, @"");
+    UITabBarController *tabVC = [[UITabBarController alloc] init];
+    tabVC.viewControllers = @[nVC1, nVC2];
+    
+    GQNavigationResponder *responder1 = [[GQNavigationResponder alloc] initWithNavigationController:nVC1];
+    GQNavigationResponder *responder2 = [[GQNavigationResponder alloc] initWithNavigationController:nVC2];
+    
+    NSURL *testURL = [NSURL URLWithString:@"http://github.com/gonefish"];
+    
+    XCTAssertTrue([responder1 handleURL:testURL withObject:nil], @"");
+    
+    XCTAssertFalse([responder2 handleURL:testURL withObject:nil], @"");
 }
 
 - (void)testHandleURLWithObject
