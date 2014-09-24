@@ -32,9 +32,7 @@
     
     NSString *className = [self.classNameMap objectForKey:[aURL dispatchURLString]];
     
-    if (className == nil) {
-        className = @"GQURLViewController";
-    }
+    if (className == nil) return NO;
     
     Class cls = NSClassFromString(className);
     
@@ -46,8 +44,12 @@
         newVC = [[cls alloc] init];
     }
     
+    if (newVC == nil) return NO;
+    
+    NSString *animated = [[aURL queryDictionary] objectForKey:@"animated"];
+    
     [self.navigationController pushViewController:newVC
-                                         animated:NO];
+                                         animated:animated ? [animated boolValue] : NO];
     
     return YES;
 }

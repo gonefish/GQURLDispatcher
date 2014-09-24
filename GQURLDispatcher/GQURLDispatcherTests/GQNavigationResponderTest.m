@@ -27,6 +27,18 @@
     [super tearDown];
 }
 
+- (void)testClassNameMapNotFound
+{
+    UIViewController *vc1 = [[UIViewController alloc] init];
+    UINavigationController *nVC1 = [[UINavigationController alloc] initWithRootViewController:vc1];
+    
+    NSURL *testURL = [NSURL URLWithString:@"http://github.com/gonefish"];
+    
+    GQNavigationResponder *responder1 = [[GQNavigationResponder alloc] initWithNavigationController:nVC1];
+    
+    XCTAssertFalse([responder1 handleURL:testURL withObject:nil], @"");
+}
+
 - (void)testEmbedInTabBarController
 {
     UIViewController *vc1 = [[UIViewController alloc] init];
@@ -38,10 +50,12 @@
     UITabBarController *tabVC = [[UITabBarController alloc] init];
     tabVC.viewControllers = @[nVC1, nVC2];
     
-    GQNavigationResponder *responder1 = [[GQNavigationResponder alloc] initWithNavigationController:nVC1];
-    GQNavigationResponder *responder2 = [[GQNavigationResponder alloc] initWithNavigationController:nVC2];
-    
     NSURL *testURL = [NSURL URLWithString:@"http://github.com/gonefish"];
+    
+    GQNavigationResponder *responder1 = [[GQNavigationResponder alloc] initWithNavigationController:nVC1];
+    responder1.classNameMap = @{@"http://github.com/gonefish": @"GQURLViewController"};
+    GQNavigationResponder *responder2 = [[GQNavigationResponder alloc] initWithNavigationController:nVC2];
+    responder2.classNameMap = @{@"http://github.com/gonefish": @"GQURLViewController"};
     
     XCTAssertTrue([responder1 handleURL:testURL withObject:nil], @"");
     
@@ -61,9 +75,7 @@
     responder.responseURLs = @[url1, url2];
     responder.classNameMap = @{@"https://github.com/gonefish/GQURLDispatcher" : @"GQURLViewController"};
     
-    [responder handleURL:url2 withObject:nil];
-    
-    XCTAssertEqualObjects(url2, [(GQURLViewController *)[nVC topViewController] gqURL], @"");
+    XCTAssertTrue([responder handleURL:url2 withObject:nil], @"");
 }
 
 @end

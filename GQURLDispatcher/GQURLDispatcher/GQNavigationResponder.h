@@ -13,11 +13,11 @@
 
 @property (nonatomic, weak) UINavigationController *navigationController;
 
-@property (nonatomic, strong) NSArray *responseURLs;
+@property (nonatomic, copy) NSArray *responseURLs;
 
-@property (nonatomic, strong) NSRegularExpression *responseURLStringRegularExpression;
+@property (nonatomic, copy) NSRegularExpression *responseURLStringRegularExpression;
 
-@property (nonatomic, strong) NSDictionary *classNameMap;
+@property (nonatomic, copy) NSDictionary *classNameMap;
 
 - (id)initWithNavigationController:(UINavigationController *)aNavigationController;
 
