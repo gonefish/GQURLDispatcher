@@ -47,46 +47,41 @@
 
 - (BOOL)dispatchURL:(NSURL *)url withObject:(id)anObject
 {
-    NSUInteger index = [[self responders] indexOfObjectWithOptions:NSEnumerationReverse
-                                                       passingTest:
-                        ^BOOL(id <GQURLResponder> obj, NSUInteger idx, BOOL *stop) {
-                            BOOL isResponse = NO;
-                            
-                            if ([obj respondsToSelector:@selector(responseURLStringRegularExpression)]
-                                && [obj responseURLStringRegularExpression] != nil) {
-                                
-                                NSString *matchString = [url dispatchURLString];
-                                
-                                NSRegularExpression *regex = [obj responseURLStringRegularExpression];
-                                
-                                NSRange rangeOfFirstMatch = [regex rangeOfFirstMatchInString:matchString
-                                                                                     options:0
-                                                                                       range:NSMakeRange(0, [matchString length])];
-                                if (!NSEqualRanges(rangeOfFirstMatch, NSMakeRange(NSNotFound, 0))) {
-                                    isResponse = YES;
-                                }
-                            } else {
-                                for (NSURL *responseURL in [obj responseURLs]) {
-                                    if ([url isSameToURL:responseURL]) {
-                                        isResponse = YES;
-                                        
-                                        break;
-                                    }
-                                }
-                            }
-                            
-                            if (isResponse) {
-                                *stop = YES;
-                            }
-                            
-                            return isResponse;
+    __block BOOL isDispatch = NO;
+    
+    [[self responders] enumerateObjectsWithOptions:NSEnumerationReverse usingBlock:^(id <GQURLResponder> obj, NSUInteger idx, BOOL *stop) {
+        BOOL isResponse = NO;
+
+        if ([obj respondsToSelector:@selector(responseURLStringRegularExpression)]
+            && [obj responseURLStringRegularExpression] != nil) {
+            
+            NSString *matchString = [url dispatchURLString];
+            
+            NSRegularExpression *regex = [obj responseURLStringRegularExpression];
+            
+            NSRange rangeOfFirstMatch = [regex rangeOfFirstMatchInString:matchString
+                                                                 options:0
+                                                                   range:NSMakeRange(0, [matchString length])];
+            if (!NSEqualRanges(rangeOfFirstMatch, NSMakeRange(NSNotFound, 0))) {
+                isResponse = YES;
+            }
+        } else {
+            for (NSURL *responseURL in [obj responseURLs]) {
+                if ([url isSameToURL:responseURL]) {
+                    isResponse = YES;
+                    
+                    break;
+                }
+            }
+        }
+        
+        if ([obj handleURL:url withObject:anObject]) {
+            isDispatch = YES;
+            *stop = YES;
+        }
     }];
     
-    if (index != NSNotFound) {
-        return [self.responders[index] handleURL:url withObject:anObject];
-    } else {
-        return NO;
-    }
+    return isDispatch;
 }
 
 - (NSArray *)responders
