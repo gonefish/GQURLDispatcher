@@ -29,6 +29,10 @@
         
         NSRange queryRange = [obj rangeOfString:@"="];
         
+        if (queryRange.location == NSNotFound) {
+            return;
+        }
+        
         NSString *key = [obj substringToIndex:queryRange.location];
         NSString *value = [obj substringFromIndex:queryRange.location + 1];
         
