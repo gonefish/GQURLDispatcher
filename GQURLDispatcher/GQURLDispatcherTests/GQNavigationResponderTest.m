@@ -10,6 +10,7 @@
 #import <XCTest/XCTest.h>
 #import "GQURLViewController.h"
 #import "GQNavigationResponder.h"
+#import <OCMock/OCMock.h>
 
 @interface GQNavigationResponderTest : XCTestCase
 
@@ -43,23 +44,38 @@
 {
     UIViewController *vc1 = [[UIViewController alloc] init];
     UINavigationController *nVC1 = [[UINavigationController alloc] initWithRootViewController:vc1];
+    id partialMock = OCMPartialMock(nVC1);
     
-    UIViewController *vc2 = [[UIViewController alloc] init];
-    UINavigationController *nVC2 = [[UINavigationController alloc] initWithRootViewController:vc2];
+    id tabBarMock = OCMClassMock([UITabBarController class]);
+    OCMStub([tabBarMock selectedViewController]).andReturn(partialMock);
     
-    UITabBarController *tabVC = [[UITabBarController alloc] init];
-    tabVC.viewControllers = @[nVC1, nVC2];
+    OCMStub([partialMock tabBarController]).andReturn(tabBarMock);
     
     NSURL *testURL = [NSURL URLWithString:@"http://github.com/gonefish"];
     
-    GQNavigationResponder *responder1 = [[GQNavigationResponder alloc] initWithNavigationController:nVC1];
+    GQNavigationResponder *responder1 = [[GQNavigationResponder alloc] initWithNavigationController:partialMock];
     responder1.classNameMap = @{@"http://github.com/gonefish": @"GQURLViewController"};
-    GQNavigationResponder *responder2 = [[GQNavigationResponder alloc] initWithNavigationController:nVC2];
-    responder2.classNameMap = @{@"http://github.com/gonefish": @"GQURLViewController"};
     
-    XCTAssertTrue([responder1 handleURL:testURL withObject:nil], @"");
+    XCTAssertTrue([responder1 handleURL:testURL withObject:nil], @"选中的视图控制器响应");
+}
+
+- (void)testEmbedInTabBarController2
+{
+    UIViewController *vc1 = [[UIViewController alloc] init];
+    UINavigationController *nVC1 = [[UINavigationController alloc] initWithRootViewController:vc1];
+    id partialMock = OCMPartialMock(nVC1);
     
-    XCTAssertFalse([responder2 handleURL:testURL withObject:nil], @"");
+    id tabBarMock = OCMClassMock([UITabBarController class]);
+    OCMStub([tabBarMock selectedViewController]).andReturn(nil);
+    
+    OCMStub([partialMock tabBarController]).andReturn(tabBarMock);
+    
+    NSURL *testURL = [NSURL URLWithString:@"http://github.com/gonefish"];
+    
+    GQNavigationResponder *responder1 = [[GQNavigationResponder alloc] initWithNavigationController:partialMock];
+    responder1.classNameMap = @{@"http://github.com/gonefish": @"GQURLViewController"};
+    
+    XCTAssertFalse([responder1 handleURL:testURL withObject:nil], @"没有选择的视图控制器不应该响应");
 }
 
 - (void)testHandleURLWithObject
