@@ -16,6 +16,8 @@
 
 @property (nonatomic, strong) UITabBarController *testTabBarController;
 
+@property (nonatomic, strong) NSURL *testTabBarURL;
+
 @end
 
 @implementation GQTabBarResponderTests
@@ -31,6 +33,8 @@
     tabVC.viewControllers = @[vc1, vc2];
     
     self.testTabBarController = tabVC;
+    
+    self.testTabBarURL = [NSURL URLWithString:@"gqurl://tabBarController/selectedIndex"];
 }
 
 - (void)tearDown {
@@ -38,30 +42,23 @@
     [super tearDown];
     
     self.testTabBarController = nil;
-}
-
-- (void)testInitWithTabBarControllerWithURL
-{
-    NSURL *url = [NSURL URLWithString:@"gqurl://tabBarController/selectedIndex"];
     
-    GQTabBarResponder *responder = [[GQTabBarResponder alloc] initWithTabBarController:self.testTabBarController
-                                                                               withURL:url];
-    
-    XCTAssertNil(responder.responseURLStringRegularExpression, @"");
-    XCTAssertEqualObjects(responder.responseURLs, @[url], @"");
-    XCTAssertEqual(self.testTabBarController, responder.tabBarController, @"");
+    self.testTabBarURL = nil;
 }
 
 - (void)testHandleURLWithObject {
-    NSURL *url1 = [NSURL URLWithString:@"gqurl://tabBarController/selectedIndex?GQTabBarIndex=0"];
-    NSURL *url2 = [NSURL URLWithString:@"gqurl://tabBarController/selectedIndex?GQTabBarIndex=2"];
+    NSURL *url1 = [NSURL URLWithString:@"gqurl://tabBarController/selectedIndex"];
+    NSURL *url2 = [NSURL URLWithString:@"gqurl://tabBarController/selectedIndex?GQTabBarIndex=1"];
+    NSURL *url3 = [NSURL URLWithString:@"gqurl://tabBarController/selectedIndex?GQTabBarIndex=2"];
     
     GQTabBarResponder *responder = [[GQTabBarResponder alloc] initWithTabBarController:self.testTabBarController
-                                                                               withURL:[NSURL URLWithString:@"gqurl://tabBarController/selectedIndex"]];
+                                                                               withURL:self.testTabBarURL];
     
-    XCTAssertTrue([responder handleURL:url1 withObject:nil], @"");
+    XCTAssertTrue([responder handleURL:url1 withObject:nil], @"Index合法");
     
-    XCTAssertFalse([responder handleURL:url2 withObject:nil], @"");
+    XCTAssertTrue([responder handleURL:url2 withObject:nil], @"Index合法");
+    
+    XCTAssertFalse([responder handleURL:url3 withObject:nil], @"Index超出范围，不应该咱就");
 }
 
 @end

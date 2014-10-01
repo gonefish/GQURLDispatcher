@@ -34,7 +34,9 @@
 {
     NSString *selectedIndexString = [[aURL queryDictionary] objectForKey:@"GQTabBarIndex"];
     
-    if (selectedIndexString == nil) return NO;
+    if (selectedIndexString == nil) {
+        selectedIndexString = @"0";
+    }
     
     NSUInteger selectedIndex = [selectedIndexString integerValue];
     
