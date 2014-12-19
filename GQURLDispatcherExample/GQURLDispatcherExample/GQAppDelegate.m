@@ -68,7 +68,9 @@
 {
     UITabBarController *tabBarController = (UITabBarController *)self.window.rootViewController;
     
-    GQTabBarResponder *tabBarResponder = [[GQTabBarResponder alloc] initWithTabBarController:tabBarController withURL:[NSURL URLWithString:@"gqurl://tabBarController/selectedIndex"]];
+    GQTabBarResponder *tabBarResponder =
+    [[GQTabBarResponder alloc] initWithTabBarController:tabBarController
+                                                withURL:[NSURL URLWithString:@"gqurl://tabBarController/selectedIndex"]];
     [[GQURLDispatcher sharedInstance] registerResponder:tabBarResponder];
     
     
