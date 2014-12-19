@@ -47,6 +47,8 @@
 
 - (BOOL)dispatchURL:(NSURL *)url withObject:(id)anObject
 {
+    if (url == nil) return NO;
+    
     __block BOOL isDispatch = NO;
     
     [[self responders] enumerateObjectsWithOptions:NSEnumerationReverse usingBlock:^(id <GQURLResponder> obj, NSUInteger idx, BOOL *stop) {

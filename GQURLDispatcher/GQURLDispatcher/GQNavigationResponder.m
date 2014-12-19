@@ -17,7 +17,7 @@
     self = [super init];
     
     if (self) {
-        self.navigationController = aNavigationController;
+        _navigationController = aNavigationController;
     }
     
     return self;

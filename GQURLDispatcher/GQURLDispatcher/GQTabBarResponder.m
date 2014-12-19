@@ -23,8 +23,8 @@
     self = [super init];
     
     if (self) {
-        self.tabBarController = aTabBarController;
-        self.responseURLs = @[aURL];
+        _tabBarController = aTabBarController;
+        _responseURLs = @[aURL];
     }
     
     return self;
