@@ -10,9 +10,9 @@
 
 @protocol GQURLViewController <NSObject>
 
-- (NSURL *)gqURL;
+- (NSURL *)gq_url;
 
-- (id)gqObject;
+- (id)gq_object;
 
 - (void)updateWithURL:(NSURL *)aURL withObject:(id)anObject;
 
@@ -20,11 +20,11 @@
 
 @interface GQURLViewController : UIViewController <GQURLViewController>
 
-@property (nonatomic, strong, readonly) NSURL *gqURL;
+@property (nonatomic, strong, readonly) NSURL *gq_url;
 
-@property (nonatomic, strong, readonly) id gqObject;
+@property (nonatomic, strong, readonly) id gq_object;
 
-@property (nonatomic, strong, readonly) NSDictionary *gqURLQueryDictionary;
+@property (nonatomic, strong, readonly) NSDictionary *gq_urlQueryDictionary;
 
 - (id)initWithURL:(NSURL *)aURL;
 

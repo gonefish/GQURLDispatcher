@@ -33,7 +33,7 @@
     
     NSURL *testURL = [NSURL URLWithString:@"https://github.com/gonefish/GQURLDispatcher?test=1"];
     
-    XCTAssertEqualObjects(dispatchURLString, [testURL dispatchURLString], @"");
+    XCTAssertEqualObjects(dispatchURLString, [testURL gq_dispatchURLString], @"");
 }
 
 - (void)testIsSameToURL
@@ -41,14 +41,14 @@
     NSURL *testURLa = [NSURL URLWithString:@"https://github.com/gonefish/GQURLDispatcher"];
     NSURL *testURLb = [NSURL URLWithString:@"https://github.com/gonefish/GQURLDispatcher?test=1"];
     
-    XCTAssertTrue([testURLa isSameToURL:testURLb], @"");
+    XCTAssertTrue([testURLa gq_isSameToURL:testURLb], @"");
 }
 
 - (void)testQueryDictionary
 {
     NSURL *testURL = [NSURL URLWithString:@"https://github.com/gonefish/GQURLDispatcher?lang=%e4%b8%ad%e6%96%87&test=1"];
     
-    NSDictionary *testDictionary = [testURL queryDictionary];
+    NSDictionary *testDictionary = [testURL gq_queryDictionary];
     
     XCTAssertEqualObjects(testDictionary[@"lang"], @"中文", @"");
     XCTAssertEqualObjects(testDictionary[@"test"], @"1", @"");

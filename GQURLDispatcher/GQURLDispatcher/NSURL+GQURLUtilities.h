@@ -10,10 +10,10 @@
 
 @interface NSURL (GQURLUtilities)
 
-- (NSString *)dispatchURLString;
+- (NSString *)gq_dispatchURLString;
 
-- (BOOL)isSameToURL:(NSURL *)aURL;
+- (BOOL)gq_isSameToURL:(NSURL *)aURL;
 
-- (NSDictionary *)queryDictionary;
+- (NSDictionary *)gq_queryDictionary;
 
 @end

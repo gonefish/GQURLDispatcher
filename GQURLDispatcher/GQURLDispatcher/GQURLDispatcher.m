@@ -67,7 +67,7 @@
         if ([obj respondsToSelector:@selector(responseURLStringRegularExpression)]
             && [obj responseURLStringRegularExpression] != nil) {
             
-            NSString *matchString = [url dispatchURLString];
+            NSString *matchString = [url gq_dispatchURLString];
             
             NSRegularExpression *regex = [obj responseURLStringRegularExpression];
             
@@ -79,7 +79,7 @@
             }
         } else {
             for (NSURL *responseURL in [obj responseURLs]) {
-                if ([url isSameToURL:responseURL]) {
+                if ([url gq_isSameToURL:responseURL]) {
                     isResponse = YES;
                     
                     break;

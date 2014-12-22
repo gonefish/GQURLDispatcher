@@ -32,7 +32,7 @@
 
 - (BOOL)handleURL:(NSURL *)aURL withObject:(id)anObject
 {
-    NSString *selectedIndexString = [[aURL queryDictionary] objectForKey:@"GQTabBarIndex"];
+    NSString *selectedIndexString = [[aURL gq_queryDictionary] objectForKey:@"GQTabBarIndex"];
     
     if (selectedIndexString == nil) {
         selectedIndexString = @"0";

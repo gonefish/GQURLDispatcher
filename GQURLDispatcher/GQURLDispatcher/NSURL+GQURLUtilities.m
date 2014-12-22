@@ -10,17 +10,17 @@
 
 @implementation NSURL (GQURLUtilities)
 
-- (NSString *)dispatchURLString
+- (NSString *)gq_dispatchURLString
 {
     return [[[self absoluteString] componentsSeparatedByString:@"?"] objectAtIndex:0];
 }
 
-- (BOOL)isSameToURL:(NSURL *)aURL
+- (BOOL)gq_isSameToURL:(NSURL *)aURL
 {
-    return [[self dispatchURLString] isEqualToString:[aURL dispatchURLString]];
+    return [[self gq_dispatchURLString] isEqualToString:[aURL gq_dispatchURLString]];
 }
 
-- (NSDictionary *)queryDictionary {
+- (NSDictionary *)gq_queryDictionary {
     if (self.query == nil) return nil;
     
     __block NSMutableDictionary *dictionary = [NSMutableDictionary dictionary];

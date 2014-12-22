@@ -30,7 +30,7 @@
         return NO;
     }
     
-    NSString *className = [self.classNameMap objectForKey:[aURL dispatchURLString]];
+    NSString *className = [self.classNameMap objectForKey:[aURL gq_dispatchURLString]];
     
     if (className == nil) return NO;
     
@@ -46,7 +46,7 @@
     
     if (newVC == nil) return NO;
     
-    NSString *animated = [[aURL queryDictionary] objectForKey:@"animated"];
+    NSString *animated = [[aURL gq_queryDictionary] objectForKey:@"animated"];
     
     [self.navigationController pushViewController:newVC
                                          animated:animated ? [animated boolValue] : NO];

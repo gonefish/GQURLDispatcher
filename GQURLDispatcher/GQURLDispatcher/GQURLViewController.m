@@ -11,11 +11,11 @@
 
 @interface GQURLViewController ()
 
-@property (nonatomic, strong) NSURL *gqURL;
+@property (nonatomic, strong) NSURL *gq_url;
 
-@property (nonatomic, strong) id gqObject;
+@property (nonatomic, strong) id gq_object;
 
-@property (nonatomic, strong) NSDictionary *gqURLQueryDictionary;
+@property (nonatomic, strong) NSDictionary *gq_urlQueryDictionary;
 
 @end
 
@@ -31,9 +31,9 @@
     self = [super init];
     
     if (self) {
-        self.gqURL = aURL;
-        self.gqObject = anObject;
-        self.gqURLQueryDictionary = [self.gqURL queryDictionary];
+        self.gq_url = aURL;
+        self.gq_object = anObject;
+        self.gq_urlQueryDictionary = [self.gq_url gq_queryDictionary];
     }
     
     return self;
