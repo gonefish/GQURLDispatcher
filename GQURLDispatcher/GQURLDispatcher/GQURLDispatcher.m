@@ -52,6 +52,16 @@
     __block BOOL isDispatch = NO;
     
     [[self responders] enumerateObjectsWithOptions:NSEnumerationReverse usingBlock:^(id <GQURLResponder> obj, NSUInteger idx, BOOL *stop) {
+        
+        if ([self.delegate respondsToSelector:@selector(urlDispatcher:shouldWithResponder:handleURL:object:)]) {
+            if ([self.delegate urlDispatcher:self
+                         shouldWithResponder:obj
+                                   handleURL:url
+                                      object:anObject] == NO) {
+                *stop = YES;
+            }
+        }
+        
         BOOL isResponse = NO;
 
         if ([obj respondsToSelector:@selector(responseURLStringRegularExpression)]
@@ -77,9 +87,18 @@
             }
         }
         
-        if ([obj handleURL:url withObject:anObject]) {
-            isDispatch = YES;
-            *stop = YES;
+        if (isResponse) {
+            if ([obj handleURL:url withObject:anObject]) {
+                isDispatch = YES;
+                *stop = YES;
+            }
+            
+            if ([self.delegate respondsToSelector:@selector(urlDispatcher:didWithResponder:handleURL:object:)]) {
+                [self.delegate urlDispatcher:self
+                            didWithResponder:obj
+                                   handleURL:url
+                                      object:anObject];
+            }
         }
     }];
     
