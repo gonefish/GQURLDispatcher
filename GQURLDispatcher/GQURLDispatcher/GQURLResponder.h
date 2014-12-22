@@ -10,12 +10,30 @@
 
 @protocol GQURLResponder <NSObject>
 
+/**
+ *  需要响应的URL地址
+ *
+ *  @return 包含NSURL的数组
+ */
 - (NSArray *)responseURLs;
 
+/**
+ *  处理方法
+ *
+ *  @param aURL     分发的URL
+ *  @param anObject 额外的对象
+ *
+ *  @return 是否成功的处理URL
+ */
 - (BOOL)handleURL:(NSURL *)aURL withObject:(id)anObject;
 
 @optional
 
+/**
+ *  通过正则表达式匹配，来确认需要响应的URL
+ *
+ * @return 正则表达式对象
+ */
 - (NSRegularExpression *)responseURLStringRegularExpression;
 
 @end
