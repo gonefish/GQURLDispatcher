@@ -32,13 +32,11 @@
 
 - (BOOL)handleURL:(NSURL *)aURL withObject:(id)anObject
 {
-    NSString *selectedIndexString = [[aURL gq_queryDictionary] objectForKey:@"GQTabBarIndex"];
+    NSString *selectedIndexValue = [[aURL gq_queryDictionary] objectForKey:@"selectedIndex"];
     
-    if (selectedIndexString == nil) {
-        selectedIndexString = @"0";
-    }
+    if (selectedIndexValue == nil) return NO;
     
-    NSUInteger selectedIndex = [selectedIndexString integerValue];
+    NSUInteger selectedIndex = [selectedIndexValue integerValue];
     
     if (selectedIndex + 1 > [[self.tabBarController viewControllers] count]) {
         return NO;

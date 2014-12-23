@@ -51,11 +51,11 @@
     
     __block BOOL isDispatch = NO;
     
-    [[self responders] enumerateObjectsWithOptions:NSEnumerationReverse usingBlock:^(id <GQURLResponder> obj, NSUInteger idx, BOOL *stop) {
+    [[self responders] enumerateObjectsWithOptions:NSEnumerationReverse usingBlock:^(id <GQURLResponder> responder, NSUInteger idx, BOOL *stop) {
         
         if ([self.delegate respondsToSelector:@selector(urlDispatcher:shouldWithResponder:handleURL:object:)]) {
             if ([self.delegate urlDispatcher:self
-                         shouldWithResponder:obj
+                         shouldWithResponder:responder
                                    handleURL:url
                                       object:anObject] == NO) {
                 *stop = YES;
@@ -64,12 +64,12 @@
         
         BOOL isResponse = NO;
 
-        if ([obj respondsToSelector:@selector(responseURLStringRegularExpression)]
-            && [obj responseURLStringRegularExpression] != nil) {
+        if ([responder respondsToSelector:@selector(responseURLStringRegularExpression)]
+            && [responder responseURLStringRegularExpression] != nil) {
             
             NSString *matchString = [url gq_dispatchURLString];
             
-            NSRegularExpression *regex = [obj responseURLStringRegularExpression];
+            NSRegularExpression *regex = [responder responseURLStringRegularExpression];
             
             NSRange rangeOfFirstMatch = [regex rangeOfFirstMatchInString:matchString
                                                                  options:0
@@ -78,7 +78,7 @@
                 isResponse = YES;
             }
         } else {
-            for (NSURL *responseURL in [obj responseURLs]) {
+            for (NSURL *responseURL in [responder responseURLs]) {
                 if ([url gq_isSameToURL:responseURL]) {
                     isResponse = YES;
                     
@@ -88,14 +88,14 @@
         }
         
         if (isResponse) {
-            if ([obj handleURL:url withObject:anObject]) {
+            if ([responder handleURL:url withObject:anObject]) {
                 isDispatch = YES;
                 *stop = YES;
             }
             
             if ([self.delegate respondsToSelector:@selector(urlDispatcher:didWithResponder:handleURL:object:)]) {
                 [self.delegate urlDispatcher:self
-                            didWithResponder:obj
+                            didWithResponder:responder
                                    handleURL:url
                                       object:anObject];
             }

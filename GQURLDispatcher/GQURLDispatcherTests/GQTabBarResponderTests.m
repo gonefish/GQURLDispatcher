@@ -18,6 +18,8 @@
 
 @property (nonatomic, strong) NSURL *testTabBarURL;
 
+@property (nonatomic, strong) GQTabBarResponder *responder;
+
 @end
 
 @implementation GQTabBarResponderTests
@@ -34,7 +36,8 @@
     
     self.testTabBarController = tabVC;
     
-    self.testTabBarURL = [NSURL URLWithString:@"gqurl://tabBarController/selectedIndex"];
+    self.responder = [[GQTabBarResponder alloc] initWithTabBarController:tabVC
+                                                withURL:[NSURL URLWithString:@"gqurl://tabBarController/"]];
 }
 
 - (void)tearDown {
@@ -43,22 +46,38 @@
     
     self.testTabBarController = nil;
     
-    self.testTabBarURL = nil;
+    self.responder = nil;
+}
+
+- (void)testHandleURLWithoutSelectedIndex
+{
+    NSURL *url = [NSURL URLWithString:@"gqurl://tabBarController/"];
+    
+    XCTAssertFalse([self.responder handleURL:url withObject:nil], @"没有任何操作不处理");
+}
+
+- (void)testHandleURLWithoutSelectedIndexValue
+{
+    NSURL *url = [NSURL URLWithString:@"gqurl://tabBarController/?selectedIndex="];
+    
+    self.responder.tabBarController.selectedIndex = 1;
+    XCTAssertTrue([self.responder handleURL:url withObject:nil], @"为空时使用默认值0");
+    XCTAssertEqual(self.responder.tabBarController.selectedIndex, 0, @"selectedIndex的默认值为0");
+}
+
+- (void)testHandleURLWithSelectedIndex
+{
+    NSURL *url = [NSURL URLWithString:@"gqurl://tabBarController/?selectedIndex=1"];
+    
+    XCTAssertTrue([self.responder handleURL:url withObject:nil], @"Index合法");
+    XCTAssertEqual(self.responder.tabBarController.selectedIndex, 1, @"");
 }
 
 - (void)testHandleURLWithObject {
-    NSURL *url1 = [NSURL URLWithString:@"gqurl://tabBarController/selectedIndex"];
-    NSURL *url2 = [NSURL URLWithString:@"gqurl://tabBarController/selectedIndex?GQTabBarIndex=1"];
-    NSURL *url3 = [NSURL URLWithString:@"gqurl://tabBarController/selectedIndex?GQTabBarIndex=2"];
+    NSURL *url = [NSURL URLWithString:@"gqurl://tabBarController/?selectedIndex=2"];
     
-    GQTabBarResponder *responder = [[GQTabBarResponder alloc] initWithTabBarController:self.testTabBarController
-                                                                               withURL:self.testTabBarURL];
-    
-    XCTAssertTrue([responder handleURL:url1 withObject:nil], @"Index合法");
-    
-    XCTAssertTrue([responder handleURL:url2 withObject:nil], @"Index合法");
-    
-    XCTAssertFalse([responder handleURL:url3 withObject:nil], @"Index超出范围，不应该咱就");
+    XCTAssertFalse([self.responder handleURL:url withObject:nil], @"Index超出范围，不应该处理");
+    XCTAssertEqual(self.responder.tabBarController.selectedIndex, 0, @"");
 }
 
 @end
