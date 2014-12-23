@@ -83,7 +83,9 @@
     
     id responder = OCMProtocolMock(@protocol(GQURLResponder));
     
-    OCMStub([responder responseURLs]).andReturn(@[testURL]);
+    NSArray *rel = @[testURL];
+    
+    OCMStub([responder responseURLs]).andReturn(rel);
     
     [self.testURLDispatcher registerResponder:responder];
     
@@ -100,7 +102,9 @@
     
     id responder = OCMProtocolMock(@protocol(GQURLResponder));
     
-    OCMStub([responder responseURLs]).andReturn(@[[NSURL URLWithString:@"https://github.com/gonefish"]]);
+    NSArray *rel = @[[NSURL URLWithString:@"https://github.com/gonefish"]];
+    
+    OCMStub([responder responseURLs]).andReturn(rel);
     
     [self.testURLDispatcher registerResponder:responder];
     
