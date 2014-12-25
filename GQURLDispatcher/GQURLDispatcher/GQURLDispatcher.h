@@ -23,6 +23,8 @@
  */
 - (BOOL)dispatchURL:(NSURL *)url;
 
++ (BOOL)dispatchURL:(NSURL *)url;
+
 /**
  *  核心方法，调用时会依次将URL和自定义对象传递给匹配的Responder响应
  *
@@ -32,6 +34,8 @@
  *  @return 如果有相应的响应者处理则返回YES，否则为NO
  */
 - (BOOL)dispatchURL:(NSURL *)url withObject:(id)anObject;
+
++ (BOOL)dispatchURL:(NSURL *)url withObject:(id)anObject;
 
 /**
  *  返回所有的响应者
@@ -54,11 +58,24 @@
  */
 - (void)unregisterResponder:(id <GQURLResponder>)responder;
 
+
 @end
 
 @protocol GQURLDispatcherDelegate <NSObject>
 
 @optional
+
+/**
+ *  开始分发
+ *
+ */
+- (void)urlDispatcherWillBeginDispatch:(GQURLDispatcher *)urlDispatcher;
+
+/**
+ *  结束分发
+ *
+ */
+- (void)urlDispatcherDidEndDispatch:(GQURLDispatcher *)urlDispatcher;
 
 /**
  *  是否使用该响应者处理URL
@@ -67,6 +84,11 @@
  */
 - (BOOL)urlDispatcher:(GQURLDispatcher *)urlDispatcher shouldWithResponder:(id <GQURLResponder>)responder handleURL:(NSURL *)aURL object:(id)anObject;
 
+/**
+ *  使用响应者处理完毕
+ *
+ */
 - (void)urlDispatcher:(GQURLDispatcher *)urlDispatcher didWithResponder:(id <GQURLResponder>)responder handleURL:(NSURL *)aURL object:(id)anObject;
+
 
 @end

@@ -45,9 +45,18 @@
     return [self dispatchURL:url withObject:nil];
 }
 
++ (BOOL)dispatchURL:(NSURL *)url
+{
+    return [[self sharedInstance] dispatchURL:url];
+}
+
 - (BOOL)dispatchURL:(NSURL *)url withObject:(id)anObject
 {
     if (url == nil) return NO;
+    
+    if ([self.delegate respondsToSelector:@selector(urlDispatcherWillBeginDispatch:)]) {
+        [self.delegate urlDispatcherWillBeginDispatch:self];
+    }
     
     __block BOOL isDispatch = NO;
     
@@ -102,7 +111,16 @@
         }
     }];
     
+    if ([self.delegate respondsToSelector:@selector(urlDispatcherDidEndDispatch:)]) {
+        [self.delegate urlDispatcherDidEndDispatch:self];
+    }
+    
     return isDispatch;
+}
+
++ (BOOL)dispatchURL:(NSURL *)url withObject:(id)anObject
+{
+    return [[self sharedInstance] dispatchURL:url withObject:anObject];
 }
 
 - (NSArray *)responders
@@ -112,16 +130,23 @@
 
 - (void)registerResponder:(id <GQURLResponder>)responder
 {
-    if ([self.responders containsObject:responder]) {
-        [self unregisterResponder:responder];
-    }
+    @synchronized(self) {
+        if ([self.responders containsObject:responder]) {
+            [self unregisterResponder:responder];
+        }
+            
+        [self.responderList addObject:responder];
         
-    [self.responderList addObject:responder];
+    }
 }
 
 - (void)unregisterResponder:(id <GQURLResponder>)responder
 {
-    [self.responderList removeObject:responder];
+    @synchronized(self) {
+        [self.responderList removeObject:responder];
+        
+    }
 }
+
 
 @end
