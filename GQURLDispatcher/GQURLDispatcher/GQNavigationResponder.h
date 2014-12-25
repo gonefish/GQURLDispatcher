@@ -15,9 +15,11 @@
 
 @property (nonatomic, copy) NSArray *responseURLs;
 
-@property (nonatomic, copy) NSRegularExpression *responseURLStringRegularExpression;
+@property (nonatomic, strong) NSRegularExpression *responseURLStringRegularExpression;
 
 @property (nonatomic, copy) NSDictionary *classNameMap;
+
+@property (nonatomic, copy, readonly) NSString *alias;
 
 - (id)initWithNavigationController:(UINavigationController *)aNavigationController;
 

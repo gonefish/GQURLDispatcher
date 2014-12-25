@@ -12,6 +12,7 @@
 @interface GQURLDispatcher ()
 
 @property (nonatomic, strong) NSMutableArray *responderList;
+@property (nonatomic, strong) NSMutableDictionary *responderAliases;
 
 @end
 
@@ -35,6 +36,7 @@
     
     if (self) {
         self.responderList = [NSMutableArray array];
+        self.responderAliases = [NSMutableDictionary dictionary];
     }
     
     return self;
@@ -137,6 +139,10 @@
             
         [self.responderList addObject:responder];
         
+        if ([responder respondsToSelector:@selector(alias)]) {
+            [self.responderAliases setObject:responder
+                              forKey:[responder alias]];
+        }
     }
 }
 
@@ -145,7 +151,15 @@
     @synchronized(self) {
         [self.responderList removeObject:responder];
         
+        if ([responder respondsToSelector:@selector(alias)]) {
+            [self.responderAliases removeObjectForKey:[responder alias]];
+        }
     }
+}
+
+- (id <GQURLResponder>)responderForAlias:(NSString *)alias
+{
+    return [self.responderAliases objectForKey:alias];
 }
 
 

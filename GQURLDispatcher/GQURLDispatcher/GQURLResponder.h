@@ -36,4 +36,6 @@
  */
 - (NSRegularExpression *)responseURLStringRegularExpression;
 
+- (NSString *)alias;
+
 @end

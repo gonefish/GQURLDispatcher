@@ -58,6 +58,7 @@
  */
 - (void)unregisterResponder:(id <GQURLResponder>)responder;
 
+- (id <GQURLResponder>)responderForAlias:(NSString *)alias;
 
 @end
 
