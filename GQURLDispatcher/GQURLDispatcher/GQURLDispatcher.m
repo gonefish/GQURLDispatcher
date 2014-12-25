@@ -139,7 +139,8 @@
             
         [self.responderList addObject:responder];
         
-        if ([responder respondsToSelector:@selector(alias)]) {
+        if ([responder respondsToSelector:@selector(alias)]
+            && [responder alias] != nil) {
             [self.responderAliases setObject:responder
                               forKey:[responder alias]];
         }
@@ -151,7 +152,8 @@
     @synchronized(self) {
         [self.responderList removeObject:responder];
         
-        if ([responder respondsToSelector:@selector(alias)]) {
+        if ([responder respondsToSelector:@selector(alias)]
+            && [responder alias] != nil) {
             [self.responderAliases removeObjectForKey:[responder alias]];
         }
     }

@@ -12,7 +12,7 @@
 
 @interface GQTabBarResponder ()
 
-@property (nonatomic, strong) NSArray *responseURLs;
+@property (nonatomic, copy) NSArray *responseURLs;
 
 @end
 

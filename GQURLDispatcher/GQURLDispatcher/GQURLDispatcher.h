@@ -58,6 +58,10 @@
  */
 - (void)unregisterResponder:(id <GQURLResponder>)responder;
 
+/**
+ *  通过别名获取响应者
+ *
+ */
 - (id <GQURLResponder>)responderForAlias:(NSString *)alias;
 
 @end
