@@ -71,29 +71,29 @@
 @optional
 
 /**
- *  开始分发
+ *  开始URL分发循环
  *
  */
-- (void)urlDispatcherWillBeginDispatch:(GQURLDispatcher *)urlDispatcher;
+- (void)URLDispatcherWillBeginDispatch:(GQURLDispatcher *)URLDispatcher;
 
 /**
- *  结束分发
+ *  结束URL分发循环
  *
  */
-- (void)urlDispatcherDidEndDispatch:(GQURLDispatcher *)urlDispatcher;
+- (void)URLDispatcherDidEndDispatch:(GQURLDispatcher *)URLDispatcher;
 
 /**
  *  是否使用该响应者处理URL
  *
  *  @return 如果返回NO，则该响应者不处理URL
  */
-- (BOOL)urlDispatcher:(GQURLDispatcher *)urlDispatcher shouldWithResponder:(id <GQURLResponder>)responder handleURL:(NSURL *)aURL object:(id)anObject;
+- (BOOL)URLDispatcher:(GQURLDispatcher *)URLDispatcher shouldWithResponder:(id <GQURLResponder>)responder handleURL:(NSURL *)aURL object:(id)anObject;
 
 /**
  *  使用响应者处理完毕
  *
  */
-- (void)urlDispatcher:(GQURLDispatcher *)urlDispatcher didWithResponder:(id <GQURLResponder>)responder handleURL:(NSURL *)aURL object:(id)anObject;
+- (void)URLDispatcher:(GQURLDispatcher *)URLDispatcher didWithResponder:(id <GQURLResponder>)responder handleURL:(NSURL *)aURL object:(id)anObject;
 
 
 @end

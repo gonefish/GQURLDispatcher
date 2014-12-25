@@ -56,16 +56,16 @@
 {
     if (url == nil) return NO;
     
-    if ([self.delegate respondsToSelector:@selector(urlDispatcherWillBeginDispatch:)]) {
-        [self.delegate urlDispatcherWillBeginDispatch:self];
+    if ([self.delegate respondsToSelector:@selector(URLDispatcherWillBeginDispatch:)]) {
+        [self.delegate URLDispatcherWillBeginDispatch:self];
     }
     
     __block BOOL isDispatch = NO;
     
     [[self responders] enumerateObjectsWithOptions:NSEnumerationReverse usingBlock:^(id <GQURLResponder> responder, NSUInteger idx, BOOL *stop) {
         
-        if ([self.delegate respondsToSelector:@selector(urlDispatcher:shouldWithResponder:handleURL:object:)]) {
-            if ([self.delegate urlDispatcher:self
+        if ([self.delegate respondsToSelector:@selector(URLDispatcher:shouldWithResponder:handleURL:object:)]) {
+            if ([self.delegate URLDispatcher:self
                          shouldWithResponder:responder
                                    handleURL:url
                                       object:anObject] == NO) {
@@ -104,8 +104,8 @@
                 *stop = YES;
             }
             
-            if ([self.delegate respondsToSelector:@selector(urlDispatcher:didWithResponder:handleURL:object:)]) {
-                [self.delegate urlDispatcher:self
+            if ([self.delegate respondsToSelector:@selector(URLDispatcher:didWithResponder:handleURL:object:)]) {
+                [self.delegate URLDispatcher:self
                             didWithResponder:responder
                                    handleURL:url
                                       object:anObject];
@@ -113,8 +113,8 @@
         }
     }];
     
-    if ([self.delegate respondsToSelector:@selector(urlDispatcherDidEndDispatch:)]) {
-        [self.delegate urlDispatcherDidEndDispatch:self];
+    if ([self.delegate respondsToSelector:@selector(URLDispatcherDidEndDispatch:)]) {
+        [self.delegate URLDispatcherDidEndDispatch:self];
     }
     
     return isDispatch;
