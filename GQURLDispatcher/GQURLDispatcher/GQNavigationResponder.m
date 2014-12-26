@@ -12,12 +12,13 @@
 
 @implementation GQNavigationResponder
 
-- (id)initWithNavigationController:(UINavigationController *)aNavigationController
+- (id)initWithNavigationController:(UINavigationController *)aNavigationController alias:(NSString *)alias
 {
     self = [super init];
     
     if (self) {
         _navigationController = aNavigationController;
+        _alias = [alias copy];
     }
     
     return self;
@@ -38,10 +39,14 @@
     
     UIViewController *newVC = nil;
     
-    if ([cls conformsToProtocol:@protocol(GQURLViewController)]) {
+    if ([cls isSubclassOfClass:[GQURLViewController class]]) {
         newVC = [[cls alloc] initWithURL:aURL withObject:anObject];
     } else {
         newVC = [[cls alloc] init];
+        
+        if ([cls conformsToProtocol:@protocol(GQURLViewController)]) {
+            [(id <GQURLViewController>)newVC updateWithURL:aURL withObject:anObject];
+        }
     }
     
     if (newVC == nil) return NO;

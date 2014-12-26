@@ -11,7 +11,7 @@
 
 @interface GQNavigationResponder : NSObject <GQURLResponder>
 
-@property (nonatomic, weak) UINavigationController *navigationController;
+@property (nonatomic, strong, readonly) UINavigationController *navigationController;
 
 @property (nonatomic, copy) NSArray *responseURLs;
 
@@ -21,6 +21,6 @@
 
 @property (nonatomic, copy, readonly) NSString *alias;
 
-- (id)initWithNavigationController:(UINavigationController *)aNavigationController;
+- (id)initWithNavigationController:(UINavigationController *)aNavigationController alias:(NSString *)alias;
 
 @end

@@ -35,7 +35,7 @@
     
     NSURL *testURL = [NSURL URLWithString:@"http://github.com/gonefish"];
     
-    GQNavigationResponder *responder1 = [[GQNavigationResponder alloc] initWithNavigationController:nVC1];
+    GQNavigationResponder *responder1 = [[GQNavigationResponder alloc] initWithNavigationController:nVC1 alias:nil];
     
     XCTAssertFalse([responder1 handleURL:testURL withObject:nil], @"");
 }
@@ -53,7 +53,7 @@
     
     NSURL *testURL = [NSURL URLWithString:@"http://github.com/gonefish"];
     
-    GQNavigationResponder *responder1 = [[GQNavigationResponder alloc] initWithNavigationController:partialMock];
+    GQNavigationResponder *responder1 = [[GQNavigationResponder alloc] initWithNavigationController:partialMock alias:nil];
     responder1.classNameMap = @{@"http://github.com/gonefish": @"GQURLViewController"};
     
     XCTAssertTrue([responder1 handleURL:testURL withObject:nil], @"选中的视图控制器响应");
@@ -72,7 +72,7 @@
     
     NSURL *testURL = [NSURL URLWithString:@"http://github.com/gonefish"];
     
-    GQNavigationResponder *responder1 = [[GQNavigationResponder alloc] initWithNavigationController:partialMock];
+    GQNavigationResponder *responder1 = [[GQNavigationResponder alloc] initWithNavigationController:partialMock alias:nil];
     responder1.classNameMap = @{@"http://github.com/gonefish": @"GQURLViewController"};
     
     XCTAssertFalse([responder1 handleURL:testURL withObject:nil], @"没有选择的视图控制器不应该响应");
@@ -87,7 +87,7 @@
     
     UINavigationController *nVC = [[UINavigationController alloc] initWithRootViewController:vc1];
     
-    GQNavigationResponder *responder = [[GQNavigationResponder alloc] initWithNavigationController:nVC];
+    GQNavigationResponder *responder = [[GQNavigationResponder alloc] initWithNavigationController:nVC alias:nil];
     responder.responseURLs = @[url1, url2];
     responder.classNameMap = @{@"https://github.com/gonefish/GQURLDispatcher" : @"GQURLViewController"};
     
