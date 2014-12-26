@@ -32,11 +32,11 @@
     
     GQURLViewController *vc = [[GQURLViewController alloc] initWithURL:aURL withObject:anObject];
     
-    XCTAssertEqual(aURL, vc.gq_url, @"");
+    XCTAssertEqual(aURL, vc.gq_url, @"对象赋值失败");
     
-    XCTAssertEqual(anObject, vc.gq_object, @"");
+    XCTAssertEqual(anObject, vc.gq_object, @"对象赋值失败");
     
-    XCTAssertEqualObjects(@{@"test": @"1"}, vc.gq_urlQueryDictionary, @"");
+    XCTAssertEqualObjects(@{@"test": @"1"}, vc.gq_urlQueryDictionary, @"query解析失败");
 }
 
 @end

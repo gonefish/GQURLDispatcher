@@ -31,8 +31,8 @@
     self = [super init];
     
     if (self) {
-        self.gq_url = aURL;
-        self.gq_object = anObject;
+        [self updateWithURL:aURL withObject:anObject];
+        
         self.gq_urlQueryDictionary = [self.gq_url gq_queryDictionary];
     }
     
@@ -41,7 +41,8 @@
 
 - (void)updateWithURL:(NSURL *)aURL withObject:(id)anObject
 {
-    // 子类实现
+    self.gq_url = aURL;
+    self.gq_object = anObject;
 }
 
 @end
