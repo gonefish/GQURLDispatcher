@@ -37,7 +37,7 @@
     self.testTabBarController = tabVC;
     
     self.responder = [[GQTabBarResponder alloc] initWithTabBarController:tabVC
-                                                withURL:[NSURL URLWithString:@"gqurl://tabBarController/"]];
+                                                URL:[NSURL URLWithString:@"gqurl://tabBarController/"]];
 }
 
 - (void)tearDown {

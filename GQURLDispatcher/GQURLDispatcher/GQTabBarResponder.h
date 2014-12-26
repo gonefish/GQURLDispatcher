@@ -11,12 +11,10 @@
 
 @interface GQTabBarResponder : NSObject <GQURLResponder>
 
-@property (nonatomic, weak) UITabBarController *tabBarController;
+@property (nonatomic, strong, readonly) UITabBarController *tabBarController;
 
 @property (nonatomic, copy, readonly) NSArray *responseURLs;
 
-@property (nonatomic, strong, readonly) NSRegularExpression *responseURLStringRegularExpression;
-
-- (id)initWithTabBarController:(UITabBarController *)aTabBarController withURL:(NSURL *)aURL;
+- (id)initWithTabBarController:(UITabBarController *)aTabBarController URL:(NSURL *)aURL;
 
 @end

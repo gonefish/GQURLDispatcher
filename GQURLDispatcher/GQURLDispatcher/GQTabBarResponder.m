@@ -12,14 +12,18 @@
 
 @interface GQTabBarResponder ()
 
-@property (nonatomic, copy) NSArray *responseURLs;
 
 @end
 
 @implementation GQTabBarResponder
 
-- (id)initWithTabBarController:(UITabBarController *)aTabBarController withURL:(NSURL *)aURL
+- (id)initWithTabBarController:(UITabBarController *)aTabBarController URL:(NSURL *)aURL
 {
+    if (aTabBarController == nil
+        || aURL == nil) {
+        return nil;
+    }
+    
     self = [super init];
     
     if (self) {

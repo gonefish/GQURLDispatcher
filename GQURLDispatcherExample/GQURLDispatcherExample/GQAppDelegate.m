@@ -70,7 +70,7 @@
     
     GQTabBarResponder *tabBarResponder =
     [[GQTabBarResponder alloc] initWithTabBarController:tabBarController
-                                                withURL:[NSURL URLWithString:@"gqurl://tabBarController/selectedIndex"]];
+                                                URL:[NSURL URLWithString:@"gqurl://tabBarController/selectedIndex"]];
     [[GQURLDispatcher sharedInstance] registerResponder:tabBarResponder];
     
     
