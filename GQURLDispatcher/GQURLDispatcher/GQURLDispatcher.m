@@ -99,6 +99,7 @@
         }
         
         if (isResponse) {
+            // 如果responder返回NO，则继续分发
             if ([responder handleURL:url withObject:anObject]) {
                 isDispatch = YES;
                 *stop = YES;
@@ -132,6 +133,8 @@
 
 - (void)registerResponder:(id <GQURLResponder>)responder
 {
+    if (![responder conformsToProtocol:@protocol(GQURLResponder)]) return;
+    
     @synchronized(self) {
         if ([self.responders containsObject:responder]) {
             [self unregisterResponder:responder];
@@ -149,6 +152,8 @@
 
 - (void)unregisterResponder:(id <GQURLResponder>)responder
 {
+    if (![responder conformsToProtocol:@protocol(GQURLResponder)]) return;
+    
     @synchronized(self) {
         [self.responderList removeObject:responder];
         
