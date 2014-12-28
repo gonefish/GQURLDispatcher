@@ -52,8 +52,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		B8126C0029C24AF0A9AD9044 /* Pods-GQURLDispatcherTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GQURLDispatcherTests.xcconfig"; path = "../Pods/Pods-GQURLDispatcherTests.xcconfig"; sourceTree = "<group>"; };
+		6717DDE59AEC82E9FAEAAFFF /* Pods-GQURLDispatcherTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GQURLDispatcherTests.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-GQURLDispatcherTests/Pods-GQURLDispatcherTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D09E1804235A48679B581586 /* libPods-GQURLDispatcherTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GQURLDispatcherTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE357596A77275C81D4E9394 /* Pods-GQURLDispatcherTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GQURLDispatcherTests.release.xcconfig"; path = "../Pods/Target Support Files/Pods-GQURLDispatcherTests/Pods-GQURLDispatcherTests.release.xcconfig"; sourceTree = "<group>"; };
 		E36D30F019CD4BA5003ACC19 /* GQURLViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GQURLViewControllerTests.m; sourceTree = "<group>"; };
 		E36D30F219CD55F9003ACC19 /* GQTabBarResponderTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GQTabBarResponderTests.m; sourceTree = "<group>"; };
 		E36D30F419CD6AA8003ACC19 /* GQNavigationResponderTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GQNavigationResponderTest.m; sourceTree = "<group>"; };
@@ -114,7 +115,7 @@
 				E38D989719C2044600630F43 /* GQURLDispatcherTests */,
 				E38D988019C2044600630F43 /* Frameworks */,
 				E38D987F19C2044600630F43 /* Products */,
-				B8126C0029C24AF0A9AD9044 /* Pods-GQURLDispatcherTests.xcconfig */,
+				E67FE85768D4EB26FEF45C62 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -145,16 +146,16 @@
 				E38D988619C2044600630F43 /* GQURLDispatcher.h */,
 				E38D988819C2044600630F43 /* GQURLDispatcher.m */,
 				E38D98EB19C2F81A00630F43 /* GQURLResponder.h */,
-				E3D3E32A19CABAD100EA7E22 /* NSURL+GQURLUtilities.h */,
-				E3D3E32B19CABAD100EA7E22 /* NSURL+GQURLUtilities.m */,
-				E3AC0C4619CCA77600A3152E /* GQURLViewController.h */,
-				E3AC0C4719CCA77600A3152E /* GQURLViewController.m */,
 				E38D98FD19C75C9200630F43 /* GQNavigationResponder.h */,
 				E38D98FE19C75C9200630F43 /* GQNavigationResponder.m */,
 				E3AC0C4919CCABD300A3152E /* GQTabBarResponder.h */,
 				E3AC0C4A19CCABD300A3152E /* GQTabBarResponder.m */,
 				E37918BB1A444CED0005B78F /* GQApplicationURLResponder.h */,
 				E37918BC1A444CED0005B78F /* GQApplicationURLResponder.m */,
+				E3D3E32A19CABAD100EA7E22 /* NSURL+GQURLUtilities.h */,
+				E3D3E32B19CABAD100EA7E22 /* NSURL+GQURLUtilities.m */,
+				E3AC0C4619CCA77600A3152E /* GQURLViewController.h */,
+				E3AC0C4719CCA77600A3152E /* GQURLViewController.m */,
 				E38D988419C2044600630F43 /* Supporting Files */,
 			);
 			path = GQURLDispatcher;
@@ -188,6 +189,15 @@
 				E38D989A19C2044600630F43 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E67FE85768D4EB26FEF45C62 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6717DDE59AEC82E9FAEAAFFF /* Pods-GQURLDispatcherTests.debug.xcconfig */,
+				DE357596A77275C81D4E9394 /* Pods-GQURLDispatcherTests.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -297,7 +307,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/../Pods/Pods-GQURLDispatcherTests-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-GQURLDispatcherTests/Pods-GQURLDispatcherTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -381,7 +391,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
@@ -412,7 +422,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -444,7 +454,7 @@
 		};
 		E38D98A519C2044600630F43 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B8126C0029C24AF0A9AD9044 /* Pods-GQURLDispatcherTests.xcconfig */;
+			baseConfigurationReference = 6717DDE59AEC82E9FAEAAFFF /* Pods-GQURLDispatcherTests.debug.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -465,7 +475,7 @@
 		};
 		E38D98A619C2044600630F43 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B8126C0029C24AF0A9AD9044 /* Pods-GQURLDispatcherTests.xcconfig */;
+			baseConfigurationReference = DE357596A77275C81D4E9394 /* Pods-GQURLDispatcherTests.release.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
