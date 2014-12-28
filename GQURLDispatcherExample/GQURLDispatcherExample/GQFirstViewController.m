@@ -28,19 +28,15 @@
 
 - (IBAction)selectTabBar:(id)sender
 {
-    [[GQURLDispatcher sharedInstance]
-     dispatchURL:
-     [NSURL URLWithString:@"gqurl://tabBarController/selectedIndex?GQTabBarIndex=1"]];
+    [GQURLDispatcher dispatchURL: [NSURL URLWithString:@"tab://example/?selectedIndex=1"]];
 }
 
 - (IBAction)pushViewController:(UIButton *)sender
 {
     if (sender.tag == 1) {
-       [[GQURLDispatcher sharedInstance]
-        dispatchURL:
-        [NSURL URLWithString:@"gqurl://firstViewController"]];
+       [GQURLDispatcher dispatchURL:[NSURL URLWithString:@"gqurl://firstViewController"]];
     } else if (sender.tag == 2) {
-        [[GQURLDispatcher sharedInstance] dispatchURL:[NSURL URLWithString:@"gqurl://secondViewController"]];
+        [GQURLDispatcher dispatchURL:[NSURL URLWithString:@"gqurl://secondViewController"]];
     }
 }
 

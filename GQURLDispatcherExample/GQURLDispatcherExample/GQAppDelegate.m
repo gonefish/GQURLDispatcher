@@ -70,19 +70,20 @@
     
     GQTabBarResponder *tabBarResponder =
     [[GQTabBarResponder alloc] initWithTabBarController:tabBarController
-                                                URL:[NSURL URLWithString:@"gqurl://tabBarController/selectedIndex"]];
+                                                URL:[NSURL URLWithString:@"tab://example/"]];
     [[GQURLDispatcher sharedInstance] registerResponder:tabBarResponder];
     
     
     NSArray *responseURLs = @[[NSURL URLWithString:@"gqurl://firstViewController"], [NSURL URLWithString:@"gqurl://secondViewController"]];
+    
     NSDictionary *classNameMap = @{@"gqurl://firstViewController": @"GQFirstViewController", @"gqurl://secondViewController": @"GQSecondViewController"};
     
-    GQNavigationResponder *navigationResponder1 = [[GQNavigationResponder alloc] initWithNavigationController:tabBarController.viewControllers[0]];
+    GQNavigationResponder *navigationResponder1 = [[GQNavigationResponder alloc] initWithNavigationController:tabBarController.viewControllers[0] alias:@"nav1"];
     
     navigationResponder1.responseURLs = responseURLs;
     navigationResponder1.classNameMap = classNameMap;
     
-    GQNavigationResponder *navigationResponder2 = [[GQNavigationResponder alloc] initWithNavigationController:tabBarController.viewControllers[1]];
+    GQNavigationResponder *navigationResponder2 = [[GQNavigationResponder alloc] initWithNavigationController:tabBarController.viewControllers[1] alias:@"nav2"];
     
     navigationResponder2.responseURLs = responseURLs;
     navigationResponder2.classNameMap = classNameMap;

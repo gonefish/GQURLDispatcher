@@ -54,7 +54,7 @@
     NSString *animated = [[aURL gq_queryDictionary] objectForKey:@"animated"];
     
     [self.navigationController pushViewController:newVC
-                                         animated:animated ? [animated boolValue] : NO];
+                                         animated:animated ? [animated boolValue] : YES];
     
     return YES;
 }
