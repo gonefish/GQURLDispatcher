@@ -8,6 +8,7 @@
 
 #import "GQFirstViewController.h"
 #import "GQURLDispatcher.h"
+#import "GQNavigationResponder.h"
 
 
 @implementation GQFirstViewController
@@ -38,6 +39,22 @@
     } else if (sender.tag == 2) {
         [GQURLDispatcher dispatchURL:[NSURL URLWithString:@"gqurl://secondViewController"]];
     }
+}
+
+- (IBAction)backAction:(id)sender
+{
+    GQNavigationResponder *nav1 = [[GQURLDispatcher sharedInstance] responderForAlias:@"nav1"];
+    
+    GQNavigationResponder *nav2 = [[GQURLDispatcher sharedInstance] responderForAlias:@"nav2"];
+    
+    
+    if (self.navigationController.tabBarController.selectedViewController == nav1.navigationController) {
+        [nav1.navigationController popViewControllerAnimated:YES];
+    } else {
+        [nav2.navigationController popViewControllerAnimated:YES];
+    }
+    
+    return;
 }
 
 @end

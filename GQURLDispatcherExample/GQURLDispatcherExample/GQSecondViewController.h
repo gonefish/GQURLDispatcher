@@ -14,4 +14,6 @@
 
 - (IBAction)pushViewController:(UIButton *)sender;
 
+- (IBAction)backAction:(id)sender;
+
 @end
