@@ -54,6 +54,8 @@
 
 - (BOOL)dispatchURL:(NSURL *)url withObject:(id)anObject
 {
+    NSAssert([NSThread isMainThread], @"只允许在主线程使用");
+    
     if (url == nil) return NO;
     
     if ([self.delegate respondsToSelector:@selector(URLDispatcherWillBeginDispatch:)]) {
