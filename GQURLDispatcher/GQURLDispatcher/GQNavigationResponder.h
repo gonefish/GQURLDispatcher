@@ -8,16 +8,13 @@
 
 #import <UIKit/UIKit.h>
 #import "GQURLResponder.h"
+#import "GQSimpleResponder.h"
 
-@interface GQNavigationResponder : NSObject <GQURLResponder>
+@interface GQNavigationResponder : GQSimpleResponder <GQURLResponder>
 
 @property (nonatomic, strong, readonly) UINavigationController *navigationController;
 
-@property (nonatomic, copy) NSArray *responseURLs;
-
 @property (nonatomic, strong) NSRegularExpression *responseURLStringRegularExpression;
-
-@property (nonatomic, copy) NSDictionary *classNameMap;
 
 @property (nonatomic, copy, readonly) NSString *alias;
 

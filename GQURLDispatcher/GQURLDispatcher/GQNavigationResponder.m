@@ -8,7 +8,6 @@
 
 #import "GQNavigationResponder.h"
 #import "NSURL+GQURLUtilities.h"
-#import "GQURLViewController.h"
 
 @implementation GQNavigationResponder
 
@@ -31,23 +30,7 @@
         return NO;
     }
     
-    NSString *className = [self.classNameMap objectForKey:[aURL gq_dispatchURLString]];
-    
-    if (className == nil) return NO;
-    
-    Class cls = NSClassFromString(className);
-    
-    UIViewController *newVC = nil;
-    
-    if ([cls isSubclassOfClass:[GQURLViewController class]]) {
-        newVC = [[cls alloc] initWithURL:aURL withObject:anObject];
-    } else {
-        newVC = [[cls alloc] init];
-        
-        if ([cls conformsToProtocol:@protocol(GQURLViewController)]) {
-            [(id <GQURLViewController>)newVC updateWithURL:aURL withObject:anObject];
-        }
-    }
+    UIViewController *newVC = [self viewControllerWithURL:aURL withObject:anObject];
     
     if (newVC == nil) return NO;
     
