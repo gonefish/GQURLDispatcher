@@ -11,22 +11,13 @@
 
 @implementation GQNavigationResponder
 
-- (id)initWithNavigationController:(UINavigationController *)aNavigationController alias:(NSString *)alias
-{
-    self = [super init];
-    
-    if (self) {
-        _navigationController = aNavigationController;
-        _alias = [alias copy];
-    }
-    
-    return self;
-}
 
 - (BOOL)handleURL:(NSURL *)aURL withObject:(id)anObject
 {
-    if (self.navigationController.tabBarController
-        && self.navigationController.tabBarController.selectedViewController != self.navigationController) {
+    UINavigationController *navigationController = (UINavigationController *)self.containerViewController;
+    
+    if (navigationController.tabBarController
+        && navigationController.tabBarController.selectedViewController != navigationController) {
         return NO;
     }
     
@@ -36,8 +27,8 @@
     
     NSString *animated = [[aURL gq_queryDictionary] objectForKey:@"animated"];
     
-    [self.navigationController pushViewController:newVC
-                                         animated:animated ? [animated boolValue] : YES];
+    [navigationController pushViewController:newVC
+                                    animated:animated ? [animated boolValue] : YES];
     
     return YES;
 }

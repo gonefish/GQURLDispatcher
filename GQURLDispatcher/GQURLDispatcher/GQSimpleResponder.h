@@ -12,7 +12,15 @@
 
 @property (nonatomic, copy) NSArray *responseURLs;
 
+@property (nonatomic, strong) NSRegularExpression *responseURLStringRegularExpression;
+
 @property (nonatomic, copy) NSDictionary *classNameMap;
+
+@property (nonatomic, copy, readonly) NSString *alias;
+
+@property (nonatomic, strong, readonly) UIViewController *containerViewController;
+
+- (instancetype)initWithContainerViewController:(UIViewController *)aViewController alias:(NSString *)alias;
 
 - (UIViewController *)viewControllerWithURL:(NSURL *)aURL withObject:(id)anObject;
 

@@ -12,12 +12,5 @@
 
 @interface GQNavigationResponder : GQSimpleResponder <GQURLResponder>
 
-@property (nonatomic, strong, readonly) UINavigationController *navigationController;
-
-@property (nonatomic, strong) NSRegularExpression *responseURLStringRegularExpression;
-
-@property (nonatomic, copy, readonly) NSString *alias;
-
-- (id)initWithNavigationController:(UINavigationController *)aNavigationController alias:(NSString *)alias;
 
 @end

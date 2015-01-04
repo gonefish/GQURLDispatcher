@@ -12,6 +12,18 @@
 
 @implementation GQSimpleResponder
 
+- (instancetype)initWithContainerViewController:(UIViewController *)aViewController alias:(NSString *)alias
+{
+    self = [super init];
+    
+    if (self) {
+        _containerViewController = aViewController;
+        _alias = [alias copy];
+    }
+    
+    return self;
+}
+
 - (UIViewController *)viewControllerWithURL:(NSURL *)aURL withObject:(id)anObject
 {
     NSString *className = [self.classNameMap objectForKey:[aURL gq_dispatchURLString]];
