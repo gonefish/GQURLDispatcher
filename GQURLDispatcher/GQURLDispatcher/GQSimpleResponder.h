@@ -22,6 +22,6 @@
 
 - (instancetype)initWithContainerViewController:(UIViewController *)aViewController alias:(NSString *)alias;
 
-- (UIViewController *)viewControllerWithURL:(NSURL *)aURL withObject:(id)anObject;
+- (UIViewController *)viewControllerWithURL:(NSURL *)aURL object:(id)anObject;
 
 @end

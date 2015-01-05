@@ -24,7 +24,7 @@
     return self;
 }
 
-- (UIViewController *)viewControllerWithURL:(NSURL *)aURL withObject:(id)anObject
+- (UIViewController *)viewControllerWithURL:(NSURL *)aURL object:(id)anObject
 {
     NSString *className = [self.classNameMap objectForKey:[aURL gq_dispatchURLString]];
     
@@ -36,7 +36,7 @@
     
     if ([cls isSubclassOfClass:[GQURLViewController class]]) {
         newVC = [[cls alloc] initWithURL:aURL withObject:anObject];
-    } else {
+    } else if ([cls isSubclassOfClass:[UIViewController class]]) {
         newVC = [[cls alloc] init];
         
         if ([cls conformsToProtocol:@protocol(GQURLViewController)]) {

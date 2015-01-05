@@ -28,18 +28,6 @@
     [super tearDown];
 }
 
-- (void)testClassNameMapNotFound
-{
-    UIViewController *vc1 = [[UIViewController alloc] init];
-    UINavigationController *nVC1 = [[UINavigationController alloc] initWithRootViewController:vc1];
-    
-    NSURL *testURL = [NSURL URLWithString:@"http://github.com/gonefish"];
-    
-    GQNavigationResponder *responder1 = [[GQNavigationResponder alloc] initWithContainerViewController:nVC1 alias:nil];
-    
-    XCTAssertFalse([responder1 handleURL:testURL withObject:nil], @"");
-}
-
 - (void)testEmbedInTabBarController
 {
     UIViewController *vc1 = [[UIViewController alloc] init];

@@ -21,7 +21,7 @@
         return NO;
     }
     
-    UIViewController *newVC = [self viewControllerWithURL:aURL withObject:anObject];
+    UIViewController *newVC = [self viewControllerWithURL:aURL object:anObject];
     
     if (newVC == nil) return NO;
     
