@@ -8,6 +8,7 @@
 
 #import "GQPresentResponder.h"
 #import "NSURL+GQURLUtilities.h"
+#import "GQCompletionWrapper.h"
 
 @implementation GQPresentResponder
 
@@ -19,9 +20,15 @@
     
     NSString *animated = [[aURL gq_queryDictionary] objectForKey:@"animated"];
     
+    GQCompletionBlock completion = nil;
+    
+    if ([anObject isKindOfClass:[GQCompletionWrapper class]]) {
+        completion = [(GQCompletionWrapper *)anObject block];
+    }
+    
     [self.containerViewController presentViewController:newVC
                                                animated:animated ? [animated boolValue] : YES
-                                             completion:nil];
+                                             completion:completion];
     
     return YES;
 }
