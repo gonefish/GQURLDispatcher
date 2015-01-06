@@ -9,6 +9,8 @@
 #import "ExampleTableViewController.h"
 #import "GQURLDispatcher.h"
 #import "GQNavigationResponder.h"
+#import "GQPresentResponder.h"
+#import "GQCompletionWrapper.h"
 
 @interface ExampleTableViewController ()
 
@@ -37,7 +39,8 @@
   @{@"title": @"Select TabBar", @"url": self.tabbarURL},
   @{@"title": @"Push First View Controller", @"url": [NSURL URLWithString:@"gqurl://firstViewController"]},
   @{@"title": @"Push Second View Controller", @"url": [NSURL URLWithString:@"gqurl://secondViewController"]},
-  @{@"title": @"Pop View Controller", @"url": @""}
+  @{@"title": @"Pop View Controller", @"url": @"" },
+  @{@"title": @"Present and Dismiss View Controller", @"url": [NSURL URLWithString:@"modal://firstViewController"]}
   ];
 }
 
@@ -104,9 +107,7 @@
 #pragma mark - Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (indexPath.row < 3) {
-        [GQURLDispatcher dispatchURL:[[self.items objectAtIndex:indexPath.row] objectForKey:@"url"]];
-    } else if (indexPath.row == 3) {
+    if (indexPath.row == 3) {
         GQNavigationResponder *nav1 = [[GQURLDispatcher sharedInstance] responderForAlias:@"nav1"];
         
         GQNavigationResponder *nav2 = [[GQURLDispatcher sharedInstance] responderForAlias:@"nav2"];
@@ -117,6 +118,20 @@
         } else {
             [(UINavigationController *)nav2.containerViewController popViewControllerAnimated:YES];
         }
+    } else if (indexPath.row == 4) {
+        GQCompletionWrapper *blockObj = [GQCompletionWrapper completionBlock:^{
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            GQPresentResponder *presentResponder = [[GQURLDispatcher sharedInstance] responderForAlias:@"present"];
+                
+            [presentResponder.containerViewController dismissViewControllerAnimated:YES
+                                                                         completion:nil];
+});
+        }];
+        
+        [GQURLDispatcher dispatchURL:[[self.items objectAtIndex:indexPath.row] objectForKey:@"url"]
+                          withObject:blockObj];
+    } else {
+        [GQURLDispatcher dispatchURL:[[self.items objectAtIndex:indexPath.row] objectForKey:@"url"]];
     }
 }
 

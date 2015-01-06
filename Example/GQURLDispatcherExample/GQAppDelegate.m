@@ -12,6 +12,7 @@
 #import "GQURLDispatcher.h"
 #import "GQFirstViewController.h"
 #import "GQSecondViewController.h"
+#import "GQPresentResponder.h"
 
 @implementation GQAppDelegate
 
@@ -88,8 +89,13 @@
     navigationResponder2.responseURLs = responseURLs;
     navigationResponder2.classNameMap = classNameMap;
     
+    GQPresentResponder *presentResponder = [[GQPresentResponder alloc] initWithContainerViewController:tabBarController alias:@"present"];
+    presentResponder.responseURLs = @[[NSURL URLWithString:@"modal://firstViewController"]];;
+    presentResponder.classNameMap = @{@"modal://firstViewController": @"GQFirstViewController"};;
+    
     [[GQURLDispatcher sharedInstance] registerResponder:navigationResponder1];
     [[GQURLDispatcher sharedInstance] registerResponder:navigationResponder2];
+    [[GQURLDispatcher sharedInstance] registerResponder:presentResponder];
     
 }
 

@@ -7,7 +7,8 @@
 //
 
 #import "GQSimpleResponder.h"
+#import "GQURLResponder.h"
 
-@interface GQPresentResponder : GQSimpleResponder
+@interface GQPresentResponder : GQSimpleResponder <GQURLResponder>
 
 @end
