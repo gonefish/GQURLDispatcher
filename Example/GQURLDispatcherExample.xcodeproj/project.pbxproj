@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E36D317419D1B746003ACC19 /* GQFirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E36D317319D1B746003ACC19 /* GQFirstViewController.xib */; };
-		E36D317619D1B794003ACC19 /* GQSecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E36D317519D1B794003ACC19 /* GQSecondViewController.xib */; };
 		E37782F61A5C16EB009C2DC6 /* libGQURLDispatcher.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E37782F11A5C159E009C2DC6 /* libGQURLDispatcher.a */; };
+		E37783001A5C488B009C2DC6 /* ExampleTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E37782FE1A5C488B009C2DC6 /* ExampleTableViewController.m */; };
+		E37783011A5C488B009C2DC6 /* ExampleTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E37782FF1A5C488B009C2DC6 /* ExampleTableViewController.xib */; };
 		E38D98B419C2049400630F43 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E38D98B319C2049400630F43 /* Foundation.framework */; };
 		E38D98B619C2049400630F43 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E38D98B519C2049400630F43 /* CoreGraphics.framework */; };
 		E38D98B819C2049400630F43 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E38D98B719C2049400630F43 /* UIKit.framework */; };
@@ -59,9 +59,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		E36D317319D1B746003ACC19 /* GQFirstViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GQFirstViewController.xib; sourceTree = "<group>"; };
-		E36D317519D1B794003ACC19 /* GQSecondViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GQSecondViewController.xib; sourceTree = "<group>"; };
 		E37782EB1A5C159E009C2DC6 /* GQURLDispatcher.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GQURLDispatcher.xcodeproj; path = ../GQURLDispatcher/GQURLDispatcher.xcodeproj; sourceTree = "<group>"; };
+		E37782FD1A5C488B009C2DC6 /* ExampleTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExampleTableViewController.h; sourceTree = "<group>"; };
+		E37782FE1A5C488B009C2DC6 /* ExampleTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExampleTableViewController.m; sourceTree = "<group>"; };
+		E37782FF1A5C488B009C2DC6 /* ExampleTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExampleTableViewController.xib; sourceTree = "<group>"; };
 		E38D98B019C2049400630F43 /* GQURLDispatcherExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GQURLDispatcherExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E38D98B319C2049400630F43 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E38D98B519C2049400630F43 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -158,12 +159,13 @@
 				E38D98C519C2049400630F43 /* Main.storyboard */,
 				E38D98C819C2049400630F43 /* GQFirstViewController.h */,
 				E38D98C919C2049400630F43 /* GQFirstViewController.m */,
-				E36D317319D1B746003ACC19 /* GQFirstViewController.xib */,
 				E38D98CB19C2049400630F43 /* GQSecondViewController.h */,
 				E38D98CC19C2049400630F43 /* GQSecondViewController.m */,
-				E36D317519D1B794003ACC19 /* GQSecondViewController.xib */,
 				E38D98CE19C2049400630F43 /* Images.xcassets */,
 				E38D98BA19C2049400630F43 /* Supporting Files */,
+				E37782FD1A5C488B009C2DC6 /* ExampleTableViewController.h */,
+				E37782FE1A5C488B009C2DC6 /* ExampleTableViewController.m */,
+				E37782FF1A5C488B009C2DC6 /* ExampleTableViewController.xib */,
 			);
 			path = GQURLDispatcherExample;
 			sourceTree = "<group>";
@@ -298,9 +300,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E37783011A5C488B009C2DC6 /* ExampleTableViewController.xib in Resources */,
 				E38D98CF19C2049400630F43 /* Images.xcassets in Resources */,
-				E36D317619D1B794003ACC19 /* GQSecondViewController.xib in Resources */,
-				E36D317419D1B746003ACC19 /* GQFirstViewController.xib in Resources */,
 				E38D98BE19C2049400630F43 /* InfoPlist.strings in Resources */,
 				E38D98C719C2049400630F43 /* Main.storyboard in Resources */,
 			);
@@ -323,6 +324,7 @@
 			files = (
 				E38D98C419C2049400630F43 /* GQAppDelegate.m in Sources */,
 				E38D98C019C2049400630F43 /* main.m in Sources */,
+				E37783001A5C488B009C2DC6 /* ExampleTableViewController.m in Sources */,
 				E38D98CD19C2049400630F43 /* GQSecondViewController.m in Sources */,
 				E38D98CA19C2049400630F43 /* GQFirstViewController.m in Sources */,
 			);
@@ -459,6 +461,7 @@
 				INFOPLIST_FILE = "GQURLDispatcherExample/GQURLDispatcherExample-Info.plist";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/../GQURLDispatcher/SourceCode";
 				WRAPPER_EXTENSION = app;
 			};
@@ -474,6 +477,7 @@
 				INFOPLIST_FILE = "GQURLDispatcherExample/GQURLDispatcherExample-Info.plist";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/../GQURLDispatcher/SourceCode";
 				WRAPPER_EXTENSION = app;
 			};

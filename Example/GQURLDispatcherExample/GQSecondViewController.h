@@ -7,13 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ExampleTableViewController.h"
 
-@interface GQSecondViewController : UIViewController
+@interface GQSecondViewController : ExampleTableViewController
 
-- (IBAction)selectTabBar:(id)sender;
-
-- (IBAction)pushViewController:(UIButton *)sender;
-
-- (IBAction)backAction:(id)sender;
 
 @end
