@@ -122,8 +122,8 @@
 		E38D987519C2044600630F43 = {
 			isa = PBXGroup;
 			children = (
-				E38D988319C2044600630F43 /* GQURLDispatcher */,
-				E38D989719C2044600630F43 /* GQURLDispatcherTests */,
+				E38D988319C2044600630F43 /* SourceCode */,
+				E38D989719C2044600630F43 /* Tests */,
 				E38D988019C2044600630F43 /* Frameworks */,
 				E38D987F19C2044600630F43 /* Products */,
 				E67FE85768D4EB26FEF45C62 /* Pods */,
@@ -151,7 +151,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		E38D988319C2044600630F43 /* GQURLDispatcher */ = {
+		E38D988319C2044600630F43 /* SourceCode */ = {
 			isa = PBXGroup;
 			children = (
 				E38D988619C2044600630F43 /* GQURLDispatcher.h */,
@@ -175,7 +175,7 @@
 				E3AC0C4719CCA77600A3152E /* GQURLViewController.m */,
 				E38D988419C2044600630F43 /* Supporting Files */,
 			);
-			path = GQURLDispatcher;
+			path = SourceCode;
 			sourceTree = "<group>";
 		};
 		E38D988419C2044600630F43 /* Supporting Files */ = {
@@ -186,7 +186,7 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		E38D989719C2044600630F43 /* GQURLDispatcherTests */ = {
+		E38D989719C2044600630F43 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
 				E38D989819C2044600630F43 /* Supporting Files */,
@@ -197,7 +197,7 @@
 				E36D30F419CD6AA8003ACC19 /* GQNavigationResponderTest.m */,
 				E397D6481A5AC5B100BDFEEF /* GQSimpleResponderTests.m */,
 			);
-			path = GQURLDispatcherTests;
+			path = Tests;
 			sourceTree = "<group>";
 		};
 		E38D989819C2044600630F43 /* Supporting Files */ = {
@@ -455,7 +455,7 @@
 			buildSettings = {
 				DSTROOT = /tmp/GQURLDispatcher.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "GQURLDispatcher/GQURLDispatcher-Prefix.pch";
+				GCC_PREFIX_HEADER = "SourceCode/GQURLDispatcher-Prefix.pch";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -467,7 +467,7 @@
 			buildSettings = {
 				DSTROOT = /tmp/GQURLDispatcher.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "GQURLDispatcher/GQURLDispatcher-Prefix.pch";
+				GCC_PREFIX_HEADER = "SourceCode/GQURLDispatcher-Prefix.pch";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -484,12 +484,12 @@
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "GQURLDispatcher/GQURLDispatcher-Prefix.pch";
+				GCC_PREFIX_HEADER = "SourceCode/GQURLDispatcher-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "GQURLDispatcherTests/GQURLDispatcherTests-Info.plist";
+				INFOPLIST_FILE = "Tests/GQURLDispatcherTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -505,8 +505,8 @@
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "GQURLDispatcher/GQURLDispatcher-Prefix.pch";
-				INFOPLIST_FILE = "GQURLDispatcherTests/GQURLDispatcherTests-Info.plist";
+				GCC_PREFIX_HEADER = "SourceCode/GQURLDispatcher-Prefix.pch";
+				INFOPLIST_FILE = "Tests/GQURLDispatcherTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = xctest;
 			};

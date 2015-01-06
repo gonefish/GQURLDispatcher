@@ -78,12 +78,12 @@
     
     NSDictionary *classNameMap = @{@"gqurl://firstViewController": @"GQFirstViewController", @"gqurl://secondViewController": @"GQSecondViewController"};
     
-    GQNavigationResponder *navigationResponder1 = [[GQNavigationResponder alloc] initWithNavigationController:tabBarController.viewControllers[0] alias:@"nav1"];
+    GQNavigationResponder *navigationResponder1 = [[GQNavigationResponder alloc] initWithContainerViewController:tabBarController.viewControllers[0] alias:@"nav1"];
     
     navigationResponder1.responseURLs = responseURLs;
     navigationResponder1.classNameMap = classNameMap;
     
-    GQNavigationResponder *navigationResponder2 = [[GQNavigationResponder alloc] initWithNavigationController:tabBarController.viewControllers[1] alias:@"nav2"];
+    GQNavigationResponder *navigationResponder2 = [[GQNavigationResponder alloc] initWithContainerViewController:tabBarController.viewControllers[1] alias:@"nav2"];
     
     navigationResponder2.responseURLs = responseURLs;
     navigationResponder2.classNameMap = classNameMap;

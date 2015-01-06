@@ -1,23 +1,24 @@
 //
-//  GQSecondViewController.m
+//  GQFirstViewController.m
 //  GQURLDispatcherExample
 //
 //  Created by Qian GuoQiang on 14-9-12.
 //  Copyright (c) 2014年 Qian GuoQiang. All rights reserved.
 //
 
-#import "GQSecondViewController.h"
+#import "GQFirstViewController.h"
 #import "GQURLDispatcher.h"
 #import "GQNavigationResponder.h"
 
-@implementation GQSecondViewController
+
+@implementation GQFirstViewController
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
-    self.title = @"Second";
+    self.title = @"First";
 }
 
 - (void)didReceiveMemoryWarning
@@ -28,13 +29,13 @@
 
 - (IBAction)selectTabBar:(id)sender
 {
-    [GQURLDispatcher dispatchURL:[NSURL URLWithString:@"tab://example/?selectedIndex=0"]];
+    [GQURLDispatcher dispatchURL: [NSURL URLWithString:@"tab://example/?selectedIndex=1"]];
 }
 
 - (IBAction)pushViewController:(UIButton *)sender
 {
     if (sender.tag == 1) {
-        [GQURLDispatcher dispatchURL:[NSURL URLWithString:@"gqurl://firstViewController"]];
+       [GQURLDispatcher dispatchURL:[NSURL URLWithString:@"gqurl://firstViewController"]];
     } else if (sender.tag == 2) {
         [GQURLDispatcher dispatchURL:[NSURL URLWithString:@"gqurl://secondViewController"]];
     }
@@ -47,10 +48,10 @@
     GQNavigationResponder *nav2 = [[GQURLDispatcher sharedInstance] responderForAlias:@"nav2"];
     
     
-    if (self.navigationController.tabBarController.selectedViewController == nav1.navigationController) {
-        [nav1.navigationController popViewControllerAnimated:YES];
+    if (self.navigationController.tabBarController.selectedViewController == nav1.containerViewController) {
+        [(UINavigationController *)nav1.containerViewController popViewControllerAnimated:YES];
     } else {
-        [nav2.navigationController popViewControllerAnimated:YES];
+        [(UINavigationController *)nav2.containerViewController popViewControllerAnimated:YES];
     }
     
     return;

@@ -1,1 +1,13 @@
-<?xml version='1.0' encoding='UTF-8'?><Workspace version='1.0'><FileRef location='group:GQURLDispatcher/GQURLDispatcher.xcodeproj'/><FileRef location='group:GQURLDispatcherExample/GQURLDispatcherExample.xcodeproj'/><FileRef location='group:Pods/Pods.xcodeproj'/></Workspace>
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:GQURLDispatcher/GQURLDispatcher.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Example/GQURLDispatcherExample.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Pods/Pods.xcodeproj">
+   </FileRef>
+</Workspace>
