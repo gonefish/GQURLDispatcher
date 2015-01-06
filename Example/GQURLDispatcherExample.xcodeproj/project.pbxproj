@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		E36D317419D1B746003ACC19 /* GQFirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E36D317319D1B746003ACC19 /* GQFirstViewController.xib */; };
 		E36D317619D1B794003ACC19 /* GQSecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E36D317519D1B794003ACC19 /* GQSecondViewController.xib */; };
+		E37782F61A5C16EB009C2DC6 /* libGQURLDispatcher.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E37782F11A5C159E009C2DC6 /* libGQURLDispatcher.a */; };
 		E38D98B419C2049400630F43 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E38D98B319C2049400630F43 /* Foundation.framework */; };
 		E38D98B619C2049400630F43 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E38D98B519C2049400630F43 /* CoreGraphics.framework */; };
 		E38D98B819C2049400630F43 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E38D98B719C2049400630F43 /* UIKit.framework */; };
@@ -24,18 +25,30 @@
 		E38D98D819C2049400630F43 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E38D98B719C2049400630F43 /* UIKit.framework */; };
 		E38D98E019C2049400630F43 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E38D98DE19C2049400630F43 /* InfoPlist.strings */; };
 		E38D98E219C2049400630F43 /* GQURLDispatcherExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E38D98E119C2049400630F43 /* GQURLDispatcherExampleTests.m */; };
-		E3CD80CA1A5BE84B003182A3 /* GQApplicationURLResponder.m in Sources */ = {isa = PBXBuildFile; fileRef = E3CD80B71A5BE84B003182A3 /* GQApplicationURLResponder.m */; };
-		E3CD80CB1A5BE84B003182A3 /* GQCompletionWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = E3CD80B91A5BE84B003182A3 /* GQCompletionWrapper.m */; };
-		E3CD80CC1A5BE84B003182A3 /* GQNavigationResponder.m in Sources */ = {isa = PBXBuildFile; fileRef = E3CD80BB1A5BE84B003182A3 /* GQNavigationResponder.m */; };
-		E3CD80CD1A5BE84B003182A3 /* GQPresentResponder.m in Sources */ = {isa = PBXBuildFile; fileRef = E3CD80BD1A5BE84B003182A3 /* GQPresentResponder.m */; };
-		E3CD80CE1A5BE84B003182A3 /* GQSimpleResponder.m in Sources */ = {isa = PBXBuildFile; fileRef = E3CD80BF1A5BE84B003182A3 /* GQSimpleResponder.m */; };
-		E3CD80CF1A5BE84B003182A3 /* GQTabBarResponder.m in Sources */ = {isa = PBXBuildFile; fileRef = E3CD80C11A5BE84B003182A3 /* GQTabBarResponder.m */; };
-		E3CD80D01A5BE84B003182A3 /* GQURLDispatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = E3CD80C41A5BE84B003182A3 /* GQURLDispatcher.m */; };
-		E3CD80D11A5BE84B003182A3 /* GQURLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3CD80C71A5BE84B003182A3 /* GQURLViewController.m */; };
-		E3CD80D21A5BE84B003182A3 /* NSURL+GQURLUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = E3CD80C91A5BE84B003182A3 /* NSURL+GQURLUtilities.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		E37782F01A5C159E009C2DC6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E37782EB1A5C159E009C2DC6 /* GQURLDispatcher.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E38D987E19C2044600630F43;
+			remoteInfo = GQURLDispatcher;
+		};
+		E37782F21A5C159E009C2DC6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E37782EB1A5C159E009C2DC6 /* GQURLDispatcher.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E38D988E19C2044600630F43;
+			remoteInfo = GQURLDispatcherTests;
+		};
+		E37782F41A5C15AE009C2DC6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E37782EB1A5C159E009C2DC6 /* GQURLDispatcher.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = E38D987D19C2044600630F43;
+			remoteInfo = GQURLDispatcher;
+		};
 		E38D98D919C2049400630F43 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = E38D98A819C2049400630F43 /* Project object */;
@@ -48,6 +61,7 @@
 /* Begin PBXFileReference section */
 		E36D317319D1B746003ACC19 /* GQFirstViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GQFirstViewController.xib; sourceTree = "<group>"; };
 		E36D317519D1B794003ACC19 /* GQSecondViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GQSecondViewController.xib; sourceTree = "<group>"; };
+		E37782EB1A5C159E009C2DC6 /* GQURLDispatcher.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GQURLDispatcher.xcodeproj; path = ../GQURLDispatcher/GQURLDispatcher.xcodeproj; sourceTree = "<group>"; };
 		E38D98B019C2049400630F43 /* GQURLDispatcherExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GQURLDispatcherExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E38D98B319C2049400630F43 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E38D98B519C2049400630F43 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -69,25 +83,6 @@
 		E38D98DD19C2049400630F43 /* GQURLDispatcherExampleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GQURLDispatcherExampleTests-Info.plist"; sourceTree = "<group>"; };
 		E38D98DF19C2049400630F43 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		E38D98E119C2049400630F43 /* GQURLDispatcherExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GQURLDispatcherExampleTests.m; sourceTree = "<group>"; };
-		E3CD80B61A5BE84B003182A3 /* GQApplicationURLResponder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GQApplicationURLResponder.h; sourceTree = "<group>"; };
-		E3CD80B71A5BE84B003182A3 /* GQApplicationURLResponder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GQApplicationURLResponder.m; sourceTree = "<group>"; };
-		E3CD80B81A5BE84B003182A3 /* GQCompletionWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GQCompletionWrapper.h; sourceTree = "<group>"; };
-		E3CD80B91A5BE84B003182A3 /* GQCompletionWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GQCompletionWrapper.m; sourceTree = "<group>"; };
-		E3CD80BA1A5BE84B003182A3 /* GQNavigationResponder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GQNavigationResponder.h; sourceTree = "<group>"; };
-		E3CD80BB1A5BE84B003182A3 /* GQNavigationResponder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GQNavigationResponder.m; sourceTree = "<group>"; };
-		E3CD80BC1A5BE84B003182A3 /* GQPresentResponder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GQPresentResponder.h; sourceTree = "<group>"; };
-		E3CD80BD1A5BE84B003182A3 /* GQPresentResponder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GQPresentResponder.m; sourceTree = "<group>"; };
-		E3CD80BE1A5BE84B003182A3 /* GQSimpleResponder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GQSimpleResponder.h; sourceTree = "<group>"; };
-		E3CD80BF1A5BE84B003182A3 /* GQSimpleResponder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GQSimpleResponder.m; sourceTree = "<group>"; };
-		E3CD80C01A5BE84B003182A3 /* GQTabBarResponder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GQTabBarResponder.h; sourceTree = "<group>"; };
-		E3CD80C11A5BE84B003182A3 /* GQTabBarResponder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GQTabBarResponder.m; sourceTree = "<group>"; };
-		E3CD80C31A5BE84B003182A3 /* GQURLDispatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GQURLDispatcher.h; sourceTree = "<group>"; };
-		E3CD80C41A5BE84B003182A3 /* GQURLDispatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GQURLDispatcher.m; sourceTree = "<group>"; };
-		E3CD80C51A5BE84B003182A3 /* GQURLResponder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GQURLResponder.h; sourceTree = "<group>"; };
-		E3CD80C61A5BE84B003182A3 /* GQURLViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GQURLViewController.h; sourceTree = "<group>"; };
-		E3CD80C71A5BE84B003182A3 /* GQURLViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GQURLViewController.m; sourceTree = "<group>"; };
-		E3CD80C81A5BE84B003182A3 /* NSURL+GQURLUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+GQURLUtilities.h"; sourceTree = "<group>"; };
-		E3CD80C91A5BE84B003182A3 /* NSURL+GQURLUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+GQURLUtilities.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E37782F61A5C16EB009C2DC6 /* libGQURLDispatcher.a in Frameworks */,
 				E38D98B619C2049400630F43 /* CoreGraphics.framework in Frameworks */,
 				E38D98B819C2049400630F43 /* UIKit.framework in Frameworks */,
 				E38D98B419C2049400630F43 /* Foundation.framework in Frameworks */,
@@ -114,9 +110,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E37782EC1A5C159E009C2DC6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E37782F11A5C159E009C2DC6 /* libGQURLDispatcher.a */,
+				E37782F31A5C159E009C2DC6 /* GQURLDispatcherTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		E38D98A719C2049400630F43 = {
 			isa = PBXGroup;
 			children = (
+				E37782EB1A5C159E009C2DC6 /* GQURLDispatcher.xcodeproj */,
 				E38D98B919C2049400630F43 /* GQURLDispatcherExample */,
 				E38D98DB19C2049400630F43 /* GQURLDispatcherExampleTests */,
 				E38D98B219C2049400630F43 /* Frameworks */,
@@ -147,7 +153,6 @@
 		E38D98B919C2049400630F43 /* GQURLDispatcherExample */ = {
 			isa = PBXGroup;
 			children = (
-				E3CD80B51A5BE84B003182A3 /* SourceCode */,
 				E38D98C219C2049400630F43 /* GQAppDelegate.h */,
 				E38D98C319C2049400630F43 /* GQAppDelegate.m */,
 				E38D98C519C2049400630F43 /* Main.storyboard */,
@@ -192,33 +197,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		E3CD80B51A5BE84B003182A3 /* SourceCode */ = {
-			isa = PBXGroup;
-			children = (
-				E3CD80B61A5BE84B003182A3 /* GQApplicationURLResponder.h */,
-				E3CD80B71A5BE84B003182A3 /* GQApplicationURLResponder.m */,
-				E3CD80B81A5BE84B003182A3 /* GQCompletionWrapper.h */,
-				E3CD80B91A5BE84B003182A3 /* GQCompletionWrapper.m */,
-				E3CD80BA1A5BE84B003182A3 /* GQNavigationResponder.h */,
-				E3CD80BB1A5BE84B003182A3 /* GQNavigationResponder.m */,
-				E3CD80BC1A5BE84B003182A3 /* GQPresentResponder.h */,
-				E3CD80BD1A5BE84B003182A3 /* GQPresentResponder.m */,
-				E3CD80BE1A5BE84B003182A3 /* GQSimpleResponder.h */,
-				E3CD80BF1A5BE84B003182A3 /* GQSimpleResponder.m */,
-				E3CD80C01A5BE84B003182A3 /* GQTabBarResponder.h */,
-				E3CD80C11A5BE84B003182A3 /* GQTabBarResponder.m */,
-				E3CD80C31A5BE84B003182A3 /* GQURLDispatcher.h */,
-				E3CD80C41A5BE84B003182A3 /* GQURLDispatcher.m */,
-				E3CD80C51A5BE84B003182A3 /* GQURLResponder.h */,
-				E3CD80C61A5BE84B003182A3 /* GQURLViewController.h */,
-				E3CD80C71A5BE84B003182A3 /* GQURLViewController.m */,
-				E3CD80C81A5BE84B003182A3 /* NSURL+GQURLUtilities.h */,
-				E3CD80C91A5BE84B003182A3 /* NSURL+GQURLUtilities.m */,
-			);
-			name = SourceCode;
-			path = ../../GQURLDispatcher/SourceCode;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -233,6 +211,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				E37782F51A5C15AE009C2DC6 /* PBXTargetDependency */,
 			);
 			name = GQURLDispatcherExample;
 			productName = GQURLDispatcherExample;
@@ -283,6 +262,12 @@
 			mainGroup = E38D98A719C2049400630F43;
 			productRefGroup = E38D98B119C2049400630F43 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = E37782EC1A5C159E009C2DC6 /* Products */;
+					ProjectRef = E37782EB1A5C159E009C2DC6 /* GQURLDispatcher.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				E38D98AF19C2049400630F43 /* GQURLDispatcherExample */,
@@ -290,6 +275,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		E37782F11A5C159E009C2DC6 /* libGQURLDispatcher.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libGQURLDispatcher.a;
+			remoteRef = E37782F01A5C159E009C2DC6 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		E37782F31A5C159E009C2DC6 /* GQURLDispatcherTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = GQURLDispatcherTests.xctest;
+			remoteRef = E37782F21A5C159E009C2DC6 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		E38D98AE19C2049400630F43 /* Resources */ = {
@@ -319,17 +321,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E3CD80D21A5BE84B003182A3 /* NSURL+GQURLUtilities.m in Sources */,
 				E38D98C419C2049400630F43 /* GQAppDelegate.m in Sources */,
 				E38D98C019C2049400630F43 /* main.m in Sources */,
-				E3CD80D11A5BE84B003182A3 /* GQURLViewController.m in Sources */,
-				E3CD80D01A5BE84B003182A3 /* GQURLDispatcher.m in Sources */,
-				E3CD80CD1A5BE84B003182A3 /* GQPresentResponder.m in Sources */,
-				E3CD80CE1A5BE84B003182A3 /* GQSimpleResponder.m in Sources */,
-				E3CD80CF1A5BE84B003182A3 /* GQTabBarResponder.m in Sources */,
-				E3CD80CA1A5BE84B003182A3 /* GQApplicationURLResponder.m in Sources */,
-				E3CD80CB1A5BE84B003182A3 /* GQCompletionWrapper.m in Sources */,
-				E3CD80CC1A5BE84B003182A3 /* GQNavigationResponder.m in Sources */,
 				E38D98CD19C2049400630F43 /* GQSecondViewController.m in Sources */,
 				E38D98CA19C2049400630F43 /* GQFirstViewController.m in Sources */,
 			);
@@ -346,6 +339,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		E37782F51A5C15AE009C2DC6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GQURLDispatcher;
+			targetProxy = E37782F41A5C15AE009C2DC6 /* PBXContainerItemProxy */;
+		};
 		E38D98DA19C2049400630F43 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = E38D98AF19C2049400630F43 /* GQURLDispatcherExample */;
@@ -460,6 +458,7 @@
 				GCC_PREFIX_HEADER = "GQURLDispatcherExample/GQURLDispatcherExample-Prefix.pch";
 				INFOPLIST_FILE = "GQURLDispatcherExample/GQURLDispatcherExample-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/../GQURLDispatcher/SourceCode";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -473,6 +472,7 @@
 				GCC_PREFIX_HEADER = "GQURLDispatcherExample/GQURLDispatcherExample-Prefix.pch";
 				INFOPLIST_FILE = "GQURLDispatcherExample/GQURLDispatcherExample-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/../GQURLDispatcher/SourceCode";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
