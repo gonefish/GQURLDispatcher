@@ -13,7 +13,7 @@ Pod::Spec.new do |s|
   s.social_media_url   = "https://github.com/gonefish"
   s.platform     = :ios, "6.0"
   s.source       = { :git => "https://github.com/gonefish/GQURLDispatcher.git", :tag => s.version.to_s }
-  s.source_files  = "GQURLDispatcher/GQURLDispatcher/*.{h,m}"
+  s.source_files  = "GQURLDispatcher/SourceCode/*.{h,m}"
   s.requires_arc = true
 
 end
