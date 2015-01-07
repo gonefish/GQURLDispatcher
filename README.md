@@ -3,16 +3,16 @@ GQURLDispatcher
 
 [![Travis-ci](https://travis-ci.org/gonefish/GQURLDispatcher.png)](https://travis-ci.org/gonefish/GQURLDispatcher)
 
-GQURLDispatcher是一个简单且灵活的，基于URL的动作分发框架。通过URL和正则表达式来进行响应者Responer的匹配及调用，响应者Responer通常是View Controller的操作或者某个特定的方法，但不限于此。
+GQURLDispatcher是一个简单且灵活的，基于URL的动作分发框架。通过URL和正则表达式来进行响应者Responder的匹配及调用，响应者Responder通常是View Controller的操作或者某个特定的方法，但不限于此。
 
 Architecture
 ------------
 
 ### Core
 
-* GQURLDispatcher
-* GQURLDispatcherDelegate
-* GQURLResponder
+* GQURLDispatcher 管理Responder，对分发的URL依次与Responder进行匹配，匹配成功后调用处理方法。
+* GQURLDispatcherDelegate 匹配流程中的通知及控制。
+* GQURLResponder 定义Responder需要实现的方法。
 
 ### Responder 处理特定动作的实体，需要实现GQURLResponder协议
 
@@ -26,7 +26,7 @@ Architecture
 
 * GQURLUtilities
 * GQURLViewController GQURLViewController协议定义了更新URL和Object的方法，用于将这2个参数传递给UIViewController。GQURLViewController类继承了UIViewController，并实现了该协议。
-* GQCompletionWrapper Block参数的对象包装
+* GQCompletionWrapper Block参数的对象包装。
 
 Installation
 ------
