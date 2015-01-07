@@ -30,7 +30,7 @@
     NSURL *aURL = [NSURL URLWithString:@"https://github.com/gonefish/GQURLDispatcher?test=1"];
     id anObject = [[NSObject alloc] init];
     
-    GQURLViewController *vc = [[GQURLViewController alloc] initWithURL:aURL withObject:anObject];
+    GQURLViewController *vc = [[GQURLViewController alloc] initWithURL:aURL object:anObject];
     
     XCTAssertEqual(aURL, vc.gq_url, @"对象赋值失败");
     

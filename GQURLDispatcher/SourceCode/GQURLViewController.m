@@ -23,15 +23,15 @@
 
 - (id)initWithURL:(NSURL *)aURL
 {
-    return [self initWithURL:aURL withObject:nil];
+    return [self initWithURL:aURL object:nil];
 }
 
-- (id)initWithURL:(NSURL *)aURL withObject:(id)anObject
+- (id)initWithURL:(NSURL *)aURL object:(id)anObject
 {
     self = [super init];
     
     if (self) {
-        [self updateWithURL:aURL withObject:anObject];
+        [self updateWithURL:aURL object:anObject];
         
         self.gq_urlQueryDictionary = [self.gq_url gq_queryDictionary];
     }
@@ -39,7 +39,7 @@
     return self;
 }
 
-- (void)updateWithURL:(NSURL *)aURL withObject:(id)anObject
+- (void)updateWithURL:(NSURL *)aURL object:(id)anObject
 {
     self.gq_url = aURL;
     self.gq_object = anObject;

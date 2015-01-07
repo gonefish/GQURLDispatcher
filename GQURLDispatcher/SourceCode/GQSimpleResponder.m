@@ -35,12 +35,12 @@
     UIViewController *newVC = nil;
     
     if ([cls isSubclassOfClass:[GQURLViewController class]]) {
-        newVC = [[cls alloc] initWithURL:aURL withObject:anObject];
+        newVC = [[cls alloc] initWithURL:aURL object:anObject];
     } else if ([cls isSubclassOfClass:[UIViewController class]]) {
         newVC = [[cls alloc] init];
         
         if ([cls conformsToProtocol:@protocol(GQURLViewController)]) {
-            [(id <GQURLViewController>)newVC updateWithURL:aURL withObject:anObject];
+            [(id <GQURLViewController>)newVC updateWithURL:aURL object:anObject];
         }
     }
     

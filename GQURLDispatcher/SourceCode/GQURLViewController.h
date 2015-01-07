@@ -14,7 +14,7 @@
 
 - (id)gq_object;
 
-- (void)updateWithURL:(NSURL *)aURL withObject:(id)anObject;
+- (void)updateWithURL:(NSURL *)aURL object:(id)anObject;
 
 @end
 
@@ -28,6 +28,6 @@
 
 - (id)initWithURL:(NSURL *)aURL;
 
-- (id)initWithURL:(NSURL *)aURL withObject:(id)anObject;
+- (id)initWithURL:(NSURL *)aURL object:(id)anObject;
 
 @end
