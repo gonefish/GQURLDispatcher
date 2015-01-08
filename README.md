@@ -14,9 +14,11 @@ Architecture
 * GQURLDispatcherDelegate 匹配流程中的通知及控制。
 * GQURLResponder 定义Responder需要实现的方法。
 
-### Responder 处理特定动作的实体，需要实现GQURLResponder协议
+### Responder 
 
-1. **GQSimpleResponder**  实现了GQURLResponder协议的部分方法，通过继承该类可以快速的实现自定义的Responder。除此之外，还提供了通过URL创建UIViewController实例的功能，在创建时会判断是否为GQURLViewController类，如果是会通过initWithURL:object:来创建实例；如果不是则使用init创建实例，然后检测是否实现了GQURLViewController协议，如果是会调用updateWithURL:object:。
+处理特定动作的实体，需要实现GQURLResponder协议。
+
+1. **GQSimpleResponder** 实现了GQURLResponder协议的部分方法，通过继承该类可以快速的实现自定义的Responder。除此之外，还提供了通过URL创建UIViewController实例的功能，在创建时会判断是否为GQURLViewController类，如果是会通过initWithURL:object:来创建实例；如果不是则使用init创建实例，然后检测是否实现了GQURLViewController协议，如果是会调用updateWithURL:object:。
 1. **GQNavigationResponder** UINavigationController的pushViewController:animated:动作的处理。
 1. **GQTabBarResponder** UITabBarController的selectedIndex动作处理。
 1. **GQApplicationURLResponder** UIApplication的openURL动作处理。
@@ -30,6 +32,8 @@ Architecture
 
 Installation
 ------
+
+CocoaPods
 
 ```ruby
 pod 'GQURLDispatcher', '~> 0.2'
