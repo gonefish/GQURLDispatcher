@@ -181,13 +181,18 @@
     
     id responder = [self mockURLResponderWithURL:testURL];
     
+    OCMStub([delegateMock URLDispatcher:self.testURLDispatcher shouldWithResponder:responder handleURL:testURL object:nil]).andReturn(YES);
+    
     [self.testURLDispatcher registerResponder:responder];
     
     [self.testURLDispatcher dispatchURL:testURL];
     
     OCMVerify([delegateMock URLDispatcherWillBeginDispatch:self.testURLDispatcher]);
+    
     OCMVerify([delegateMock URLDispatcher:self.testURLDispatcher shouldWithResponder:responder handleURL:testURL object:nil]);
+    
     OCMVerify([delegateMock URLDispatcher:self.testURLDispatcher didWithResponder:responder handleURL:testURL object:nil]);
+    
     OCMVerify([delegateMock URLDispatcherDidEndDispatch:self.testURLDispatcher]);
 }
 
@@ -207,8 +212,6 @@
     
     XCTAssertFalse([self.testURLDispatcher dispatchURL:testURL], @"不应该响应responder");
 }
-
-
 
 - (id <GQURLResponder>)mockURLResponderWithURL:(NSURL *)aURL
 {

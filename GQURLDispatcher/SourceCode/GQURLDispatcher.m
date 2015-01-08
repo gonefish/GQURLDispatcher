@@ -71,7 +71,7 @@
                          shouldWithResponder:responder
                                    handleURL:url
                                       object:anObject] == NO) {
-                *stop = YES;
+                return;
             }
         }
         
