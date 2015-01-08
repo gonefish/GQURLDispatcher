@@ -30,6 +30,11 @@ Architecture
 * GQURLViewController GQURLViewController协议定义了更新URL和Object的方法，用于将这2个参数传递给UIViewController。GQURLViewController类继承了UIViewController，并实现了该协议。
 * GQCompletionWrapper Block参数的对象包装。
 
+Flow
+-----
+
+![Dispatch Flow](https://raw.githubusercontent.com/gonefish/GQURLDispatcher/master/Dispatch%20Flow.png)
+
 Installation
 ------
 
