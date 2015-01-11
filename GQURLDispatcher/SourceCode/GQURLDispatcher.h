@@ -15,26 +15,39 @@
 
 @property (nonatomic, weak) id<GQURLDispatcherDelegate> delegate;
 
+/**
+ *  返回单例
+ *
+ */
 + (instancetype)sharedInstance;
 
 /**
- *  调用dispatchURL:withObject:，withObject传递nil
+ *  核心方法，等于dispatchURL:withObject:中，withObject为nil
  *
  */
 - (BOOL)dispatchURL:(NSURL *)url;
 
+/**
+ *  快捷方法，使用单例调用dispatchURL
+ *
+ */
 + (BOOL)dispatchURL:(NSURL *)url;
 
 /**
- *  核心方法，调用时会依次将URL和自定义对象传递给匹配的Responder响应
+ *  核心方法，将要分发的URL和自定义对象依次传递给匹配的Responder进行处理
+ *  流程图 https://raw.githubusercontent.com/gonefish/GQURLDispatcher/master/Dispatch%20Flow.png
  *
  *  @param url      URL对象
- *  @param anObject 自定义的参数
+ *  @param anObject 自定义的对象
  *
  *  @return 如果有相应的响应者处理则返回YES，否则为NO
  */
 - (BOOL)dispatchURL:(NSURL *)url withObject:(id)anObject;
 
+/**
+ *  快捷方法，使用单例调用dispatchURL:withObject:
+ *
+ */
 + (BOOL)dispatchURL:(NSURL *)url withObject:(id)anObject;
 
 /**
@@ -61,6 +74,7 @@
 /**
  *  通过别名获取响应者
  *
+ *  @return 返回该别名的Responder，否则为nil
  */
 - (id <GQURLResponder>)responderForAlias:(NSString *)alias;
 

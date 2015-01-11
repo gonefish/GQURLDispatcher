@@ -36,6 +36,11 @@
  */
 - (NSRegularExpression *)responseURLStringRegularExpression;
 
+/**
+ *  Responder的别名，用于快速查找
+ *
+ *  @return 别名字符串
+ */
 - (NSString *)alias;
 
 @end
