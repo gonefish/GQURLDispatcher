@@ -72,31 +72,32 @@
     GQTabBarResponder *tabBarResponder =
     [[GQTabBarResponder alloc] initWithTabBarController:tabBarController
                                                 URL:[NSURL URLWithString:@"tab://example/"]];
+    
     [[GQURLDispatcher sharedInstance] registerResponder:tabBarResponder];
     
     
-    NSArray *responseURLs = @[[NSURL URLWithString:@"gqurl://firstViewController"], [NSURL URLWithString:@"gqurl://secondViewController"]];
-    
-    NSDictionary *classNameMap = @{@"gqurl://firstViewController": @"GQFirstViewController", @"gqurl://secondViewController": @"GQSecondViewController"};
+    NSDictionary *classNameMap = @{@"gqurl://firstViewController": @"GQFirstViewController",
+                                   @"gqurl://secondViewController": @"GQSecondViewController"};
     
     GQNavigationResponder *navigationResponder1 = [[GQNavigationResponder alloc] initWithContainerViewController:tabBarController.viewControllers[0] alias:@"nav1"];
     
-    navigationResponder1.responseURLs = responseURLs;
     navigationResponder1.classNameMap = classNameMap;
+    
+    [[GQURLDispatcher sharedInstance] registerResponder:navigationResponder1];
+    
     
     GQNavigationResponder *navigationResponder2 = [[GQNavigationResponder alloc] initWithContainerViewController:tabBarController.viewControllers[1] alias:@"nav2"];
     
-    navigationResponder2.responseURLs = responseURLs;
     navigationResponder2.classNameMap = classNameMap;
     
+    [[GQURLDispatcher sharedInstance] registerResponder:navigationResponder2];
+    
+    
     GQPresentResponder *presentResponder = [[GQPresentResponder alloc] initWithContainerViewController:tabBarController alias:@"present"];
-    presentResponder.responseURLs = @[[NSURL URLWithString:@"modal://firstViewController"]];;
+    
     presentResponder.classNameMap = @{@"modal://firstViewController": @"GQFirstViewController"};;
     
-    [[GQURLDispatcher sharedInstance] registerResponder:navigationResponder1];
-    [[GQURLDispatcher sharedInstance] registerResponder:navigationResponder2];
     [[GQURLDispatcher sharedInstance] registerResponder:presentResponder];
-    
 }
 
 @end
