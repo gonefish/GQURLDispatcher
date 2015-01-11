@@ -47,4 +47,28 @@
     return newVC;
 }
 
+- (void)setClassNameMap:(NSDictionary *)classNameMap
+{
+    @synchronized(self) {
+        _classNameMap = [classNameMap copy];
+        
+        NSMutableArray *tmpArray = [NSMutableArray array];
+        NSURL *aURL = nil;
+        
+        for (id url in [_classNameMap allKeys]) {
+            aURL = [NSURL URLWithString:url];
+            
+            if (aURL) {
+                [tmpArray addObject:aURL];
+            }
+        }
+        
+        if (self.responseURLs) {
+            self.responseURLs = [self.responseURLs arrayByAddingObjectsFromArray:tmpArray];
+        } else {
+            self.responseURLs = tmpArray;
+        }
+    }
+}
+
 @end

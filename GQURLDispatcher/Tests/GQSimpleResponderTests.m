@@ -60,4 +60,12 @@
     XCTAssert([self.testSimpleResponder viewControllerWithURL:[NSURL URLWithString:testURLString] object:nil], @"返回UIViewController实例");
 }
 
+- (void)testSetClassNameMap
+{
+    NSString *testURLString = @"http://github.com/gonefish";
+    self.testSimpleResponder.classNameMap = @{testURLString: @"UIViewController"};
+    
+    XCTAssert([self.testSimpleResponder.responseURLs count] == 1, @"URL字符串的key没有添加到responseURLs中");
+}
+
 @end
