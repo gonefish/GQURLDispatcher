@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "GQURLDispatcher"
-  s.version      = "0.2"
+  s.version      = "0.3"
   s.summary      = "A simple and flexible dispatch action framework based URL for iOS"
 
   s.description  = <<-DESC
