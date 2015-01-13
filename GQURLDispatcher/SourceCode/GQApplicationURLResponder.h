@@ -11,6 +11,8 @@
 
 @interface GQApplicationURLResponder : NSObject <GQURLResponder>
 
-@property (nonatomic, strong, readonly) NSRegularExpression *responseURLStringRegularExpression;
+@property (nonatomic, strong) NSRegularExpression *responseURLStringRegularExpression;
+
+@property (nonatomic, copy) NSArray *responseURLs;
 
 @end

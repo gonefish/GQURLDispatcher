@@ -23,11 +23,6 @@
     return self;
 }
 
-- (NSArray *)responseURLs
-{
-    return nil;
-}
-
 - (BOOL)handleURL:(NSURL *)aURL withObject:(id)anObject
 {
     if ([[UIApplication sharedApplication] canOpenURL:aURL]) {
