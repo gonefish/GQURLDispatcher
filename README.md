@@ -30,8 +30,7 @@ Architecture
 * GQURLViewController GQURLViewController协议定义了更新URL和Object的方法，用于将这2个参数传递给UIViewController。GQURLViewController类继承了UIViewController，并实现了该协议。
 * GQCompletionWrapper Block参数的对象包装。
 
-分发流程
--------------
+### 分发流程
 
 黄色的背景表示GQURLDispatcherDelegate交互的部分，绿色的背景表示GQURLResponder交互的部分。
 
