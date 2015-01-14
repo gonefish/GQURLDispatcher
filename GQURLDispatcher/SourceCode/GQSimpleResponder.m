@@ -26,23 +26,26 @@
 
 - (UIViewController *)viewControllerWithURL:(NSURL *)aURL object:(id)anObject
 {
-    NSString *className = [self.classNameMap objectForKey:[aURL gq_dispatchURLString]];
+    UIViewController *newVC = [self storyboardViewControllerWithURL:aURL object:anObject];
     
-    if (className == nil) return nil;
+    if (newVC == nil) {
+        newVC = [self nibViewControllerWithURL:aURL object:anObject];
+    }
     
-    Class cls = NSClassFromString(className);
-    
-    UIViewController *newVC = nil;
-    
-    if ([cls isSubclassOfClass:[UIViewController class]]) {
-        newVC = [[cls alloc] init];
-        
-        if ([cls conformsToProtocol:@protocol(GQURLViewController)]) {
-            [(id <GQURLViewController>)newVC updateWithURL:aURL object:anObject];
-        }
+    if ([newVC conformsToProtocol:@protocol(GQURLViewController)]) {
+        [(id <GQURLViewController>)newVC updateWithURL:aURL object:anObject];
     }
     
     return newVC;
+}
+
+- (void)setStoryboardIdentifierMap:(NSDictionary *)storyboardIdentifierMap
+{
+    @synchronized(self) {
+        _storyboardIdentifierMap = [storyboardIdentifierMap copy];
+        
+        [self addResponseURLsWithArray:[_storyboardIdentifierMap allKeys]];
+    }
 }
 
 - (void)setClassNameMap:(NSDictionary *)classNameMap
@@ -50,23 +53,67 @@
     @synchronized(self) {
         _classNameMap = [classNameMap copy];
         
-        NSMutableArray *tmpArray = [NSMutableArray array];
-        NSURL *aURL = nil;
+        [self addResponseURLsWithArray:[_classNameMap allKeys]];
+    }
+}
+
+#pragma mark - Private
+
+- (void)addResponseURLsWithArray:(NSArray *)array
+{
+    NSMutableArray *tmpArray = [NSMutableArray array];
+    NSURL *aURL = nil;
+    
+    for (id url in array) {
+        aURL = [NSURL URLWithString:url];
         
-        for (id url in [_classNameMap allKeys]) {
-            aURL = [NSURL URLWithString:url];
-            
-            if (aURL) {
-                [tmpArray addObject:aURL];
-            }
-        }
-        
-        if (self.responseURLs) {
-            self.responseURLs = [self.responseURLs arrayByAddingObjectsFromArray:tmpArray];
-        } else {
-            self.responseURLs = tmpArray;
+        if (aURL) {
+            [tmpArray addObject:aURL];
         }
     }
+    
+    if (self.responseURLs) {
+        self.responseURLs = [self.responseURLs arrayByAddingObjectsFromArray:tmpArray];
+    } else {
+        self.responseURLs = tmpArray;
+    }
+}
+
+- (UIViewController *)nibViewControllerWithURL:(NSURL *)aURL object:(id)anObject
+{
+    UIViewController *newVC = nil;
+    
+    NSString *className = [self.classNameMap objectForKey:[aURL gq_dispatchURLString]];
+    
+    if (className == nil) return nil;
+    
+    Class cls = NSClassFromString(className);
+    
+    if ([cls isSubclassOfClass:[UIViewController class]]) {
+        newVC = [[cls alloc] init];
+    }
+    
+    return newVC;
+}
+
+- (UIViewController *)storyboardViewControllerWithURL:(NSURL *)aURL object:(id)anObject
+{
+    UIViewController *newVC = nil;
+    
+    if (self.storyboardBlock) {
+        UIStoryboard *storyboard = self.storyboardBlock(aURL, anObject);
+        
+        if (storyboard) {
+            @try {
+                NSString *identifier = [self.storyboardIdentifierMap objectForKey:[aURL gq_dispatchURLString]];
+                newVC = [storyboard instantiateViewControllerWithIdentifier:identifier];
+            }
+            @catch (NSException *exception) {
+            }
+        }
+    }
+    
+    return newVC;
 }
 
 @end

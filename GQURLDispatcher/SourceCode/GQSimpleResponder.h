@@ -8,11 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
+typedef UIStoryboard* (^GQStoryboardBlock)(NSURL*, id);
+
 @interface GQSimpleResponder : NSObject
 
 @property (nonatomic, copy) NSArray *responseURLs;
 
 @property (nonatomic, strong) NSRegularExpression *responseURLStringRegularExpression;
+
+@property (nonatomic, copy, readonly) NSString *alias;
 
 /**
  *  URL到UIViewController类名的映射字典，键是URL，值是类名
@@ -20,7 +24,17 @@
  */
 @property (nonatomic, copy) NSDictionary *classNameMap;
 
-@property (nonatomic, copy, readonly) NSString *alias;
+/**
+ *  设置Block后，会优先尝试通过Storyboard创建实例
+ */
+@property (nonatomic, copy) GQStoryboardBlock storyboardBlock;
+
+
+/**
+ *  URL到Storyboard Identifier的映射，键是URL，值是ID
+ *  如：@{@"gq://GQURLDispatcher": @"MainViewController"}
+*/
+@property (nonatomic, copy) NSDictionary *storyboardIdentifierMap;
 
 @property (nonatomic, strong, readonly) UIViewController *containerViewController;
 
