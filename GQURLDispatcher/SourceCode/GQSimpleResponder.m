@@ -34,9 +34,7 @@
     
     UIViewController *newVC = nil;
     
-    if ([cls isSubclassOfClass:[GQURLViewController class]]) {
-        newVC = [[cls alloc] initWithURL:aURL object:anObject];
-    } else if ([cls isSubclassOfClass:[UIViewController class]]) {
+    if ([cls isSubclassOfClass:[UIViewController class]]) {
         newVC = [[cls alloc] init];
         
         if ([cls conformsToProtocol:@protocol(GQURLViewController)]) {

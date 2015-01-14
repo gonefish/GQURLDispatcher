@@ -39,13 +39,6 @@
     XCTAssertNil([self.testSimpleResponder viewControllerWithURL:testURL object:nil], @"不存在的URL返回nil");
 }
 
-- (void)testviewControllerWithURLObjectReturnGQURLViewController {
-    NSString *testURLString = @"http://github.com/gonefish";
-    self.testSimpleResponder.classNameMap = @{testURLString: @"GQURLViewController"};
-    
-    XCTAssert([self.testSimpleResponder viewControllerWithURL:[NSURL URLWithString:testURLString] object:nil], @"返回GQURLViewController实例");
-}
-
 - (void)testviewControllerWithURLObjectReturnErrorClass {
     NSString *testURLString = @"http://github.com/gonefish";
     self.testSimpleResponder.classNameMap = @{testURLString: @"NSObject"};

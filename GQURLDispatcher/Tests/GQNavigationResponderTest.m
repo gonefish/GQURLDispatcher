@@ -42,7 +42,7 @@
     NSURL *testURL = [NSURL URLWithString:@"http://github.com/gonefish"];
     
     GQNavigationResponder *responder1 = [[GQNavigationResponder alloc] initWithContainerViewController:partialMock alias:nil];
-    responder1.classNameMap = @{@"http://github.com/gonefish": @"GQURLViewController"};
+    responder1.classNameMap = @{@"http://github.com/gonefish": @"UIViewController"};
     
     XCTAssertTrue([responder1 handleURL:testURL withObject:nil], @"选中的视图控制器响应");
 }
@@ -66,20 +66,20 @@
     XCTAssertFalse([responder1 handleURL:testURL withObject:nil], @"没有选择的视图控制器不应该响应");
 }
 
-- (void)testHandleURLWithObject
-{
-    NSURL *url1 = [NSURL URLWithString:@"https://github.com/gonefish"];
-    GQURLViewController *vc1 = [[GQURLViewController alloc] initWithURL:url1];
-    
-    NSURL *url2 = [NSURL URLWithString:@"https://github.com/gonefish/GQURLDispatcher"];
-    
-    UINavigationController *nVC = [[UINavigationController alloc] initWithRootViewController:vc1];
-    
-    GQNavigationResponder *responder = [[GQNavigationResponder alloc] initWithContainerViewController:nVC alias:nil];
-    responder.responseURLs = @[url1, url2];
-    responder.classNameMap = @{@"https://github.com/gonefish/GQURLDispatcher" : @"GQURLViewController"};
-    
-    XCTAssertTrue([responder handleURL:url2 withObject:nil], @"");
-}
+//- (void)testHandleURLWithObject
+//{
+//    NSURL *url1 = [NSURL URLWithString:@"https://github.com/gonefish"];
+//    GQURLViewController *vc1 = [[GQURLViewController alloc] initWithURL:url1];
+//    
+//    NSURL *url2 = [NSURL URLWithString:@"https://github.com/gonefish/GQURLDispatcher"];
+//    
+//    UINavigationController *nVC = [[UINavigationController alloc] initWithRootViewController:vc1];
+//    
+//    GQNavigationResponder *responder = [[GQNavigationResponder alloc] initWithContainerViewController:nVC alias:nil];
+//    responder.responseURLs = @[url1, url2];
+//    responder.classNameMap = @{@"https://github.com/gonefish/GQURLDispatcher" : @"GQURLViewController"};
+//    
+//    XCTAssertTrue([responder handleURL:url2 withObject:nil], @"");
+//}
 
 @end
