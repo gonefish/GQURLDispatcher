@@ -7,9 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "GQURLResponder.h"
 
-@protocol GQURLDispatcherDelegate;
+#import "GQNavigationResponder.h"
+#import "GQTabBarResponder.h"
+#import "GQPresentResponder.h"
+#import "GQApplicationURLResponder.h"
+#import "GQCompletionWrapper.h"
+
+@protocol GQURLDispatcherDelegate, GQURLResponder;
 
 @interface GQURLDispatcher : NSObject
 
