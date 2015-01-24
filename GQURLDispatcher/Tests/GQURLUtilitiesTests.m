@@ -7,6 +7,7 @@
 //
 
 #import <XCTest/XCTest.h>
+#import "GQURLDispatcher.h"
 #import "NSURL+GQURLUtilities.h"
 
 @interface GQURLUtilitiesTests : XCTestCase
@@ -31,22 +32,22 @@
 {
     NSString *dispatchURLString = @"https://github.com/gonefish/GQURLDispatcher";
     
-    NSURL *testURL = [NSURL URLWithString:@"https://github.com/gonefish/GQURLDispatcher?test=1"];
+    NSURL *testURL = GQURL(@"https://github.com/gonefish/GQURLDispatcher?test=1");
     
     XCTAssertEqualObjects(dispatchURLString, [testURL gq_dispatchURLString], @"");
 }
 
 - (void)testIsSameToURL
 {
-    NSURL *testURLa = [NSURL URLWithString:@"https://github.com/gonefish/GQURLDispatcher"];
-    NSURL *testURLb = [NSURL URLWithString:@"https://github.com/gonefish/GQURLDispatcher?test=1"];
+    NSURL *testURLa = GQURL(@"https://github.com/gonefish/GQURLDispatcher");
+    NSURL *testURLb = GQURL(@"https://github.com/gonefish/GQURLDispatcher?test=1");
     
     XCTAssertTrue([testURLa gq_isSameToURL:testURLb], @"");
 }
 
 - (void)testQueryDictionary
 {
-    NSURL *testURL = [NSURL URLWithString:@"https://github.com/gonefish/GQURLDispatcher?lang=%e4%b8%ad%e6%96%87&test=1"];
+    NSURL *testURL = GQURL(@"https://github.com/gonefish/GQURLDispatcher?lang=%e4%b8%ad%e6%96%87&test=1");
     
     NSDictionary *testDictionary = [testURL gq_queryDictionary];
     

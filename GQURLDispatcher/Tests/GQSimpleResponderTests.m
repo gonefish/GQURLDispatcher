@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
 #import "GQSimpleResponder.h"
+#import "GQURLDispatcher.h"
 #import <OCMock/OCMock.h>
 
 @interface GQSimpleResponderTests : XCTestCase
@@ -34,7 +35,7 @@
 }
 
 - (void)testviewControllerWithURLObjectReturnNil {
-    NSURL *testURL = [NSURL URLWithString:@"http://github.com/gonefish"];
+    NSURL *testURL = GQURL(@"http://github.com/gonefish");
     
     XCTAssertNil([self.testSimpleResponder viewControllerWithURL:testURL object:nil], @"不存在的URL返回nil");
 }

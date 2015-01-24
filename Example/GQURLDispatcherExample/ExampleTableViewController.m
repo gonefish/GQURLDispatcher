@@ -32,16 +32,16 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
     if (self.tabbarURL == nil) {
-        self.tabbarURL = [NSURL URLWithString:@"tab://example/?selectedIndex=1"];
+        self.tabbarURL = GQURL(@"tab://example/?selectedIndex=1");
     }
     
     self.items = @[
   @{@"title": @"Select TabBar", @"url": self.tabbarURL},
-  @{@"title": @"Push First View Controller", @"url": [NSURL URLWithString:@"gqurl://firstViewController"]},
-  @{@"title": @"Push Second View Controller", @"url": [NSURL URLWithString:@"gqurl://secondViewController"]},
-  @{@"title": @"Push Third View Controller", @"url": [NSURL URLWithString:@"gqurl://thirdViewController"]},
+  @{@"title": @"Push First View Controller", @"url": GQURL(@"gqurl://firstViewController")},
+  @{@"title": @"Push Second View Controller", @"url": GQURL(@"gqurl://secondViewController")},
+  @{@"title": @"Push Third View Controller", @"url": GQURL(@"gqurl://thirdViewController")},
   @{@"title": @"Pop View Controller", @"url": @"" },
-  @{@"title": @"Present and Dismiss View Controller", @"url": [NSURL URLWithString:@"modal://firstViewController"]}
+  @{@"title": @"Present and Dismiss View Controller", @"url": GQURL(@"modal://firstViewController")}
   ];
 }
 

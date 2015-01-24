@@ -14,6 +14,8 @@
 #import "GQApplicationURLResponder.h"
 #import "GQCompletionWrapper.h"
 
+#define GQURL(s) [NSURL URLWithString:s] 
+
 @protocol GQURLDispatcherDelegate, GQURLResponder;
 
 @interface GQURLDispatcher : NSObject

@@ -8,8 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
-#import "GQTabBarResponder.h"
-#import "GQURLViewController.h"
+#import "GQURLDispatcher.h"
 #import <OCMock/OCMock.h>
 
 @interface GQTabBarResponderTests : XCTestCase
@@ -37,7 +36,7 @@
     self.testTabBarController = tabVC;
     
     self.responder = [[GQTabBarResponder alloc] initWithTabBarController:tabVC
-                                                URL:[NSURL URLWithString:@"gqurl://tabBarController/"]];
+                                                URL:GQURL(@"gqurl://tabBarController/")];
 }
 
 - (void)tearDown {
@@ -51,14 +50,14 @@
 
 - (void)testHandleURLWithoutSelectedIndex
 {
-    NSURL *url = [NSURL URLWithString:@"gqurl://tabBarController/"];
+    NSURL *url = GQURL(@"gqurl://tabBarController/");
     
     XCTAssertFalse([self.responder handleURL:url withObject:nil], @"没有任何操作不处理");
 }
 
 - (void)testHandleURLWithoutSelectedIndexValue
 {
-    NSURL *url = [NSURL URLWithString:@"gqurl://tabBarController/?selectedIndex="];
+    NSURL *url = GQURL(@"gqurl://tabBarController/?selectedIndex=");
     
     self.responder.tabBarController.selectedIndex = 1;
     XCTAssertTrue([self.responder handleURL:url withObject:nil], @"为空时使用默认值0");
@@ -67,14 +66,14 @@
 
 - (void)testHandleURLWithSelectedIndex
 {
-    NSURL *url = [NSURL URLWithString:@"gqurl://tabBarController/?selectedIndex=1"];
+    NSURL *url = GQURL(@"gqurl://tabBarController/?selectedIndex=1");
     
     XCTAssertTrue([self.responder handleURL:url withObject:nil], @"Index合法");
     XCTAssertEqual(self.responder.tabBarController.selectedIndex, 1, @"");
 }
 
 - (void)testHandleURLWithObject {
-    NSURL *url = [NSURL URLWithString:@"gqurl://tabBarController/?selectedIndex=2"];
+    NSURL *url = GQURL(@"gqurl://tabBarController/?selectedIndex=2");
     
     XCTAssertFalse([self.responder handleURL:url withObject:nil], @"Index超出范围，不应该处理");
     XCTAssertEqual(self.responder.tabBarController.selectedIndex, 0, @"");

@@ -7,12 +7,13 @@
 //
 
 #import "GQSecondViewController.h"
+#import "GQURLDispatcher.h"
 
 @implementation GQSecondViewController
 
 - (void)viewDidLoad
 {
-    self.tabbarURL = [NSURL URLWithString:@"tab://example/?selectedIndex=0"];
+    self.tabbarURL = GQURL(@"tab://example/?selectedIndex=0");
     
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.

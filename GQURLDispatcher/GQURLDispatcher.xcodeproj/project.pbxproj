@@ -57,8 +57,8 @@
 		6717DDE59AEC82E9FAEAAFFF /* Pods-GQURLDispatcherTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GQURLDispatcherTests.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-GQURLDispatcherTests/Pods-GQURLDispatcherTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D09E1804235A48679B581586 /* libPods-GQURLDispatcherTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GQURLDispatcherTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE357596A77275C81D4E9394 /* Pods-GQURLDispatcherTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GQURLDispatcherTests.release.xcconfig"; path = "../Pods/Target Support Files/Pods-GQURLDispatcherTests/Pods-GQURLDispatcherTests.release.xcconfig"; sourceTree = "<group>"; };
-		E36D30F219CD55F9003ACC19 /* GQTabBarResponderTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GQTabBarResponderTests.m; sourceTree = "<group>"; };
-		E36D30F419CD6AA8003ACC19 /* GQNavigationResponderTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GQNavigationResponderTest.m; sourceTree = "<group>"; };
+		E36D30F219CD55F9003ACC19 /* GQTabBarResponderTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = GQTabBarResponderTests.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		E36D30F419CD6AA8003ACC19 /* GQNavigationResponderTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = GQNavigationResponderTest.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		E37918BB1A444CED0005B78F /* GQApplicationURLResponder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GQApplicationURLResponder.h; sourceTree = "<group>"; };
 		E37918BC1A444CED0005B78F /* GQApplicationURLResponder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GQApplicationURLResponder.m; sourceTree = "<group>"; };
 		E38D987E19C2044600630F43 /* libGQURLDispatcher.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libGQURLDispatcher.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -71,7 +71,7 @@
 		E38D989219C2044600630F43 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		E38D989919C2044600630F43 /* GQURLDispatcherTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GQURLDispatcherTests-Info.plist"; sourceTree = "<group>"; };
 		E38D989B19C2044600630F43 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		E38D989D19C2044600630F43 /* GQURLDispatcherTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GQURLDispatcherTests.m; sourceTree = "<group>"; };
+		E38D989D19C2044600630F43 /* GQURLDispatcherTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = GQURLDispatcherTests.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		E38D98EB19C2F81A00630F43 /* GQURLResponder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GQURLResponder.h; sourceTree = "<group>"; };
 		E38D98EC19C2F8DF00630F43 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		E38D98FD19C75C9200630F43 /* GQNavigationResponder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GQNavigationResponder.h; sourceTree = "<group>"; };
@@ -80,7 +80,7 @@
 		E397D6431A5997B400BDFEEF /* GQSimpleResponder.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.objc; path = GQSimpleResponder.m; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; wrapsLines = 1; };
 		E397D6451A59A3D200BDFEEF /* GQPresentResponder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GQPresentResponder.h; sourceTree = "<group>"; };
 		E397D6461A59A3D200BDFEEF /* GQPresentResponder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GQPresentResponder.m; sourceTree = "<group>"; };
-		E397D6481A5AC5B100BDFEEF /* GQSimpleResponderTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GQSimpleResponderTests.m; sourceTree = "<group>"; };
+		E397D6481A5AC5B100BDFEEF /* GQSimpleResponderTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = GQSimpleResponderTests.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		E397D64A1A5AD19C00BDFEEF /* GQCompletionWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GQCompletionWrapper.h; sourceTree = "<group>"; };
 		E397D64B1A5AD19C00BDFEEF /* GQCompletionWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GQCompletionWrapper.m; sourceTree = "<group>"; };
 		E3AC0C4619CCA77600A3152E /* GQURLViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GQURLViewController.h; sourceTree = "<group>"; };
@@ -88,7 +88,7 @@
 		E3AC0C4A19CCABD300A3152E /* GQTabBarResponder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GQTabBarResponder.m; sourceTree = "<group>"; };
 		E3D3E32A19CABAD100EA7E22 /* NSURL+GQURLUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+GQURLUtilities.h"; sourceTree = "<group>"; };
 		E3D3E32B19CABAD100EA7E22 /* NSURL+GQURLUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+GQURLUtilities.m"; sourceTree = "<group>"; };
-		E3E7C5D019CADAF800F75C89 /* GQURLUtilitiesTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GQURLUtilitiesTests.m; sourceTree = "<group>"; };
+		E3E7C5D019CADAF800F75C89 /* GQURLUtilitiesTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = GQURLUtilitiesTests.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */

@@ -103,7 +103,7 @@
 
 - (void)testDispatchURLPass
 {
-    NSURL *testURL = [NSURL URLWithString:@"https://github.com/gonefish/GQURLDispatcher"];
+    NSURL *testURL = GQURL(@"https://github.com/gonefish/GQURLDispatcher");
     
     id responder = OCMProtocolMock(@protocol(GQURLResponder));
     
@@ -122,11 +122,11 @@
 
 - (void)testDispatchURLFail
 {
-    NSURL *testURL = [NSURL URLWithString:@"https://github.com/gonefish/GQURLDispatcher"];
+    NSURL *testURL = GQURL(@"https://github.com/gonefish/GQURLDispatcher");
     
     id responder = OCMProtocolMock(@protocol(GQURLResponder));
     
-    NSArray *rel = @[[NSURL URLWithString:@"https://github.com/gonefish"]];
+    NSArray *rel = @[GQURL(@"https://github.com/gonefish")];
     
     OCMStub([responder responseURLs]).andReturn(rel);
     
@@ -137,7 +137,7 @@
 
 - (void)testResponseURLStringRegularExpressionPass
 {
-    NSURL *testURL = [NSURL URLWithString:@"https://github.com/gonefish/GQURLDispatcher"];
+    NSURL *testURL = GQURL(@"https://github.com/gonefish/GQURLDispatcher");
     
     id responder = OCMProtocolMock(@protocol(GQURLResponder));
     
@@ -156,7 +156,7 @@
 
 - (void)testResponseURLStringRegularExpressionFail
 {
-    NSURL *testURL = [NSURL URLWithString:@"https://github.com/gonefish/GQURLDispatcher"];
+    NSURL *testURL = GQURL(@"https://github.com/gonefish/GQURLDispatcher");
     
     id responder = OCMProtocolMock(@protocol(GQURLResponder));
     
@@ -177,7 +177,7 @@
     
     self.testURLDispatcher.delegate = delegateMock;
     
-    NSURL *testURL = [NSURL URLWithString:@"https://github.com/gonefish/GQURLDispatcher"];
+    NSURL *testURL = GQURL(@"https://github.com/gonefish/GQURLDispatcher");
     
     id responder = [self mockURLResponderWithURL:testURL];
     
@@ -198,7 +198,7 @@
 
 - (void)testURLDispatcherShouldWithResponderHandleURLObject
 {
-    NSURL *testURL = [NSURL URLWithString:@"https://github.com/gonefish/GQURLDispatcher"];
+    NSURL *testURL = GQURL(@"https://github.com/gonefish/GQURLDispatcher");
     
     id responder = [self mockURLResponderWithURL:testURL];
     

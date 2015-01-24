@@ -8,8 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
-#import "GQURLViewController.h"
-#import "GQNavigationResponder.h"
+#import "GQURLDispatcher.h"
 #import <OCMock/OCMock.h>
 
 @interface GQNavigationResponderTest : XCTestCase
@@ -39,7 +38,7 @@
     
     OCMStub([partialMock tabBarController]).andReturn(tabBarMock);
     
-    NSURL *testURL = [NSURL URLWithString:@"http://github.com/gonefish"];
+    NSURL *testURL = GQURL(@"http://github.com/gonefish");
     
     GQNavigationResponder *responder1 = [[GQNavigationResponder alloc] initWithContainerViewController:partialMock alias:nil];
     responder1.classNameMap = @{@"http://github.com/gonefish": @"UIViewController"};
@@ -58,7 +57,7 @@
     
     OCMStub([partialMock tabBarController]).andReturn(tabBarMock);
     
-    NSURL *testURL = [NSURL URLWithString:@"http://github.com/gonefish"];
+    NSURL *testURL = GQURL(@"http://github.com/gonefish");
     
     GQNavigationResponder *responder1 = [[GQNavigationResponder alloc] initWithContainerViewController:partialMock alias:nil];
     responder1.classNameMap = @{@"http://github.com/gonefish": @"GQURLViewController"};
@@ -68,10 +67,10 @@
 
 //- (void)testHandleURLWithObject
 //{
-//    NSURL *url1 = [NSURL URLWithString:@"https://github.com/gonefish"];
+//    NSURL *url1 = GQURL(@"https://github.com/gonefish");
 //    GQURLViewController *vc1 = [[GQURLViewController alloc] initWithURL:url1];
 //    
-//    NSURL *url2 = [NSURL URLWithString:@"https://github.com/gonefish/GQURLDispatcher"];
+//    NSURL *url2 = GQURL(@"https://github.com/gonefish/GQURLDispatcher");
 //    
 //    UINavigationController *nVC = [[UINavigationController alloc] initWithRootViewController:vc1];
 //    

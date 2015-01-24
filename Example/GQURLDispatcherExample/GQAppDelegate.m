@@ -71,7 +71,7 @@
     
     GQTabBarResponder *tabBarResponder =
     [[GQTabBarResponder alloc] initWithTabBarController:tabBarController
-                                                URL:[NSURL URLWithString:@"tab://example/"]];
+                                                URL:GQURL(@"tab://example/")];
     
     [[GQURLDispatcher sharedInstance] registerResponder:tabBarResponder];
     

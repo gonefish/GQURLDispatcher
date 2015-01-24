@@ -61,7 +61,7 @@
 /* Begin PBXFileReference section */
 		E37782EB1A5C159E009C2DC6 /* GQURLDispatcher.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GQURLDispatcher.xcodeproj; path = ../GQURLDispatcher/GQURLDispatcher.xcodeproj; sourceTree = "<group>"; };
 		E37782FD1A5C488B009C2DC6 /* ExampleTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExampleTableViewController.h; sourceTree = "<group>"; };
-		E37782FE1A5C488B009C2DC6 /* ExampleTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExampleTableViewController.m; sourceTree = "<group>"; };
+		E37782FE1A5C488B009C2DC6 /* ExampleTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = ExampleTableViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		E37782FF1A5C488B009C2DC6 /* ExampleTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExampleTableViewController.xib; sourceTree = "<group>"; };
 		E38D98B019C2049400630F43 /* GQURLDispatcherExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GQURLDispatcherExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E38D98B319C2049400630F43 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
