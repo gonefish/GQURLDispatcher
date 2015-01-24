@@ -29,6 +29,7 @@ typedef UIStoryboard* (^GQStoryboardBlock)(NSURL*, id);
  */
 @property (nonatomic, copy) GQStoryboardBlock storyboardBlock;
 
+@property (nonatomic, strong) UIStoryboard *storyboard;
 
 /**
  *  URL到Storyboard Identifier的映射，键是URL，值是ID
