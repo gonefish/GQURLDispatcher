@@ -81,15 +81,13 @@
     
     NSDictionary *storyboardIdentifierMap = @{@"gqurl://thirdViewController": @"thirdViewController"};
     
-    GQStoryboardBlock storyboardBlock = ^UIStoryboard *(NSURL *aURL, id anObject){
-        return [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-    };
+    UIStoryboard *main = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     
     GQNavigationResponder *navigationResponder1 = [[GQNavigationResponder alloc] initWithContainerViewController:tabBarController.viewControllers[0] alias:@"nav1"];
     
     navigationResponder1.classNameMap = classNameMap;
     navigationResponder1.storyboardIdentifierMap = storyboardIdentifierMap;
-    navigationResponder1.storyboardBlock = storyboardBlock;
+    navigationResponder1.storyboard = main;
     
     [[GQURLDispatcher sharedInstance] registerResponder:navigationResponder1];
     
@@ -98,7 +96,7 @@
     
     navigationResponder2.classNameMap = classNameMap;
     navigationResponder2.storyboardIdentifierMap = storyboardIdentifierMap;
-    navigationResponder2.storyboardBlock = storyboardBlock;
+    navigationResponder2.storyboard = main;
     
     [[GQURLDispatcher sharedInstance] registerResponder:navigationResponder2];
     

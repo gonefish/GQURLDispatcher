@@ -100,16 +100,12 @@
 {
     UIViewController *newVC = nil;
     
-    if (self.storyboardBlock) {
-        UIStoryboard *storyboard = self.storyboardBlock(aURL, anObject);
-        
-        if (storyboard) {
-            @try {
-                NSString *identifier = [self.storyboardIdentifierMap objectForKey:[aURL gq_dispatchURLString]];
-                newVC = [storyboard instantiateViewControllerWithIdentifier:identifier];
-            }
-            @catch (NSException *exception) {
-            }
+    if (self.storyboard) {
+        @try {
+            NSString *identifier = [self.storyboardIdentifierMap objectForKey:[aURL gq_dispatchURLString]];
+            newVC = [self.storyboard instantiateViewControllerWithIdentifier:identifier];
+        }
+        @catch (NSException *exception) {
         }
     }
     

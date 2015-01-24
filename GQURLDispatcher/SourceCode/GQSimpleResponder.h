@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-typedef UIStoryboard* (^GQStoryboardBlock)(NSURL*, id);
-
 @interface GQSimpleResponder : NSObject
 
 @property (nonatomic, copy) NSArray *responseURLs;
@@ -25,10 +23,8 @@ typedef UIStoryboard* (^GQStoryboardBlock)(NSURL*, id);
 @property (nonatomic, copy) NSDictionary *classNameMap;
 
 /**
- *  设置Block后，会优先尝试通过Storyboard创建实例
+ *  如果不为nil，会优先尝试通过Storyboard创建实例
  */
-@property (nonatomic, copy) GQStoryboardBlock storyboardBlock;
-
 @property (nonatomic, strong) UIStoryboard *storyboard;
 
 /**
