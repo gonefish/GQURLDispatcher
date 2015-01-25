@@ -87,7 +87,6 @@
     
     navigationResponder1.classNameMap = classNameMap;
     navigationResponder1.storyboardIdentifierMap = storyboardIdentifierMap;
-    navigationResponder1.storyboard = main;
     
     [[GQURLDispatcher sharedInstance] registerResponder:navigationResponder1];
     
@@ -96,7 +95,6 @@
     
     navigationResponder2.classNameMap = classNameMap;
     navigationResponder2.storyboardIdentifierMap = storyboardIdentifierMap;
-    navigationResponder2.storyboard = main;
     
     [[GQURLDispatcher sharedInstance] registerResponder:navigationResponder2];
     
