@@ -25,7 +25,7 @@
 /**
  *  如果不为nil，会优先尝试通过Storyboard创建实例
  */
-@property (nonatomic, strong) UIStoryboard *storyboard;
+@property (nonatomic, strong, readonly) UIStoryboard *storyboard;
 
 /**
  *  URL到Storyboard Identifier的映射，键是URL，值是ID

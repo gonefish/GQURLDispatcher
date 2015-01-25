@@ -19,6 +19,10 @@
     if (self) {
         _containerViewController = aViewController;
         _alias = [alias copy];
+        
+        if (aViewController.storyboard) {
+            _storyboard = aViewController.storyboard;
+        }
     }
     
     return self;
@@ -59,6 +63,9 @@
 
 #pragma mark - Private
 
+/**
+ *  如果数组里面是URL，则自动添加到responseURLs中
+ */
 - (void)addResponseURLsWithArray:(NSArray *)array
 {
     NSMutableArray *tmpArray = [NSMutableArray array];
