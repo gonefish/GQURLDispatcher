@@ -34,24 +34,34 @@
     self.testSimpleResponder = nil;
 }
 
-- (void)testviewControllerWithURLObjectReturnNil {
+- (void)testViewControllerWithURLObjectReturnNil {
     NSURL *testURL = GQURL(@"http://github.com/gonefish");
     
     XCTAssertNil([self.testSimpleResponder viewControllerWithURL:testURL object:nil], @"不存在的URL返回nil");
 }
 
-- (void)testviewControllerWithURLObjectReturnErrorClass {
+- (void)testViewControllerWithURLObjectReturnErrorClass {
     NSString *testURLString = @"http://github.com/gonefish";
     self.testSimpleResponder.classNameMap = @{testURLString: @"NSObject"};
     
-    XCTAssertNil([self.testSimpleResponder viewControllerWithURL:[NSURL URLWithString:testURLString] object:nil], @"必须是UIViewController的子类");
+    XCTAssertNil([self.testSimpleResponder viewControllerWithURL:GQURL(testURLString) object:nil], @"不是UIViewController的子类时返回nil");
 }
 
-- (void)testviewControllerWithURLObjectReturnUIViewController {
+- (void)testViewControllerWithURLObjectReturnUIViewController {
     NSString *testURLString = @"http://github.com/gonefish";
     self.testSimpleResponder.classNameMap = @{testURLString: @"UIViewController"};
     
-    XCTAssert([self.testSimpleResponder viewControllerWithURL:[NSURL URLWithString:testURLString] object:nil], @"返回UIViewController实例");
+    XCTAssert([self.testSimpleResponder viewControllerWithURL:GQURL(testURLString) object:nil], @"应该返回UIViewController实例");
+}
+
+- (void)testViewControllerWithURLObjectReturnInstance
+{
+    NSString *testURLString = @"http://github.com/gonefish";
+    UIViewController *testVC = [UIViewController new];
+    self.testSimpleResponder.classNameMap = @{testURLString: testVC};
+    
+    XCTAssertEqualObjects(testVC, [self.testSimpleResponder viewControllerWithURL:GQURL(testURLString) object:nil], @"应该返回设置的实例变量");
+    
 }
 
 - (void)testSetClassNameMap

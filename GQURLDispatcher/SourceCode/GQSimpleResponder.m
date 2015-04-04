@@ -86,23 +86,38 @@
     }
 }
 
+/**
+ *  通过Xib创建UIViewController实例
+ *
+ */
 - (UIViewController *)nibViewControllerWithURL:(NSURL *)aURL object:(id)anObject
 {
     UIViewController *newVC = nil;
     
-    NSString *className = [self.classNameMap objectForKey:[aURL gq_dispatchURLString]];
+    id classNameOrInstance = [self.classNameMap objectForKey:[aURL gq_dispatchURLString]];
     
-    if (className == nil) return nil;
+    if (classNameOrInstance == nil) return nil;
     
-    Class cls = NSClassFromString(className);
-    
-    if ([cls isSubclassOfClass:[UIViewController class]]) {
-        newVC = [[cls alloc] init];
+    if ([classNameOrInstance isKindOfClass:[UIViewController class]]) {
+        return classNameOrInstance;
+    } else {
+        NSAssert([classNameOrInstance isKindOfClass:[NSString class]], @"不是实例就是字符串");
+        
+        Class cls = NSClassFromString(classNameOrInstance);
+        
+        if (cls
+            && [cls isSubclassOfClass:[UIViewController class]]) {
+            newVC = [[cls alloc] init];
+        }
+        
+        return newVC;
     }
-    
-    return newVC;
 }
 
+/**
+ *  使用Storyboard创建UIViewController实例
+ *
+ */
 - (UIViewController *)storyboardViewControllerWithURL:(NSURL *)aURL object:(id)anObject
 {
     UIViewController *newVC = nil;
