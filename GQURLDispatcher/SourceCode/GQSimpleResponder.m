@@ -12,6 +12,11 @@
 
 @implementation GQSimpleResponder
 
+- (instancetype)initWithContainerViewController:(UIViewController *)aViewController;
+{
+    return [self initWithContainerViewController:aViewController alias:nil];
+}
+
 - (instancetype)initWithContainerViewController:(UIViewController *)aViewController alias:(NSString *)alias
 {
     self = [super init];

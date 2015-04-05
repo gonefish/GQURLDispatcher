@@ -35,6 +35,8 @@
 
 @property (nonatomic, strong, readonly) UIViewController *containerViewController;
 
+- (instancetype)initWithContainerViewController:(UIViewController *)aViewController;
+
 - (instancetype)initWithContainerViewController:(UIViewController *)aViewController alias:(NSString *)alias;
 
 /**
