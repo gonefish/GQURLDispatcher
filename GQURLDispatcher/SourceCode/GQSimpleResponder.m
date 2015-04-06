@@ -35,7 +35,11 @@
 
 - (UIViewController *)viewControllerWithURL:(NSURL *)aURL object:(id)anObject
 {
-    UIViewController *newVC = [self storyboardViewControllerWithURL:aURL object:anObject];
+    UIViewController *newVC = nil;
+    
+    if (self.isSupportStoryboard) {
+        newVC = [self storyboardViewControllerWithURL:aURL object:anObject];
+    }
     
     if (newVC == nil) {
         newVC = [self nibViewControllerWithURL:aURL object:anObject];

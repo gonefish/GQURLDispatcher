@@ -23,6 +23,11 @@
 @property (nonatomic, copy) NSDictionary *classNameMap;
 
 /**
+ *  是否支持Storyboard
+ */
+@property (nonatomic) BOOL isSupportStoryboard;
+
+/**
  *  如果不为nil，会优先尝试通过Storyboard创建实例
  */
 @property (nonatomic, strong, readonly) UIStoryboard *storyboard;
