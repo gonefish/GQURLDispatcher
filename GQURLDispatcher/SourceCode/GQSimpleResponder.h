@@ -38,7 +38,7 @@
 */
 @property (nonatomic, copy) NSDictionary *storyboardIdentifierMap;
 
-@property (nonatomic, strong, readonly) UIViewController *containerViewController;
+@property (nonatomic, weak, readonly) UIViewController *containerViewController;
 
 - (instancetype)initWithContainerViewController:(UIViewController *)aViewController;
 
