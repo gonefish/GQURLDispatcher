@@ -30,6 +30,13 @@
 @optional
 
 /**
+ *  返回实际处理视图切换的对象
+ *
+ *  @return 容器控制器
+ */
+- (UIViewController *)containerViewController;
+
+/**
  *  通过正则表达式匹配，来确认需要响应的URL
  *
  * @return 正则表达式对象

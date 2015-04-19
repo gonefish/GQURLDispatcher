@@ -85,6 +85,11 @@
  */
 - (id <GQURLResponder>)responderForAlias:(NSString *)alias;
 
+/**
+ *  清理GQURLResponder对象中containerViewController为空对象
+ */
+- (void)cleanup;
+
 @end
 
 @protocol GQURLDispatcherDelegate <NSObject>

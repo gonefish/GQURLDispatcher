@@ -24,23 +24,14 @@
     [[GQURLDispatcher sharedInstance] registerResponder:responer];
 }
 
-- (void)gq_removeResponder
+- (void)gq_removeResponderWithAlias:(NSString *)aliasName;
 {
-    __block GQNavigationResponder *responder = nil;
-    
-    [[[GQURLDispatcher sharedInstance] responders] enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-        
-        if ([obj isKindOfClass:[GQNavigationResponder class]]) {
-            if ([(GQNavigationResponder *)obj containerViewController] == self) {
-                responder = obj;
-                
-                *stop = YES;
-            }
-        }
-    }];
+    id <GQURLResponder> responder = [[GQURLDispatcher sharedInstance] responderForAlias:aliasName];
     
     if (responder) {
         [[GQURLDispatcher sharedInstance] unregisterResponder:responder];
     }
+    
 }
+
 @end

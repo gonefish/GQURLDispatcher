@@ -171,5 +171,20 @@
     return [self.responderAliases objectForKey:alias];
 }
 
+- (void)cleanup;
+{
+    NSMutableArray *cleanResponer = [NSMutableArray array];
+    
+    [self.responders enumerateObjectsUsingBlock:^(id <GQURLResponder> obj, NSUInteger idx, BOOL *stop) {
+        if ([obj respondsToSelector:@selector(containerViewController)]
+            && [obj containerViewController] == nil) {
+            [cleanResponer addObject:obj];
+        }
+    }];
+    
+    [cleanResponer enumerateObjectsUsingBlock:^(id <GQURLResponder> obj, NSUInteger idx, BOOL *stop) {
+        [[GQURLDispatcher sharedInstance] unregisterResponder:obj];
+    }];
+}
 
 @end

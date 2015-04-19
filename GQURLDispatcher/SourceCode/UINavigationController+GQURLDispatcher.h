@@ -14,6 +14,6 @@
 
 - (void)gq_addResponderWithAlias:(NSString *)aliasName completion:(void (^)(GQNavigationResponder *responser))completion;
 
-- (void)gq_removeResponder;
+- (void)gq_removeResponderWithAlias:(NSString *)aliasName;
 
 @end
