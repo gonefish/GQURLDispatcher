@@ -11,7 +11,7 @@
 
 @implementation UINavigationController (GQURLDispatcher)
 
-- (void)gq_addResponderWithAlias:(NSString *)aliasName completion:(void (^)(GQNavigationResponder *))completion
+- (void)gq_addResponderWithAlias:(NSString *)aliasName completion:(void (^)(GQNavigationResponder *responder))completion
 {
     GQNavigationResponder *responer =
     [[GQNavigationResponder alloc] initWithContainerViewController:self

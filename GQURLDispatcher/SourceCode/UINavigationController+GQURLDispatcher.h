@@ -12,7 +12,7 @@
 
 @interface UINavigationController (GQURLDispatcher)
 
-- (void)gq_addResponderWithAlias:(NSString *)aliasName completion:(void (^)(GQNavigationResponder *responser))completion;
+- (void)gq_addResponderWithAlias:(NSString *)aliasName completion:(void (^)(GQNavigationResponder *responder))completion;
 
 - (void)gq_removeResponderWithAlias:(NSString *)aliasName;
 
