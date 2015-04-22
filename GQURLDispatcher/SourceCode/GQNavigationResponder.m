@@ -8,6 +8,7 @@
 
 #import "GQNavigationResponder.h"
 #import "NSURL+GQURLUtilities.h"
+#import "GQURLDispatcher.h"
 
 @implementation GQNavigationResponder
 
@@ -31,6 +32,32 @@
                                     animated:animated ? [animated boolValue] : YES];
     
     return YES;
+}
+
+@end
+
+@implementation UINavigationController (GQURLDispatcher)
+
+- (void)gq_addResponderWithAlias:(NSString *)aliasName completion:(void (^)(GQNavigationResponder *responder))completion
+{
+    GQNavigationResponder *responer =
+    [[GQNavigationResponder alloc] initWithContainerViewController:self
+                                                             alias:aliasName];
+    
+    if (completion) {
+        completion(responer);
+    }
+    
+    [[GQURLDispatcher sharedInstance] registerResponder:responer];
+}
+
+- (void)gq_removeResponderWithAlias:(NSString *)aliasName;
+{
+    id <GQURLResponder> responder = [[GQURLDispatcher sharedInstance] responderForAlias:aliasName];
+    
+    if (responder) {
+        [[GQURLDispatcher sharedInstance] unregisterResponder:responder];
+    }
 }
 
 @end

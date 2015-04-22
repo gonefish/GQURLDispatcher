@@ -65,6 +65,20 @@
     XCTAssertFalse([responder1 handleURL:testURL withObject:nil], @"没有选择的视图控制器不应该响应");
 }
 
+- (void)testNavigationResponderCategory
+{
+    UIViewController *vc1 = [[UIViewController alloc] init];
+    UINavigationController *nVC1 = [[UINavigationController alloc] initWithRootViewController:vc1];
+    
+    [nVC1 gq_addResponderWithAlias:@"test" completion:nil];
+    
+    XCTAssertTrue([[GQURLDispatcher sharedInstance] responderForAlias:@"test"], @"类别方法注册不成功");
+    
+    [nVC1 gq_removeResponderWithAlias:@"test"];
+    
+    XCTAssertFalse([[GQURLDispatcher sharedInstance] responderForAlias:@"test"], @"类别方法取消注册不成功");
+}
+
 //- (void)testHandleURLWithObject
 //{
 //    NSURL *url1 = GQURL(@"https://github.com/gonefish");

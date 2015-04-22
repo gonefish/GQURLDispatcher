@@ -14,3 +14,11 @@
 
 
 @end
+
+@interface UINavigationController (GQNavigationResponder)
+
+- (void)gq_addResponderWithAlias:(NSString *)aliasName completion:(void (^)(GQNavigationResponder *responder))completion;
+
+- (void)gq_removeResponderWithAlias:(NSString *)aliasName;
+
+@end
