@@ -1,0 +1,14 @@
+PODS:
+  - GQURLDispatcher (0.4)
+
+DEPENDENCIES:
+  - GQURLDispatcher (from `../SourceCode`)
+
+EXTERNAL SOURCES:
+  GQURLDispatcher:
+    :path: ../SourceCode
+
+SPEC CHECKSUMS:
+  GQURLDispatcher: f2d90140e40a75ec9aa1c26618977f220474e8d2
+
+COCOAPODS: 0.36.4

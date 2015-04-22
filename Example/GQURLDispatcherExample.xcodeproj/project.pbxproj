@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E37782F61A5C16EB009C2DC6 /* libGQURLDispatcher.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E37782F11A5C159E009C2DC6 /* libGQURLDispatcher.a */; };
+		A50416BE62EF44869E2B6DCB /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8383383C08AD0841FCD14518 /* libPods.a */; };
 		E37783001A5C488B009C2DC6 /* ExampleTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E37782FE1A5C488B009C2DC6 /* ExampleTableViewController.m */; };
 		E37783011A5C488B009C2DC6 /* ExampleTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E37782FF1A5C488B009C2DC6 /* ExampleTableViewController.xib */; };
 		E38D98B419C2049400630F43 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E38D98B319C2049400630F43 /* Foundation.framework */; };
@@ -28,27 +28,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		E37782F01A5C159E009C2DC6 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E37782EB1A5C159E009C2DC6 /* GQURLDispatcher.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = E38D987E19C2044600630F43;
-			remoteInfo = GQURLDispatcher;
-		};
-		E37782F21A5C159E009C2DC6 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E37782EB1A5C159E009C2DC6 /* GQURLDispatcher.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = E38D988E19C2044600630F43;
-			remoteInfo = GQURLDispatcherTests;
-		};
-		E37782F41A5C15AE009C2DC6 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E37782EB1A5C159E009C2DC6 /* GQURLDispatcher.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = E38D987D19C2044600630F43;
-			remoteInfo = GQURLDispatcher;
-		};
 		E38D98D919C2049400630F43 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = E38D98A819C2049400630F43 /* Project object */;
@@ -59,7 +38,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		E37782EB1A5C159E009C2DC6 /* GQURLDispatcher.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GQURLDispatcher.xcodeproj; path = ../GQURLDispatcher/GQURLDispatcher.xcodeproj; sourceTree = "<group>"; };
+		0CD6C58D8DCF8F151DCF4E94 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		567E4C629485C14E7A3DFD52 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		8383383C08AD0841FCD14518 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E37782FD1A5C488B009C2DC6 /* ExampleTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExampleTableViewController.h; sourceTree = "<group>"; };
 		E37782FE1A5C488B009C2DC6 /* ExampleTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = ExampleTableViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		E37782FF1A5C488B009C2DC6 /* ExampleTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExampleTableViewController.xib; sourceTree = "<group>"; };
@@ -91,10 +72,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E37782F61A5C16EB009C2DC6 /* libGQURLDispatcher.a in Frameworks */,
 				E38D98B619C2049400630F43 /* CoreGraphics.framework in Frameworks */,
 				E38D98B819C2049400630F43 /* UIKit.framework in Frameworks */,
 				E38D98B419C2049400630F43 /* Foundation.framework in Frameworks */,
+				A50416BE62EF44869E2B6DCB /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,23 +92,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		E37782EC1A5C159E009C2DC6 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				E37782F11A5C159E009C2DC6 /* libGQURLDispatcher.a */,
-				E37782F31A5C159E009C2DC6 /* GQURLDispatcherTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		E38D98A719C2049400630F43 = {
 			isa = PBXGroup;
 			children = (
-				E37782EB1A5C159E009C2DC6 /* GQURLDispatcher.xcodeproj */,
 				E38D98B919C2049400630F43 /* GQURLDispatcherExample */,
 				E38D98DB19C2049400630F43 /* GQURLDispatcherExampleTests */,
 				E38D98B219C2049400630F43 /* Frameworks */,
 				E38D98B119C2049400630F43 /* Products */,
+				EC7D5B3F0FC5A69E096CB648 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -147,6 +119,7 @@
 				E38D98B519C2049400630F43 /* CoreGraphics.framework */,
 				E38D98B719C2049400630F43 /* UIKit.framework */,
 				E38D98D519C2049400630F43 /* XCTest.framework */,
+				8383383C08AD0841FCD14518 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -199,6 +172,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		EC7D5B3F0FC5A69E096CB648 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0CD6C58D8DCF8F151DCF4E94 /* Pods.debug.xcconfig */,
+				567E4C629485C14E7A3DFD52 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -206,14 +188,15 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E38D98E519C2049400630F43 /* Build configuration list for PBXNativeTarget "GQURLDispatcherExample" */;
 			buildPhases = (
+				5BF56092002187C71CFD6739 /* Check Pods Manifest.lock */,
 				E38D98AC19C2049400630F43 /* Sources */,
 				E38D98AD19C2049400630F43 /* Frameworks */,
 				E38D98AE19C2049400630F43 /* Resources */,
+				AD30417D0126923143AC04B9 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				E37782F51A5C15AE009C2DC6 /* PBXTargetDependency */,
 			);
 			name = GQURLDispatcherExample;
 			productName = GQURLDispatcherExample;
@@ -264,12 +247,6 @@
 			mainGroup = E38D98A719C2049400630F43;
 			productRefGroup = E38D98B119C2049400630F43 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = E37782EC1A5C159E009C2DC6 /* Products */;
-					ProjectRef = E37782EB1A5C159E009C2DC6 /* GQURLDispatcher.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				E38D98AF19C2049400630F43 /* GQURLDispatcherExample */,
@@ -277,23 +254,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		E37782F11A5C159E009C2DC6 /* libGQURLDispatcher.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libGQURLDispatcher.a;
-			remoteRef = E37782F01A5C159E009C2DC6 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		E37782F31A5C159E009C2DC6 /* GQURLDispatcherTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = GQURLDispatcherTests.xctest;
-			remoteRef = E37782F21A5C159E009C2DC6 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		E38D98AE19C2049400630F43 /* Resources */ = {
@@ -316,6 +276,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5BF56092002187C71CFD6739 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		AD30417D0126923143AC04B9 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E38D98AC19C2049400630F43 /* Sources */ = {
@@ -341,11 +334,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		E37782F51A5C15AE009C2DC6 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = GQURLDispatcher;
-			targetProxy = E37782F41A5C15AE009C2DC6 /* PBXContainerItemProxy */;
-		};
 		E38D98DA19C2049400630F43 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = E38D98AF19C2049400630F43 /* GQURLDispatcherExample */;
@@ -453,13 +441,14 @@
 		};
 		E38D98E619C2049400630F43 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0CD6C58D8DCF8F151DCF4E94 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GQURLDispatcherExample/GQURLDispatcherExample-Prefix.pch";
 				INFOPLIST_FILE = "GQURLDispatcherExample/GQURLDispatcherExample-Info.plist";
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/../GQURLDispatcher/SourceCode";
@@ -469,13 +458,14 @@
 		};
 		E38D98E719C2049400630F43 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 567E4C629485C14E7A3DFD52 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GQURLDispatcherExample/GQURLDispatcherExample-Prefix.pch";
 				INFOPLIST_FILE = "GQURLDispatcherExample/GQURLDispatcherExample-Info.plist";
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/../GQURLDispatcher/SourceCode";

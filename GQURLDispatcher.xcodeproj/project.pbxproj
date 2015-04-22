@@ -8,9 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		33474776CA8841BCB8053EC3 /* libPods-GQURLDispatcherTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D09E1804235A48679B581586 /* libPods-GQURLDispatcherTests.a */; };
+		E333F9831AE79FC200A0303A /* GQApplicationURLResponder.m in Sources */ = {isa = PBXBuildFile; fileRef = E333F9731AE79FC200A0303A /* GQApplicationURLResponder.m */; };
+		E333F9841AE79FC200A0303A /* GQNavigationResponder.m in Sources */ = {isa = PBXBuildFile; fileRef = E333F9751AE79FC200A0303A /* GQNavigationResponder.m */; };
+		E333F9851AE79FC200A0303A /* GQPresentResponder.m in Sources */ = {isa = PBXBuildFile; fileRef = E333F9771AE79FC200A0303A /* GQPresentResponder.m */; };
+		E333F9861AE79FC200A0303A /* GQSimpleResponder.m in Sources */ = {isa = PBXBuildFile; fileRef = E333F9791AE79FC200A0303A /* GQSimpleResponder.m */; };
+		E333F9871AE79FC200A0303A /* GQTabBarResponder.m in Sources */ = {isa = PBXBuildFile; fileRef = E333F97B1AE79FC200A0303A /* GQTabBarResponder.m */; };
+		E333F9881AE79FC200A0303A /* GQCompletionWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = E333F97F1AE79FC200A0303A /* GQCompletionWrapper.m */; };
+		E333F9891AE79FC200A0303A /* NSURL+GQURLUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = E333F9821AE79FC200A0303A /* NSURL+GQURLUtilities.m */; };
 		E36D30F319CD55F9003ACC19 /* GQTabBarResponderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E36D30F219CD55F9003ACC19 /* GQTabBarResponderTests.m */; };
 		E36D30F519CD6AA8003ACC19 /* GQNavigationResponderTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E36D30F419CD6AA8003ACC19 /* GQNavigationResponderTest.m */; };
-		E37918BD1A444CED0005B78F /* GQApplicationURLResponder.m in Sources */ = {isa = PBXBuildFile; fileRef = E37918BC1A444CED0005B78F /* GQApplicationURLResponder.m */; };
 		E38D988219C2044600630F43 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E38D988119C2044600630F43 /* Foundation.framework */; };
 		E38D988719C2044600630F43 /* GQURLDispatcher.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = E38D988619C2044600630F43 /* GQURLDispatcher.h */; };
 		E38D988919C2044600630F43 /* GQURLDispatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = E38D988819C2044600630F43 /* GQURLDispatcher.m */; };
@@ -20,13 +26,7 @@
 		E38D989619C2044600630F43 /* libGQURLDispatcher.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E38D987E19C2044600630F43 /* libGQURLDispatcher.a */; };
 		E38D989C19C2044600630F43 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E38D989A19C2044600630F43 /* InfoPlist.strings */; };
 		E38D989E19C2044600630F43 /* GQURLDispatcherTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E38D989D19C2044600630F43 /* GQURLDispatcherTests.m */; };
-		E38D98FF19C75C9200630F43 /* GQNavigationResponder.m in Sources */ = {isa = PBXBuildFile; fileRef = E38D98FE19C75C9200630F43 /* GQNavigationResponder.m */; };
-		E397D6441A5997B400BDFEEF /* GQSimpleResponder.m in Sources */ = {isa = PBXBuildFile; fileRef = E397D6431A5997B400BDFEEF /* GQSimpleResponder.m */; };
-		E397D6471A59A3D200BDFEEF /* GQPresentResponder.m in Sources */ = {isa = PBXBuildFile; fileRef = E397D6461A59A3D200BDFEEF /* GQPresentResponder.m */; };
 		E397D6491A5AC5B100BDFEEF /* GQSimpleResponderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E397D6481A5AC5B100BDFEEF /* GQSimpleResponderTests.m */; };
-		E397D64C1A5AD19C00BDFEEF /* GQCompletionWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = E397D64B1A5AD19C00BDFEEF /* GQCompletionWrapper.m */; };
-		E3AC0C4B19CCABD300A3152E /* GQTabBarResponder.m in Sources */ = {isa = PBXBuildFile; fileRef = E3AC0C4A19CCABD300A3152E /* GQTabBarResponder.m */; };
-		E3D3E32C19CABAD100EA7E22 /* NSURL+GQURLUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = E3D3E32B19CABAD100EA7E22 /* NSURL+GQURLUtilities.m */; };
 		E3E7C5D119CADAF800F75C89 /* GQURLUtilitiesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E3E7C5D019CADAF800F75C89 /* GQURLUtilitiesTests.m */; };
 /* End PBXBuildFile section */
 
@@ -54,16 +54,29 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		6717DDE59AEC82E9FAEAAFFF /* Pods-GQURLDispatcherTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GQURLDispatcherTests.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-GQURLDispatcherTests/Pods-GQURLDispatcherTests.debug.xcconfig"; sourceTree = "<group>"; };
+		2CA7A62CE15AF9316774D052 /* Pods-GQURLDispatcherTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GQURLDispatcherTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GQURLDispatcherTests/Pods-GQURLDispatcherTests.release.xcconfig"; sourceTree = "<group>"; };
 		D09E1804235A48679B581586 /* libPods-GQURLDispatcherTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GQURLDispatcherTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		DE357596A77275C81D4E9394 /* Pods-GQURLDispatcherTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GQURLDispatcherTests.release.xcconfig"; path = "../Pods/Target Support Files/Pods-GQURLDispatcherTests/Pods-GQURLDispatcherTests.release.xcconfig"; sourceTree = "<group>"; };
+		E333F9721AE79FC200A0303A /* GQApplicationURLResponder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GQApplicationURLResponder.h; sourceTree = "<group>"; };
+		E333F9731AE79FC200A0303A /* GQApplicationURLResponder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GQApplicationURLResponder.m; sourceTree = "<group>"; };
+		E333F9741AE79FC200A0303A /* GQNavigationResponder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GQNavigationResponder.h; sourceTree = "<group>"; };
+		E333F9751AE79FC200A0303A /* GQNavigationResponder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GQNavigationResponder.m; sourceTree = "<group>"; };
+		E333F9761AE79FC200A0303A /* GQPresentResponder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GQPresentResponder.h; sourceTree = "<group>"; };
+		E333F9771AE79FC200A0303A /* GQPresentResponder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GQPresentResponder.m; sourceTree = "<group>"; };
+		E333F9781AE79FC200A0303A /* GQSimpleResponder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GQSimpleResponder.h; sourceTree = "<group>"; };
+		E333F9791AE79FC200A0303A /* GQSimpleResponder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GQSimpleResponder.m; sourceTree = "<group>"; };
+		E333F97A1AE79FC200A0303A /* GQTabBarResponder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GQTabBarResponder.h; sourceTree = "<group>"; };
+		E333F97B1AE79FC200A0303A /* GQTabBarResponder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GQTabBarResponder.m; sourceTree = "<group>"; };
+		E333F97C1AE79FC200A0303A /* GQURLResponder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GQURLResponder.h; sourceTree = "<group>"; };
+		E333F97E1AE79FC200A0303A /* GQCompletionWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GQCompletionWrapper.h; sourceTree = "<group>"; };
+		E333F97F1AE79FC200A0303A /* GQCompletionWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GQCompletionWrapper.m; sourceTree = "<group>"; };
+		E333F9801AE79FC200A0303A /* GQURLViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GQURLViewController.h; sourceTree = "<group>"; };
+		E333F9811AE79FC200A0303A /* NSURL+GQURLUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+GQURLUtilities.h"; sourceTree = "<group>"; };
+		E333F9821AE79FC200A0303A /* NSURL+GQURLUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+GQURLUtilities.m"; sourceTree = "<group>"; };
+		E333F98B1AE7A08700A0303A /* GQURLDispatcher-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GQURLDispatcher-Prefix.pch"; sourceTree = "<group>"; };
 		E36D30F219CD55F9003ACC19 /* GQTabBarResponderTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = GQTabBarResponderTests.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		E36D30F419CD6AA8003ACC19 /* GQNavigationResponderTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = GQNavigationResponderTest.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		E37918BB1A444CED0005B78F /* GQApplicationURLResponder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GQApplicationURLResponder.h; sourceTree = "<group>"; };
-		E37918BC1A444CED0005B78F /* GQApplicationURLResponder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GQApplicationURLResponder.m; sourceTree = "<group>"; };
 		E38D987E19C2044600630F43 /* libGQURLDispatcher.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libGQURLDispatcher.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E38D988119C2044600630F43 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		E38D988519C2044600630F43 /* GQURLDispatcher-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GQURLDispatcher-Prefix.pch"; sourceTree = "<group>"; };
 		E38D988619C2044600630F43 /* GQURLDispatcher.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GQURLDispatcher.h; sourceTree = "<group>"; };
 		E38D988819C2044600630F43 /* GQURLDispatcher.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GQURLDispatcher.m; sourceTree = "<group>"; };
 		E38D988E19C2044600630F43 /* GQURLDispatcherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GQURLDispatcherTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -72,23 +85,10 @@
 		E38D989919C2044600630F43 /* GQURLDispatcherTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GQURLDispatcherTests-Info.plist"; sourceTree = "<group>"; };
 		E38D989B19C2044600630F43 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		E38D989D19C2044600630F43 /* GQURLDispatcherTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = GQURLDispatcherTests.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		E38D98EB19C2F81A00630F43 /* GQURLResponder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GQURLResponder.h; sourceTree = "<group>"; };
 		E38D98EC19C2F8DF00630F43 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		E38D98FD19C75C9200630F43 /* GQNavigationResponder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GQNavigationResponder.h; sourceTree = "<group>"; };
-		E38D98FE19C75C9200630F43 /* GQNavigationResponder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GQNavigationResponder.m; sourceTree = "<group>"; };
-		E397D6421A5997B400BDFEEF /* GQSimpleResponder.h */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.h; path = GQSimpleResponder.h; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; wrapsLines = 1; };
-		E397D6431A5997B400BDFEEF /* GQSimpleResponder.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.objc; path = GQSimpleResponder.m; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; wrapsLines = 1; };
-		E397D6451A59A3D200BDFEEF /* GQPresentResponder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GQPresentResponder.h; sourceTree = "<group>"; };
-		E397D6461A59A3D200BDFEEF /* GQPresentResponder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GQPresentResponder.m; sourceTree = "<group>"; };
 		E397D6481A5AC5B100BDFEEF /* GQSimpleResponderTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = GQSimpleResponderTests.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		E397D64A1A5AD19C00BDFEEF /* GQCompletionWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GQCompletionWrapper.h; sourceTree = "<group>"; };
-		E397D64B1A5AD19C00BDFEEF /* GQCompletionWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GQCompletionWrapper.m; sourceTree = "<group>"; };
-		E3AC0C4619CCA77600A3152E /* GQURLViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GQURLViewController.h; sourceTree = "<group>"; };
-		E3AC0C4919CCABD300A3152E /* GQTabBarResponder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GQTabBarResponder.h; sourceTree = "<group>"; };
-		E3AC0C4A19CCABD300A3152E /* GQTabBarResponder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GQTabBarResponder.m; sourceTree = "<group>"; };
-		E3D3E32A19CABAD100EA7E22 /* NSURL+GQURLUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+GQURLUtilities.h"; sourceTree = "<group>"; };
-		E3D3E32B19CABAD100EA7E22 /* NSURL+GQURLUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+GQURLUtilities.m"; sourceTree = "<group>"; };
 		E3E7C5D019CADAF800F75C89 /* GQURLUtilitiesTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = GQURLUtilitiesTests.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		EFC5185ED52A3C9EA0021B4E /* Pods-GQURLDispatcherTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GQURLDispatcherTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GQURLDispatcherTests/Pods-GQURLDispatcherTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,14 +115,54 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DB278005DAF8344B5A7120DF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EFC5185ED52A3C9EA0021B4E /* Pods-GQURLDispatcherTests.debug.xcconfig */,
+				2CA7A62CE15AF9316774D052 /* Pods-GQURLDispatcherTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E333F9711AE79FC200A0303A /* Responder */ = {
+			isa = PBXGroup;
+			children = (
+				E333F9721AE79FC200A0303A /* GQApplicationURLResponder.h */,
+				E333F9731AE79FC200A0303A /* GQApplicationURLResponder.m */,
+				E333F9741AE79FC200A0303A /* GQNavigationResponder.h */,
+				E333F9751AE79FC200A0303A /* GQNavigationResponder.m */,
+				E333F9761AE79FC200A0303A /* GQPresentResponder.h */,
+				E333F9771AE79FC200A0303A /* GQPresentResponder.m */,
+				E333F9781AE79FC200A0303A /* GQSimpleResponder.h */,
+				E333F9791AE79FC200A0303A /* GQSimpleResponder.m */,
+				E333F97A1AE79FC200A0303A /* GQTabBarResponder.h */,
+				E333F97B1AE79FC200A0303A /* GQTabBarResponder.m */,
+				E333F97C1AE79FC200A0303A /* GQURLResponder.h */,
+			);
+			path = Responder;
+			sourceTree = "<group>";
+		};
+		E333F97D1AE79FC200A0303A /* Utiles */ = {
+			isa = PBXGroup;
+			children = (
+				E333F97E1AE79FC200A0303A /* GQCompletionWrapper.h */,
+				E333F97F1AE79FC200A0303A /* GQCompletionWrapper.m */,
+				E333F9801AE79FC200A0303A /* GQURLViewController.h */,
+				E333F9811AE79FC200A0303A /* NSURL+GQURLUtilities.h */,
+				E333F9821AE79FC200A0303A /* NSURL+GQURLUtilities.m */,
+			);
+			path = Utiles;
+			sourceTree = "<group>";
+		};
 		E38D987519C2044600630F43 = {
 			isa = PBXGroup;
 			children = (
+				E333F98B1AE7A08700A0303A /* GQURLDispatcher-Prefix.pch */,
 				E38D988319C2044600630F43 /* SourceCode */,
 				E38D989719C2044600630F43 /* Tests */,
 				E38D988019C2044600630F43 /* Frameworks */,
 				E38D987F19C2044600630F43 /* Products */,
-				E67FE85768D4EB26FEF45C62 /* Pods */,
+				DB278005DAF8344B5A7120DF /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -152,33 +192,10 @@
 			children = (
 				E38D988619C2044600630F43 /* GQURLDispatcher.h */,
 				E38D988819C2044600630F43 /* GQURLDispatcher.m */,
-				E38D98EB19C2F81A00630F43 /* GQURLResponder.h */,
-				E397D6421A5997B400BDFEEF /* GQSimpleResponder.h */,
-				E397D6431A5997B400BDFEEF /* GQSimpleResponder.m */,
-				E38D98FD19C75C9200630F43 /* GQNavigationResponder.h */,
-				E38D98FE19C75C9200630F43 /* GQNavigationResponder.m */,
-				E3AC0C4919CCABD300A3152E /* GQTabBarResponder.h */,
-				E3AC0C4A19CCABD300A3152E /* GQTabBarResponder.m */,
-				E37918BB1A444CED0005B78F /* GQApplicationURLResponder.h */,
-				E37918BC1A444CED0005B78F /* GQApplicationURLResponder.m */,
-				E397D6451A59A3D200BDFEEF /* GQPresentResponder.h */,
-				E397D6461A59A3D200BDFEEF /* GQPresentResponder.m */,
-				E397D64A1A5AD19C00BDFEEF /* GQCompletionWrapper.h */,
-				E397D64B1A5AD19C00BDFEEF /* GQCompletionWrapper.m */,
-				E3D3E32A19CABAD100EA7E22 /* NSURL+GQURLUtilities.h */,
-				E3D3E32B19CABAD100EA7E22 /* NSURL+GQURLUtilities.m */,
-				E3AC0C4619CCA77600A3152E /* GQURLViewController.h */,
-				E38D988419C2044600630F43 /* Supporting Files */,
+				E333F9711AE79FC200A0303A /* Responder */,
+				E333F97D1AE79FC200A0303A /* Utiles */,
 			);
 			path = SourceCode;
-			sourceTree = "<group>";
-		};
-		E38D988419C2044600630F43 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				E38D988519C2044600630F43 /* GQURLDispatcher-Prefix.pch */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		E38D989719C2044600630F43 /* Tests */ = {
@@ -201,15 +218,6 @@
 				E38D989A19C2044600630F43 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		E67FE85768D4EB26FEF45C62 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				6717DDE59AEC82E9FAEAAFFF /* Pods-GQURLDispatcherTests.debug.xcconfig */,
-				DE357596A77275C81D4E9394 /* Pods-GQURLDispatcherTests.release.xcconfig */,
-			);
-			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -319,7 +327,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-GQURLDispatcherTests/Pods-GQURLDispatcherTests-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GQURLDispatcherTests/Pods-GQURLDispatcherTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -329,14 +337,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E38D98FF19C75C9200630F43 /* GQNavigationResponder.m in Sources */,
+				E333F9871AE79FC200A0303A /* GQTabBarResponder.m in Sources */,
+				E333F9861AE79FC200A0303A /* GQSimpleResponder.m in Sources */,
+				E333F9841AE79FC200A0303A /* GQNavigationResponder.m in Sources */,
 				E38D988919C2044600630F43 /* GQURLDispatcher.m in Sources */,
-				E397D6471A59A3D200BDFEEF /* GQPresentResponder.m in Sources */,
-				E397D64C1A5AD19C00BDFEEF /* GQCompletionWrapper.m in Sources */,
-				E37918BD1A444CED0005B78F /* GQApplicationURLResponder.m in Sources */,
-				E397D6441A5997B400BDFEEF /* GQSimpleResponder.m in Sources */,
-				E3D3E32C19CABAD100EA7E22 /* NSURL+GQURLUtilities.m in Sources */,
-				E3AC0C4B19CCABD300A3152E /* GQTabBarResponder.m in Sources */,
+				E333F9881AE79FC200A0303A /* GQCompletionWrapper.m in Sources */,
+				E333F9851AE79FC200A0303A /* GQPresentResponder.m in Sources */,
+				E333F9831AE79FC200A0303A /* GQApplicationURLResponder.m in Sources */,
+				E333F9891AE79FC200A0303A /* NSURL+GQURLUtilities.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -447,7 +455,7 @@
 			buildSettings = {
 				DSTROOT = /tmp/GQURLDispatcher.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "SourceCode/GQURLDispatcher-Prefix.pch";
+				GCC_PREFIX_HEADER = "GQURLDispatcher-Prefix.pch";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -459,7 +467,7 @@
 			buildSettings = {
 				DSTROOT = /tmp/GQURLDispatcher.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "SourceCode/GQURLDispatcher-Prefix.pch";
+				GCC_PREFIX_HEADER = "GQURLDispatcher-Prefix.pch";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -468,7 +476,7 @@
 		};
 		E38D98A519C2044600630F43 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6717DDE59AEC82E9FAEAAFFF /* Pods-GQURLDispatcherTests.debug.xcconfig */;
+			baseConfigurationReference = EFC5185ED52A3C9EA0021B4E /* Pods-GQURLDispatcherTests.debug.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -476,7 +484,7 @@
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "SourceCode/GQURLDispatcher-Prefix.pch";
+				GCC_PREFIX_HEADER = "GQURLDispatcher-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -489,7 +497,7 @@
 		};
 		E38D98A619C2044600630F43 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DE357596A77275C81D4E9394 /* Pods-GQURLDispatcherTests.release.xcconfig */;
+			baseConfigurationReference = 2CA7A62CE15AF9316774D052 /* Pods-GQURLDispatcherTests.release.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -497,7 +505,7 @@
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "SourceCode/GQURLDispatcher-Prefix.pch";
+				GCC_PREFIX_HEADER = "GQURLDispatcher-Prefix.pch";
 				INFOPLIST_FILE = "Tests/GQURLDispatcherTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = xctest;
