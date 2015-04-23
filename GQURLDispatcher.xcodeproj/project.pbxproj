@@ -8,18 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		33474776CA8841BCB8053EC3 /* libPods-GQURLDispatcherTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D09E1804235A48679B581586 /* libPods-GQURLDispatcherTests.a */; };
-		E333F9831AE79FC200A0303A /* GQApplicationURLResponder.m in Sources */ = {isa = PBXBuildFile; fileRef = E333F9731AE79FC200A0303A /* GQApplicationURLResponder.m */; };
-		E333F9841AE79FC200A0303A /* GQNavigationResponder.m in Sources */ = {isa = PBXBuildFile; fileRef = E333F9751AE79FC200A0303A /* GQNavigationResponder.m */; };
-		E333F9851AE79FC200A0303A /* GQPresentResponder.m in Sources */ = {isa = PBXBuildFile; fileRef = E333F9771AE79FC200A0303A /* GQPresentResponder.m */; };
-		E333F9861AE79FC200A0303A /* GQSimpleResponder.m in Sources */ = {isa = PBXBuildFile; fileRef = E333F9791AE79FC200A0303A /* GQSimpleResponder.m */; };
-		E333F9871AE79FC200A0303A /* GQTabBarResponder.m in Sources */ = {isa = PBXBuildFile; fileRef = E333F97B1AE79FC200A0303A /* GQTabBarResponder.m */; };
-		E333F9881AE79FC200A0303A /* GQCompletionWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = E333F97F1AE79FC200A0303A /* GQCompletionWrapper.m */; };
-		E333F9891AE79FC200A0303A /* NSURL+GQURLUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = E333F9821AE79FC200A0303A /* NSURL+GQURLUtilities.m */; };
+		E360894D1AE9409E00C2B3FF /* GQURLDispatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = E360893A1AE9409E00C2B3FF /* GQURLDispatcher.m */; };
+		E360894E1AE9409E00C2B3FF /* GQApplicationURLResponder.m in Sources */ = {isa = PBXBuildFile; fileRef = E360893D1AE9409E00C2B3FF /* GQApplicationURLResponder.m */; };
+		E360894F1AE9409E00C2B3FF /* GQNavigationResponder.m in Sources */ = {isa = PBXBuildFile; fileRef = E360893F1AE9409E00C2B3FF /* GQNavigationResponder.m */; };
+		E36089501AE9409E00C2B3FF /* GQPresentResponder.m in Sources */ = {isa = PBXBuildFile; fileRef = E36089411AE9409E00C2B3FF /* GQPresentResponder.m */; };
+		E36089511AE9409E00C2B3FF /* GQSimpleResponder.m in Sources */ = {isa = PBXBuildFile; fileRef = E36089431AE9409E00C2B3FF /* GQSimpleResponder.m */; };
+		E36089521AE9409E00C2B3FF /* GQTabBarResponder.m in Sources */ = {isa = PBXBuildFile; fileRef = E36089451AE9409E00C2B3FF /* GQTabBarResponder.m */; };
+		E36089531AE9409E00C2B3FF /* GQCompletionWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = E36089491AE9409E00C2B3FF /* GQCompletionWrapper.m */; };
+		E36089541AE9409E00C2B3FF /* NSURL+GQURLUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = E360894C1AE9409E00C2B3FF /* NSURL+GQURLUtilities.m */; };
 		E36D30F319CD55F9003ACC19 /* GQTabBarResponderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E36D30F219CD55F9003ACC19 /* GQTabBarResponderTests.m */; };
 		E36D30F519CD6AA8003ACC19 /* GQNavigationResponderTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E36D30F419CD6AA8003ACC19 /* GQNavigationResponderTest.m */; };
 		E38D988219C2044600630F43 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E38D988119C2044600630F43 /* Foundation.framework */; };
-		E38D988719C2044600630F43 /* GQURLDispatcher.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = E38D988619C2044600630F43 /* GQURLDispatcher.h */; };
-		E38D988919C2044600630F43 /* GQURLDispatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = E38D988819C2044600630F43 /* GQURLDispatcher.m */; };
 		E38D989019C2044600630F43 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E38D988F19C2044600630F43 /* XCTest.framework */; };
 		E38D989119C2044600630F43 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E38D988119C2044600630F43 /* Foundation.framework */; };
 		E38D989319C2044600630F43 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E38D989219C2044600630F43 /* UIKit.framework */; };
@@ -47,7 +46,6 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
-				E38D988719C2044600630F43 /* GQURLDispatcher.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,29 +54,29 @@
 /* Begin PBXFileReference section */
 		2CA7A62CE15AF9316774D052 /* Pods-GQURLDispatcherTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GQURLDispatcherTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GQURLDispatcherTests/Pods-GQURLDispatcherTests.release.xcconfig"; sourceTree = "<group>"; };
 		D09E1804235A48679B581586 /* libPods-GQURLDispatcherTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GQURLDispatcherTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		E333F9721AE79FC200A0303A /* GQApplicationURLResponder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GQApplicationURLResponder.h; sourceTree = "<group>"; };
-		E333F9731AE79FC200A0303A /* GQApplicationURLResponder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GQApplicationURLResponder.m; sourceTree = "<group>"; };
-		E333F9741AE79FC200A0303A /* GQNavigationResponder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GQNavigationResponder.h; sourceTree = "<group>"; };
-		E333F9751AE79FC200A0303A /* GQNavigationResponder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GQNavigationResponder.m; sourceTree = "<group>"; };
-		E333F9761AE79FC200A0303A /* GQPresentResponder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GQPresentResponder.h; sourceTree = "<group>"; };
-		E333F9771AE79FC200A0303A /* GQPresentResponder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GQPresentResponder.m; sourceTree = "<group>"; };
-		E333F9781AE79FC200A0303A /* GQSimpleResponder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GQSimpleResponder.h; sourceTree = "<group>"; };
-		E333F9791AE79FC200A0303A /* GQSimpleResponder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GQSimpleResponder.m; sourceTree = "<group>"; };
-		E333F97A1AE79FC200A0303A /* GQTabBarResponder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GQTabBarResponder.h; sourceTree = "<group>"; };
-		E333F97B1AE79FC200A0303A /* GQTabBarResponder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GQTabBarResponder.m; sourceTree = "<group>"; };
-		E333F97C1AE79FC200A0303A /* GQURLResponder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GQURLResponder.h; sourceTree = "<group>"; };
-		E333F97E1AE79FC200A0303A /* GQCompletionWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GQCompletionWrapper.h; sourceTree = "<group>"; };
-		E333F97F1AE79FC200A0303A /* GQCompletionWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GQCompletionWrapper.m; sourceTree = "<group>"; };
-		E333F9801AE79FC200A0303A /* GQURLViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GQURLViewController.h; sourceTree = "<group>"; };
-		E333F9811AE79FC200A0303A /* NSURL+GQURLUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+GQURLUtilities.h"; sourceTree = "<group>"; };
-		E333F9821AE79FC200A0303A /* NSURL+GQURLUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+GQURLUtilities.m"; sourceTree = "<group>"; };
 		E333F98B1AE7A08700A0303A /* GQURLDispatcher-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GQURLDispatcher-Prefix.pch"; sourceTree = "<group>"; };
+		E36089391AE9409E00C2B3FF /* GQURLDispatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GQURLDispatcher.h; sourceTree = "<group>"; };
+		E360893A1AE9409E00C2B3FF /* GQURLDispatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GQURLDispatcher.m; sourceTree = "<group>"; };
+		E360893C1AE9409E00C2B3FF /* GQApplicationURLResponder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GQApplicationURLResponder.h; sourceTree = "<group>"; };
+		E360893D1AE9409E00C2B3FF /* GQApplicationURLResponder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GQApplicationURLResponder.m; sourceTree = "<group>"; };
+		E360893E1AE9409E00C2B3FF /* GQNavigationResponder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GQNavigationResponder.h; sourceTree = "<group>"; };
+		E360893F1AE9409E00C2B3FF /* GQNavigationResponder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GQNavigationResponder.m; sourceTree = "<group>"; };
+		E36089401AE9409E00C2B3FF /* GQPresentResponder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GQPresentResponder.h; sourceTree = "<group>"; };
+		E36089411AE9409E00C2B3FF /* GQPresentResponder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GQPresentResponder.m; sourceTree = "<group>"; };
+		E36089421AE9409E00C2B3FF /* GQSimpleResponder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GQSimpleResponder.h; sourceTree = "<group>"; };
+		E36089431AE9409E00C2B3FF /* GQSimpleResponder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GQSimpleResponder.m; sourceTree = "<group>"; };
+		E36089441AE9409E00C2B3FF /* GQTabBarResponder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GQTabBarResponder.h; sourceTree = "<group>"; };
+		E36089451AE9409E00C2B3FF /* GQTabBarResponder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GQTabBarResponder.m; sourceTree = "<group>"; };
+		E36089461AE9409E00C2B3FF /* GQURLResponder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GQURLResponder.h; sourceTree = "<group>"; };
+		E36089481AE9409E00C2B3FF /* GQCompletionWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GQCompletionWrapper.h; sourceTree = "<group>"; };
+		E36089491AE9409E00C2B3FF /* GQCompletionWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GQCompletionWrapper.m; sourceTree = "<group>"; };
+		E360894A1AE9409E00C2B3FF /* GQURLViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GQURLViewController.h; sourceTree = "<group>"; };
+		E360894B1AE9409E00C2B3FF /* NSURL+GQURLUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+GQURLUtilities.h"; sourceTree = "<group>"; };
+		E360894C1AE9409E00C2B3FF /* NSURL+GQURLUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+GQURLUtilities.m"; sourceTree = "<group>"; };
 		E36D30F219CD55F9003ACC19 /* GQTabBarResponderTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = GQTabBarResponderTests.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		E36D30F419CD6AA8003ACC19 /* GQNavigationResponderTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = GQNavigationResponderTest.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		E38D987E19C2044600630F43 /* libGQURLDispatcher.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libGQURLDispatcher.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E38D988119C2044600630F43 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		E38D988619C2044600630F43 /* GQURLDispatcher.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GQURLDispatcher.h; sourceTree = "<group>"; };
-		E38D988819C2044600630F43 /* GQURLDispatcher.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GQURLDispatcher.m; sourceTree = "<group>"; };
 		E38D988E19C2044600630F43 /* GQURLDispatcherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GQURLDispatcherTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E38D988F19C2044600630F43 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		E38D989219C2044600630F43 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
@@ -124,32 +122,43 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		E333F9711AE79FC200A0303A /* Responder */ = {
+		E36089381AE9409E00C2B3FF /* GQURLDispatcher */ = {
 			isa = PBXGroup;
 			children = (
-				E333F9721AE79FC200A0303A /* GQApplicationURLResponder.h */,
-				E333F9731AE79FC200A0303A /* GQApplicationURLResponder.m */,
-				E333F9741AE79FC200A0303A /* GQNavigationResponder.h */,
-				E333F9751AE79FC200A0303A /* GQNavigationResponder.m */,
-				E333F9761AE79FC200A0303A /* GQPresentResponder.h */,
-				E333F9771AE79FC200A0303A /* GQPresentResponder.m */,
-				E333F9781AE79FC200A0303A /* GQSimpleResponder.h */,
-				E333F9791AE79FC200A0303A /* GQSimpleResponder.m */,
-				E333F97A1AE79FC200A0303A /* GQTabBarResponder.h */,
-				E333F97B1AE79FC200A0303A /* GQTabBarResponder.m */,
-				E333F97C1AE79FC200A0303A /* GQURLResponder.h */,
+				E36089391AE9409E00C2B3FF /* GQURLDispatcher.h */,
+				E360893A1AE9409E00C2B3FF /* GQURLDispatcher.m */,
+				E360893B1AE9409E00C2B3FF /* Responder */,
+				E36089471AE9409E00C2B3FF /* Utiles */,
+			);
+			path = GQURLDispatcher;
+			sourceTree = "<group>";
+		};
+		E360893B1AE9409E00C2B3FF /* Responder */ = {
+			isa = PBXGroup;
+			children = (
+				E360893C1AE9409E00C2B3FF /* GQApplicationURLResponder.h */,
+				E360893D1AE9409E00C2B3FF /* GQApplicationURLResponder.m */,
+				E360893E1AE9409E00C2B3FF /* GQNavigationResponder.h */,
+				E360893F1AE9409E00C2B3FF /* GQNavigationResponder.m */,
+				E36089401AE9409E00C2B3FF /* GQPresentResponder.h */,
+				E36089411AE9409E00C2B3FF /* GQPresentResponder.m */,
+				E36089421AE9409E00C2B3FF /* GQSimpleResponder.h */,
+				E36089431AE9409E00C2B3FF /* GQSimpleResponder.m */,
+				E36089441AE9409E00C2B3FF /* GQTabBarResponder.h */,
+				E36089451AE9409E00C2B3FF /* GQTabBarResponder.m */,
+				E36089461AE9409E00C2B3FF /* GQURLResponder.h */,
 			);
 			path = Responder;
 			sourceTree = "<group>";
 		};
-		E333F97D1AE79FC200A0303A /* Utiles */ = {
+		E36089471AE9409E00C2B3FF /* Utiles */ = {
 			isa = PBXGroup;
 			children = (
-				E333F97E1AE79FC200A0303A /* GQCompletionWrapper.h */,
-				E333F97F1AE79FC200A0303A /* GQCompletionWrapper.m */,
-				E333F9801AE79FC200A0303A /* GQURLViewController.h */,
-				E333F9811AE79FC200A0303A /* NSURL+GQURLUtilities.h */,
-				E333F9821AE79FC200A0303A /* NSURL+GQURLUtilities.m */,
+				E36089481AE9409E00C2B3FF /* GQCompletionWrapper.h */,
+				E36089491AE9409E00C2B3FF /* GQCompletionWrapper.m */,
+				E360894A1AE9409E00C2B3FF /* GQURLViewController.h */,
+				E360894B1AE9409E00C2B3FF /* NSURL+GQURLUtilities.h */,
+				E360894C1AE9409E00C2B3FF /* NSURL+GQURLUtilities.m */,
 			);
 			path = Utiles;
 			sourceTree = "<group>";
@@ -158,7 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				E333F98B1AE7A08700A0303A /* GQURLDispatcher-Prefix.pch */,
-				E38D988319C2044600630F43 /* SourceCode */,
+				E36089381AE9409E00C2B3FF /* GQURLDispatcher */,
 				E38D989719C2044600630F43 /* Tests */,
 				E38D988019C2044600630F43 /* Frameworks */,
 				E38D987F19C2044600630F43 /* Products */,
@@ -185,17 +194,6 @@
 				D09E1804235A48679B581586 /* libPods-GQURLDispatcherTests.a */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		E38D988319C2044600630F43 /* SourceCode */ = {
-			isa = PBXGroup;
-			children = (
-				E38D988619C2044600630F43 /* GQURLDispatcher.h */,
-				E38D988819C2044600630F43 /* GQURLDispatcher.m */,
-				E333F9711AE79FC200A0303A /* Responder */,
-				E333F97D1AE79FC200A0303A /* Utiles */,
-			);
-			path = SourceCode;
 			sourceTree = "<group>";
 		};
 		E38D989719C2044600630F43 /* Tests */ = {
@@ -337,14 +335,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E333F9871AE79FC200A0303A /* GQTabBarResponder.m in Sources */,
-				E333F9861AE79FC200A0303A /* GQSimpleResponder.m in Sources */,
-				E333F9841AE79FC200A0303A /* GQNavigationResponder.m in Sources */,
-				E38D988919C2044600630F43 /* GQURLDispatcher.m in Sources */,
-				E333F9881AE79FC200A0303A /* GQCompletionWrapper.m in Sources */,
-				E333F9851AE79FC200A0303A /* GQPresentResponder.m in Sources */,
-				E333F9831AE79FC200A0303A /* GQApplicationURLResponder.m in Sources */,
-				E333F9891AE79FC200A0303A /* NSURL+GQURLUtilities.m in Sources */,
+				E36089521AE9409E00C2B3FF /* GQTabBarResponder.m in Sources */,
+				E36089511AE9409E00C2B3FF /* GQSimpleResponder.m in Sources */,
+				E360894F1AE9409E00C2B3FF /* GQNavigationResponder.m in Sources */,
+				E360894D1AE9409E00C2B3FF /* GQURLDispatcher.m in Sources */,
+				E36089531AE9409E00C2B3FF /* GQCompletionWrapper.m in Sources */,
+				E36089501AE9409E00C2B3FF /* GQPresentResponder.m in Sources */,
+				E360894E1AE9409E00C2B3FF /* GQApplicationURLResponder.m in Sources */,
+				E36089541AE9409E00C2B3FF /* NSURL+GQURLUtilities.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
