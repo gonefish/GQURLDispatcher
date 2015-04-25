@@ -181,8 +181,6 @@
     
     id responder = [self mockURLResponderWithURL:testURL];
     
-    OCMStub([delegateMock URLDispatcher:self.testURLDispatcher shouldWithResponder:responder handleURL:testURL object:nil]).andReturn(YES);
-    
     OCMStub([delegateMock URLDispatcherShouldBeginDispatch:self.testURLDispatcher handleURL:testURL object:nil]).andReturn(YES);
     
     [self.testURLDispatcher registerResponder:responder];
@@ -191,29 +189,11 @@
     
     OCMVerify([delegateMock URLDispatcherShouldBeginDispatch:self.testURLDispatcher handleURL:testURL object:nil]);
     
-    OCMVerify([delegateMock URLDispatcher:self.testURLDispatcher shouldWithResponder:responder handleURL:testURL object:nil]);
-    
     OCMVerify([delegateMock URLDispatcher:self.testURLDispatcher didWithResponder:responder handleURL:testURL object:nil]);
     
     OCMVerify([delegateMock URLDispatcherDidEndDispatch:self.testURLDispatcher]);
 }
 
-- (void)testURLDispatcherShouldWithResponderHandleURLObject
-{
-    NSURL *testURL = GQURL(@"https://github.com/gonefish/GQURLDispatcher");
-    
-    id responder = [self mockURLResponderWithURL:testURL];
-    
-    id <GQURLDispatcherDelegate> delegateMock = OCMProtocolMock(@protocol(GQURLDispatcherDelegate));
-    
-    OCMStub([delegateMock URLDispatcher:self.testURLDispatcher shouldWithResponder:responder handleURL:testURL object:nil]).andReturn(NO);
-    
-    self.testURLDispatcher.delegate = delegateMock;
-    
-    [self.testURLDispatcher registerResponder:responder];
-    
-    XCTAssertFalse([self.testURLDispatcher dispatchURL:testURL], @"不应该响应responder");
-}
 
 - (id <GQURLResponder>)mockURLResponderWithURL:(NSURL *)aURL
 {

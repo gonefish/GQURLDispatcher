@@ -110,13 +110,6 @@
 - (void)URLDispatcherDidEndDispatch:(GQURLDispatcher *)URLDispatcher;
 
 /**
- *  是否使用该响应者处理URL
- *
- *  @return 如果返回NO，则该响应者不处理URL
- */
-- (BOOL)URLDispatcher:(GQURLDispatcher *)URLDispatcher shouldWithResponder:(id <GQURLResponder>)responder handleURL:(NSURL *)aURL object:(id)anObject;
-
-/**
  *  使用响应者处理完毕
  *
  */

@@ -68,15 +68,6 @@
     
     [[self responders] enumerateObjectsWithOptions:NSEnumerationReverse usingBlock:^(id <GQURLResponder> responder, NSUInteger idx, BOOL *stop) {
         
-        if ([self.delegate respondsToSelector:@selector(URLDispatcher:shouldWithResponder:handleURL:object:)]) {
-            if ([self.delegate URLDispatcher:self
-                         shouldWithResponder:responder
-                                   handleURL:url
-                                      object:anObject] == NO) {
-                return;
-            }
-        }
-        
         BOOL isResponse = NO;
 
         if ([responder respondsToSelector:@selector(responseURLStringRegularExpression)]
