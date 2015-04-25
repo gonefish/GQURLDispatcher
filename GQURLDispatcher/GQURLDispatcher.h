@@ -97,13 +97,14 @@
 @optional
 
 /**
- *  开始URL分发循环
+ *  是否要开始分发请求
  *
+ *  @return 如果返回NO，将不会处理这次请求
  */
-- (void)URLDispatcherWillBeginDispatch:(GQURLDispatcher *)URLDispatcher;
+- (BOOL)URLDispatcherShouldBeginDispatch:(GQURLDispatcher *)URLDispatcher handleURL:(NSURL *)aURL object:(id)anObject;
 
 /**
- *  结束URL分发循环
+ *  URL分发请求结束
  *
  */
 - (void)URLDispatcherDidEndDispatch:(GQURLDispatcher *)URLDispatcher;

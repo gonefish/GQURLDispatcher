@@ -58,8 +58,10 @@
     
     if (url == nil) return NO;
     
-    if ([self.delegate respondsToSelector:@selector(URLDispatcherWillBeginDispatch:)]) {
-        [self.delegate URLDispatcherWillBeginDispatch:self];
+    if ([self.delegate respondsToSelector:@selector(URLDispatcherShouldBeginDispatch:handleURL:object:)]) {
+        if ([self.delegate URLDispatcherShouldBeginDispatch:self handleURL:url object:anObject] == NO) {
+            return NO;
+        }
     }
     
     __block BOOL isDispatch = NO;

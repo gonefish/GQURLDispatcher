@@ -183,11 +183,13 @@
     
     OCMStub([delegateMock URLDispatcher:self.testURLDispatcher shouldWithResponder:responder handleURL:testURL object:nil]).andReturn(YES);
     
+    OCMStub([delegateMock URLDispatcherShouldBeginDispatch:self.testURLDispatcher handleURL:testURL object:nil]).andReturn(YES);
+    
     [self.testURLDispatcher registerResponder:responder];
     
     [self.testURLDispatcher dispatchURL:testURL];
     
-    OCMVerify([delegateMock URLDispatcherWillBeginDispatch:self.testURLDispatcher]);
+    OCMVerify([delegateMock URLDispatcherShouldBeginDispatch:self.testURLDispatcher handleURL:testURL object:nil]);
     
     OCMVerify([delegateMock URLDispatcher:self.testURLDispatcher shouldWithResponder:responder handleURL:testURL object:nil]);
     
