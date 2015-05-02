@@ -30,13 +30,6 @@
 @optional
 
 /**
- *  返回实际处理视图切换的对象
- *
- *  @return 容器控制器
- */
-- (UIViewController *)containerViewController;
-
-/**
  *  通过正则表达式匹配，来确认需要响应的URL
  *
  * @return 正则表达式对象
@@ -49,5 +42,12 @@
  *  @return 别名字符串
  */
 - (NSString *)alias;
+
+/**
+ *  Responder可以声明自己需要被删除
+ *
+ *  @return 如果返回YES，在下次分发URL时会被移除
+ */
+- (BOOL)needRemove;
 
 @end

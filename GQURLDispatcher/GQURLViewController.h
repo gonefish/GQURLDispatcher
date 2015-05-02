@@ -10,10 +10,6 @@
 
 @protocol GQURLViewController <NSObject>
 
-@property (nonatomic, strong, readonly) NSURL *gq_url;
-
-@property (nonatomic, strong, readonly) id gq_object;
-
 /**
  *  更新URL和自定义对象的方法
  *
@@ -21,5 +17,9 @@
  *  @param anObject 分发的自定义的对象
  */
 - (void)updateWithURL:(NSURL *)aURL object:(id)anObject;
+
+- (NSURL *)gq_URL;
+
+- (id)gq_object;
 
 @end

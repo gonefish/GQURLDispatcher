@@ -189,8 +189,6 @@
     
     OCMVerify([delegateMock URLDispatcherShouldBeginDispatch:self.testURLDispatcher handleURL:testURL object:nil]);
     
-    OCMVerify([delegateMock URLDispatcher:self.testURLDispatcher didWithResponder:responder handleURL:testURL object:nil]);
-    
     OCMVerify([delegateMock URLDispatcherDidEndDispatch:self.testURLDispatcher]);
 }
 

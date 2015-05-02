@@ -125,10 +125,24 @@
 		E3353B151AE9C358002237A2 /* GQURLDispatcher */ = {
 			isa = PBXGroup;
 			children = (
-				E3353B161AE9C358002237A2 /* GQApplicationURLResponder.h */,
-				E3353B171AE9C358002237A2 /* GQApplicationURLResponder.m */,
+				E3447B6A1AF4FB1300881237 /* Responder */,
 				E3353B181AE9C358002237A2 /* GQCompletionWrapper.h */,
 				E3353B191AE9C358002237A2 /* GQCompletionWrapper.m */,
+				E3353B221AE9C358002237A2 /* GQURLDispatcher.h */,
+				E3353B231AE9C358002237A2 /* GQURLDispatcher.m */,
+				E3353B251AE9C358002237A2 /* GQURLViewController.h */,
+				E3353B261AE9C358002237A2 /* NSURL+GQURLUtilities.h */,
+				E3353B271AE9C358002237A2 /* NSURL+GQURLUtilities.m */,
+			);
+			path = GQURLDispatcher;
+			sourceTree = "<group>";
+		};
+		E3447B6A1AF4FB1300881237 /* Responder */ = {
+			isa = PBXGroup;
+			children = (
+				E3353B241AE9C358002237A2 /* GQURLResponder.h */,
+				E3353B161AE9C358002237A2 /* GQApplicationURLResponder.h */,
+				E3353B171AE9C358002237A2 /* GQApplicationURLResponder.m */,
 				E3353B1A1AE9C358002237A2 /* GQNavigationResponder.h */,
 				E3353B1B1AE9C358002237A2 /* GQNavigationResponder.m */,
 				E3353B1C1AE9C358002237A2 /* GQPresentResponder.h */,
@@ -137,14 +151,8 @@
 				E3353B1F1AE9C358002237A2 /* GQSimpleResponder.m */,
 				E3353B201AE9C358002237A2 /* GQTabBarResponder.h */,
 				E3353B211AE9C358002237A2 /* GQTabBarResponder.m */,
-				E3353B221AE9C358002237A2 /* GQURLDispatcher.h */,
-				E3353B231AE9C358002237A2 /* GQURLDispatcher.m */,
-				E3353B241AE9C358002237A2 /* GQURLResponder.h */,
-				E3353B251AE9C358002237A2 /* GQURLViewController.h */,
-				E3353B261AE9C358002237A2 /* NSURL+GQURLUtilities.h */,
-				E3353B271AE9C358002237A2 /* NSURL+GQURLUtilities.m */,
 			);
-			path = GQURLDispatcher;
+			name = Responder;
 			sourceTree = "<group>";
 		};
 		E38D987519C2044600630F43 = {

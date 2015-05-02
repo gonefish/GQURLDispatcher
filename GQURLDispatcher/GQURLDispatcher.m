@@ -52,6 +52,7 @@
     return [[self sharedInstance] dispatchURL:url];
 }
 
+
 - (BOOL)dispatchURL:(NSURL *)url withObject:(id)anObject
 {
     NSAssert([NSThread isMainThread], @"只允许在主线程使用");
@@ -64,10 +65,14 @@
         }
     }
     
+    [self cleanResponer];
+    
+    // 开始匹配Responder
     __block BOOL isDispatch = NO;
     
-    [[self responders] enumerateObjectsWithOptions:NSEnumerationReverse usingBlock:^(id <GQURLResponder> responder, NSUInteger idx, BOOL *stop) {
+    [self.responderList enumerateObjectsWithOptions:NSEnumerationReverse usingBlock:^(id <GQURLResponder> responder, NSUInteger idx, BOOL *stop) {
         
+        // 是否需要响应
         BOOL isResponse = NO;
 
         if ([responder respondsToSelector:@selector(responseURLStringRegularExpression)]
@@ -98,13 +103,6 @@
             if ([responder handleURL:url withObject:anObject]) {
                 isDispatch = YES;
                 *stop = YES;
-            }
-            
-            if ([self.delegate respondsToSelector:@selector(URLDispatcher:didWithResponder:handleURL:object:)]) {
-                [self.delegate URLDispatcher:self
-                            didWithResponder:responder
-                                   handleURL:url
-                                      object:anObject];
             }
         }
     }];
@@ -164,19 +162,26 @@
     return [self.responderAliases objectForKey:alias];
 }
 
-- (void)cleanup;
+#pragma mark - Private
+
+
+- (void)cleanResponer
 {
-    NSMutableArray *cleanResponer = [NSMutableArray array];
+    // 尝试清理Responder
     
-    [self.responders enumerateObjectsUsingBlock:^(id <GQURLResponder> obj, NSUInteger idx, BOOL *stop) {
-        if ([obj respondsToSelector:@selector(containerViewController)]
-            && [obj containerViewController] == nil) {
-            [cleanResponer addObject:obj];
+    NSMutableArray *needRemoveResponers = [NSMutableArray array];
+    
+    [self.responderList enumerateObjectsUsingBlock:^(id <GQURLResponder> responder, NSUInteger idx, BOOL *stop) {
+        if ([responder respondsToSelector:@selector(needRemove)]) {
+            
+            if ([responder needRemove]) {
+                [needRemoveResponers addObject:responder];
+            }
         }
     }];
     
-    [cleanResponer enumerateObjectsUsingBlock:^(id <GQURLResponder> obj, NSUInteger idx, BOOL *stop) {
-        [[GQURLDispatcher sharedInstance] unregisterResponder:obj];
+    [needRemoveResponers enumerateObjectsUsingBlock:^(id <GQURLResponder> responder, NSUInteger idx, BOOL *stop) {
+        [[GQURLDispatcher sharedInstance] unregisterResponder:responder];
     }];
 }
 
