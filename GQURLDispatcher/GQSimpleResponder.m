@@ -143,4 +143,20 @@
     return newVC;
 }
 
+#pragma mark - GQURLResponder
+
+- (BOOL)handleURL:(NSURL *)aURL withObject:(id)anObject
+{
+    return NO;
+}
+
+- (BOOL)needRemove
+{
+    if (self.containerViewController) {
+        return NO;
+    } else {
+        return YES;
+    }
+}
+
 @end

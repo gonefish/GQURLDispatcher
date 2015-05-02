@@ -8,11 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-#import "GQNavigationResponder.h"
-#import "GQTabBarResponder.h"
-#import "GQPresentResponder.h"
-#import "GQApplicationURLResponder.h"
-#import "GQCompletionWrapper.h"
+#import "GQURLResponder.h"
 
 #define GQURL(s) [NSURL URLWithString:s] 
 

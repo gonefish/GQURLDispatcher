@@ -1,0 +1,29 @@
+digraph G {
+	node [shape=box];
+	"GQPresentResponder" -> "GQCompletionWrapper";
+	"GQPresentResponder" -> "GQSimpleResponder";
+	"GQPresentResponder" -> "GQURLResponder";
+	"GQCompletionWrapper" -> {};
+	"GQSimpleResponder" -> "GQURLViewController";
+	"GQSimpleResponder" -> "GQURLResponder";
+	"GQApplicationURLResponder" -> "GQURLResponder";
+	"GQTabBarResponder" -> "GQURLResponder";
+	"GQNavigationResponder" -> "GQSimpleResponder";
+	"GQNavigationResponder" -> "GQURLDispatcher";
+	"GQURLViewController" -> {};
+	"GQURLResponder" -> {};
+	"GQURLDispatcher" -> "GQURLResponder";
+	"GQResponers" -> "GQNavigationResponder";
+	"GQResponers" -> "GQPresentResponder";
+	"GQResponers" -> "GQCompletionWrapper";
+	"GQResponers" -> "GQApplicationURLResponder";
+	"GQResponers" -> "GQTabBarResponder";
+	
+	
+	edge [color=blue, dir=both];
+	
+	edge [color=black];
+	node [shape=plaintext];
+	"Categories" [label="NSURL+GQURLUtilities"];
+}
+

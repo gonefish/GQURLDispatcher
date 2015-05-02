@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GQURLResponder.h"
 
-@interface GQSimpleResponder : NSObject
+@interface GQSimpleResponder : NSObject <GQURLResponder>
 
 @property (nonatomic, copy) NSArray *responseURLs;
 

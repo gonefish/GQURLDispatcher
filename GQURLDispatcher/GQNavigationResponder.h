@@ -7,11 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "GQURLResponder.h"
 #import "GQSimpleResponder.h"
 
-@interface GQNavigationResponder : GQSimpleResponder <GQURLResponder>
-
+@interface GQNavigationResponder : GQSimpleResponder
 
 @end
 

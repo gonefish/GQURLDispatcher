@@ -7,9 +7,10 @@
 //
 
 #import <XCTest/XCTest.h>
-#import "GQURLDispatcher.h"
-#import "GQURLResponder.h"
 #import <OCMock/OCMock.h>
+
+#import "GQURLDispatcher.h"
+#import "GQResponers.h"
 
 @interface GQURLDispatcherTests : XCTestCase
 

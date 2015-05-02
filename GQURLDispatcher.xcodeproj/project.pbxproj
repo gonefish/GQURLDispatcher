@@ -73,6 +73,7 @@
 		E3353B251AE9C358002237A2 /* GQURLViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GQURLViewController.h; sourceTree = "<group>"; };
 		E3353B261AE9C358002237A2 /* NSURL+GQURLUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+GQURLUtilities.h"; sourceTree = "<group>"; };
 		E3353B271AE9C358002237A2 /* NSURL+GQURLUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+GQURLUtilities.m"; sourceTree = "<group>"; };
+		E3447B6B1AF506E900881237 /* GQResponers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GQResponers.h; sourceTree = "<group>"; };
 		E36D30F219CD55F9003ACC19 /* GQTabBarResponderTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = GQTabBarResponderTests.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		E36D30F419CD6AA8003ACC19 /* GQNavigationResponderTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = GQNavigationResponderTest.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		E38D987E19C2044600630F43 /* libGQURLDispatcher.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libGQURLDispatcher.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -126,8 +127,6 @@
 			isa = PBXGroup;
 			children = (
 				E3447B6A1AF4FB1300881237 /* Responder */,
-				E3353B181AE9C358002237A2 /* GQCompletionWrapper.h */,
-				E3353B191AE9C358002237A2 /* GQCompletionWrapper.m */,
 				E3353B221AE9C358002237A2 /* GQURLDispatcher.h */,
 				E3353B231AE9C358002237A2 /* GQURLDispatcher.m */,
 				E3353B251AE9C358002237A2 /* GQURLViewController.h */,
@@ -141,16 +140,19 @@
 			isa = PBXGroup;
 			children = (
 				E3353B241AE9C358002237A2 /* GQURLResponder.h */,
+				E3353B1E1AE9C358002237A2 /* GQSimpleResponder.h */,
+				E3353B1F1AE9C358002237A2 /* GQSimpleResponder.m */,
 				E3353B161AE9C358002237A2 /* GQApplicationURLResponder.h */,
 				E3353B171AE9C358002237A2 /* GQApplicationURLResponder.m */,
 				E3353B1A1AE9C358002237A2 /* GQNavigationResponder.h */,
 				E3353B1B1AE9C358002237A2 /* GQNavigationResponder.m */,
 				E3353B1C1AE9C358002237A2 /* GQPresentResponder.h */,
 				E3353B1D1AE9C358002237A2 /* GQPresentResponder.m */,
-				E3353B1E1AE9C358002237A2 /* GQSimpleResponder.h */,
-				E3353B1F1AE9C358002237A2 /* GQSimpleResponder.m */,
 				E3353B201AE9C358002237A2 /* GQTabBarResponder.h */,
 				E3353B211AE9C358002237A2 /* GQTabBarResponder.m */,
+				E3447B6B1AF506E900881237 /* GQResponers.h */,
+				E3353B181AE9C358002237A2 /* GQCompletionWrapper.h */,
+				E3353B191AE9C358002237A2 /* GQCompletionWrapper.m */,
 			);
 			name = Responder;
 			sourceTree = "<group>";

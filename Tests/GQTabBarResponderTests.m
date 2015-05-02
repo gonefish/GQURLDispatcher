@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
-#import "GQURLDispatcher.h"
 #import <OCMock/OCMock.h>
+
+#import "GQURLDispatcher.h"
+#import "GQResponers.h"
 
 @interface GQTabBarResponderTests : XCTestCase
 
