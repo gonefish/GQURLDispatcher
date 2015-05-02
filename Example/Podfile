@@ -1,1 +1,1 @@
-pod 'GQURLDispatcher', :path => '../SourceCode'
+pod 'GQURLDispatcher', :path => '../'

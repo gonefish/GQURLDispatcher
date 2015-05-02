@@ -7,12 +7,10 @@
 //
 
 #import "GQAppDelegate.h"
-#import "GQTabBarResponder.h"
-#import "GQNavigationResponder.h"
-#import "GQURLDispatcher.h"
 #import "GQFirstViewController.h"
 #import "GQSecondViewController.h"
-#import "GQPresentResponder.h"
+#import <GQURLDispatcher/GQURLDispatcher.h>
+#import <GQURLDispatcher/GQResponers.h>
 
 @implementation GQAppDelegate
 
